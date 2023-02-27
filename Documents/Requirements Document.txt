@@ -1,239 +1,281 @@
-﻿	Adventure Game Requirements
-	
-	
-	
-	Team Members
+﻿Adventure Game Requirements
+
+
+Team Members
 Erik Anderson
 Benjamin Seifried
 
 
-
-	Purpose
+Purpose
 The Adventure Game (“Game”) has the purpose of providing a simple, retro adventure RPG experience to potentially multiple players on the same computer.
 
 
-
-	Requirements
+Requirements
+00)
 Name: start_screen_and_menu
 Type: functional
 Summary: When the Game loads, the player shall be presented with a start screen showing the Game’s title and a menu of choices they can take.
 
 
+01)
 Name: account_add
 Type: functional
 Summary: Players shall be able to create an account for themselves containing a variety of details.
 
 
+02)
 Name: account_delete
 Type: functional
 Summary: Players shall be able to delete accounts, provided they have permissions.
 
 
+03)
 Name: account_modify
 Type: functional
 Summary: Players shall be able to modify account details, provided they have permissions.
 
 
+04)
 Name: account_security
 Type: risk
 Summary: Accounts shall only be able to be accessed and modified in the game if a player enters a valid password.
 
 
+05)
 Name: account_contents
 Type: functional
 Summary: Accounts shall contain a player’s name, game saves, local leaderboard, and meta-progress shop details at minimum.
 
 
+06)
 Name: account_view
 Type: functional
 Summary: Accounts and their details shall be able to be viewed by the player, in accordance with their permission level.
 
 
+07)
 Name: in_account_menu
 Type: functional
 Summary: After entering their account, a player shall be presented with a menu of choices they can take, such as managing their saves, starting a new game, checking their local leaderboard, accessing their meta shop, and accessing the wiki.
 
 
+08)
 Name: save_save_load
 Type: functional
 Summary: Players shall be able to save and load their progress in a playthrough of the game, and maintain multiple saves.
 
 
+09)
 Name: save_delete
 Type: functional
 Summary: Players shall be able to delete their saves
 
 
+10)
 Name: save_overwrite
 Type: functional
 Summary: Players shall be able to overwrite their saves with another save
 
 
+11)
 Name: save_delete_overwrite_warning
 Type: functional
 Summary: Players shall be warned that deleting and overwriting saves causes them to permanently lose access to their saves.
 
 
+12)
 Name: save_view
 Type: functional
 Summary: Players shall be able to view their saves before selecting which one to use.
 
 
+13)
 Name: leaderboard_local
 Type: functional
 Summary: A leaderboard of the performances of an account’s runs through the game shall be maintained.
 
 
+14)
 Name: leaderboard_global
 Type: functional
 Summary: A leaderboard of the performances of all accounts’ runs through the game shall be maintained
 
 
+15)
 Name: leaderboard_write
 Type: functional
 Summary: Upon the success or failure of a given run through the game, the performance of the run shall be written to the local and global leaderboards.
 
 
+16)
 Name: leaderboard_view
 Type: functional
 Summary: A player shall be able to view the local and global leaderboards.
 
 
+17)
 Name: leaderboard_rank
 Type: functional
 Summary: The leaderboard shall rank run performance according to some metric or combination of metrics.
 
 
+18)
 Name: map_node
 Type: functional
 Summary: The game’s map shall be composed of interconnected nodes that may have conditions on the movement from one node to another.
 
 
+19)
 Name: map_node_event
 Type: functional
 Summary:The map nodes shall have a unique event or scene associated with each one, and repetition of events or scenes should be minimal.
 
 
+20)
 Name: map_node_select
 Type: functional
 Summary: The player shall have some method of selecting which map node to progress to.
 
 
+21)
 Name: map_view
 Type: functional
 Summary: The player shall be able to view the map of nodes, to be able to better determine how they want to act.
 
 
+22)
 Name: character
 Type: functional
 Summary: A player shall control a character that has a class, skills, and an inventory.
 
 
+23)
 Name: character_class
 Type: functional
 Summary: A player’s character shall have a class, which is a template that defines the skills and other features that a character starts with.
 
 
+24)
 Name: character_skills
 Type: functional
 Summary: A player’s character shall have skills, which are values that determine a character’s proficiency in various activities.
 
 
+25)
 Name: character_skills_modification
 Type: functional
 Summary: A player’s character’s skills shall be able to be changed during the course of a run.
 
 
+26)
 Name: character_view
 Type: functional
 Summary: A player shall be able to view a character’s class, skills, and other information.
 
 
+27)
 Name: item
 Type: functional
 Summary: Some map nodes or map node events shall contain or confer items to the player’s character that modify their skills or provide various functions.
 
 
+28)
 Name: inventory
 Type: functional
 Summary: There shall be an inventory of items that a character has obtained and placed in their inventory.
 
 
+29)
 Name: inventory_view
 Type: functional
 Summary: A player shall be able to view the inventory of their character and its contents.
 
 
+30)
 Name: combat_system
 Type: functional
 Summary: Some map nodes shall present a player’s character with combat, wherein they will face off against an opponent and succeed or fail to some degree.
 
 
+31)
 Name: combat_enemy
 Type: functional
 Summary: Combat shall present the player character with an opponent that has its own skills and actions that it may take.
 
 
+32)
 Name: combat_abilities
 Type: functional
 Summary: Both the player character and the enemy in combat shall have a list of skills dependent upon each entity’s skills and items that allow them to take various actions.
 
 
+33)
 Name: combat_view
 Type: functional
 Summary: A player shall be able to view combat as it occurs, wherein they shall be presented with options that may be taken to progress combat.
 
 
+34)
 Name: meta_shop
 Type: functional
 Summary: The game shall contain an in game shop where a player can view, purchase, or sell changes to gameplay.
 
 
+35)
 Name: meta_shop_currency
 Type: functional
 Summary: A player’s account shall maintain a balance of points serving as a currency in the meta shop that can be used to effect changes to their account’s gameplay.
 
 
+36)
 Name: meta_shop_purchase
 Type: functional
 Summary: A player shall have the ability to expend meta shop currency to purchase items in the meta shop to effect changes to their gameplay.
 
 
+37)
 Name: meta_shop_contents
 Type: functional
 Summary: The meta shop shall contain a variety of gameplay changes available for purchase that should change how the player plays the game.
 
 
+38)
 Name: meta_shop_view
 Type: functional
 Summary: A player shall be able to view the meta shop tied to their account and its available purchases.
 
 
+39)
 Name: wiki
 Type: functional
 Summary: An in-game wiki shall be present that contains information about any major gameplay mechanics, items, enemies, and other features that they’ve seen.
 
 
+40)
 Name: wiki_view
 Type: functional
 Summary: A player shall be able to view the wiki and its contents.
 
 
+41)
 Name: platform_os
 Type: constraint
 Summary: The game shall work on Microsoft Windows 10
 
 
+42)
 Name: screen_resolution
 Type: constraint
 Summary: The game shall work on 1080p monitors
 
 
+43)
 Name: processor_support
 Type: constraint
 Summary: The game shall work on Intel and AMD CPUs
 
 
+44)
 Name: load_time
 Type:  constraint
 Summary: The game shall load on start in at least 30 seconds
