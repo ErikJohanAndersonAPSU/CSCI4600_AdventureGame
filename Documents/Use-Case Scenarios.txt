@@ -1,0 +1,168 @@
+﻿CSCI 4600 Use Case Scenarios
+Erik Anderson
+Benjamin Seifried
+Adventure Game Program
+2023-02-28
+
+
+
+
+Purpose
+The Adventure Game (“Game”) has the purpose of providing a simple, retro adventure RPG experience to potentially multiple users on the same computer.
+
+
+        Use-Case Scenarios [a][b]
+01) Start Screen/ Menu >> New Account
+A user has launched the Game for the first time on a given computer (meaning there are no accounts stored) and is viewing the start screen and menu. The start screen indicates that the game is played primarily with a mouse. The user desires to play the Game, and to do so they must create an account. The menu that they are presented with has a single choice, which is to create an account. The user presses the button associated with this choice, at which point the button is replaced with a set of text boxes that can take inputs. The user would be informed that they are required to enter an account name, and that they could optionally declare a separate character name and add a password. After entering their inputs, the user would press a button to confirm account creation, after which they would be logged into their account and presented with the in-account menu.
+
+
+If a user exits the Game during account creation, already-entered account details will be discarded and nothing will be saved. If the user enters an account name that already exists, they will be informed that the name is unavailable and asked to enter a different name. 
+
+
+02)Start Screen/ Menu>> Existing Account
+A user has launched the Game, one or more accounts exists on a given computer, and one of these accounts is the user’s. The start screen presents the user with two choices, which are to either log into an existing account or to create a new account. The user presses the button to log into an existing account, and is presented with a back button, a login button, and two inputs - one for their account’s username and one for their account’s password. The user enters the correct data into each input to access their account, after which they click the login button and are logged into their account and presented with the in-account menu.
+
+
+If the user exits the Game while at the login screen, any entered data will be discarded. If the user enters an invalid username-password combination, they will be informed that one or both of their inputs is incorrect, without specifying which input or inputs might be incorrect.
+
+
+03)Start Screen/ Menu>> Existing Account 
+A user has launched the Game, one or more accounts exists on a given computer, and none of these accounts is the user’s. The start screen presents the user with two choices, which are to either log into an existing account or to create a new account. The user presses the button to create a new account, and is presented with a back button, a create account button, and four inputs - one for their account’s username, an optional one for their character name, and an optional pair for their account’s password and password confirmation. The user would be informed that they are required to enter an account name, and that they could optionally declare a separate character name and password. After entering their inputs, the user would press a button to confirm account creation, after which they would be logged into their account and presented with the in-account menu.
+
+
+If the user exits the Game while at the account creation screen, any entered data will be discarded. If the user enters an already-existing username, they will be informed that the username is taken and that they must choose a new username. No data will be saved until a free username is entered.
+
+
+04)Start Screen/ Menu >> New Game
+A user has launched the Game and logged into their account. No saves exist on their computer. The in-account menu presents the user with at least two selectable choices, which is to start a new game or to log out of their account. Two other choices are shown but may be indicated as unselectable based on account progression, which are to view the leaderboards and the meta shop. The user selects to start a new game and is taken to the class selection screen, wherein they can either select a character class from one or more character classes or return to the in-account menu via a “back” button. The number of classes offered is dependent on their account details and progression. Each character class has a button associated with it to select the class, and pressing the button changes it to a confirmation button. If the user confirms their choice by pressing the confirmation button, they are entered into the game using the selected class. If they press anywhere else on the screen, the originally selected button reverts away from its confirmation-seeking state.
+
+
+If the user exits the class selection screen, any information on selected-but-not-confirmed classes is discarded.
+
+
+05) Start Screen Menu >> Load Game
+A user has launched the Game and logged into their account. One or more saves exist on their computer. The in-account menu presents the user with three selectable choices, which is to start a new game, to load an existing save, or to log out of their account. Two other choices are shown but may be indicated as unselectable based on account progression, which are to view the leaderboards and the meta shop. The user selects to load an existing save and is taken to the save selection screen, wherein they can view saves and their respective basic details, select a save to load, or return to the in-account menu via a “back” button. Only saves associated with the logged-in account are shown. Each save has a button associated with it to select the save, and pressing the button changes it to a confirmation button. If the user confirms their choice by pressing the confirmation button, they are entered into the game using the selected save. If they press anywhere else on the screen, the originally selected button reverts away from its confirmation-seeking state.
+
+
+If the user exits the save selection screen, any information on selected-but-not-confirmed classes is discarded.
+
+
+
+
+06) Start Screen/ Menu >> LeaderBoard
+A user has launched the Game and logged into their account with at least 1 run has been finished in some way by some account. The selection to View Leaderboard will be available(local / global). Upon Clicking the button selection a pop-up window with the following data will be available to view:
+Character Name (Account name if no character name specified), (time) Length of run, Score
+
+
+07) Start Screen/Menu >>MetaShop
+A user has launched the game and logged into their account with at least 1 run finished in some way locally. The selection to view Metashop will be available. Upon Clicking the button selection a pop-up window with the following information and choices will be available. Character Name (Account name if no character name specified), Items currently users possession with value/cost and benefit of items listed. Items available for purchase with value/cost and benefit of items listed. Meta-Currency currently available to users for purchase. 
+
+
+If a user clicks on a current item in their personal inventory they will be given the choice to “sell” the item for the value listed at which time the item will be removed from inventory and value will be added to Meta-Currency available to the user. Any benefits of the item will be deducted from the users attribute scores as applicable.
+
+
+If a user clicks on an item for sale they will be given the choice to “purchase” the item for the value listed. The item will then be removed from the MetaShop inventory and populated in the user's personal inventory. The value of the item will be deducted from available Meta-Currency. Any benefits of the item will be added in the characters attribute scores as applicable.
+If the user does not have enough available currency to purchase a selected item, they will be instructed as such.
+
+
+08) Start Screen/Menu >>Wiki
+A user has launched the game and logged into their account with at least 1 run finished in some way locally. The selection to view Wiki will be available.  Upon Clicking the button selection a pop-up window will populate with a simple scrollable wiki containing information relevant to the game.
+
+
+
+
+09)Main Game Screen
+A User that has started a new game or has continued with an existing save will find the Main Window populated with the Game Screen. This will consist of distinct sections laid out in a grid that include Character View, Combat/Action Center, Map/Node View, StoryText Box detailing action choices that will determine in which way the game will progress, Choice Selection Section that consists of two buttons(Choice A and Choice B) that allow the user to select which action they will take through the gameplay.
+
+
+Depending on the Choice A or B  all sections outlined above will be updated through the progression of the game. Details of those updated will be populated in the Combat/Action Center. The map will update to show progression. The Character View will update to reflect any increments or decrements in skills, meta-currency, or inventory. Text Box will populate with a new scenario for the user to evaluate. 
+
+
+The Game will continue until a choice is made that reaches the end of a story thread, or if users skills are decremented to a point where the story thread is ended. 
+
+
+A user may choose at any time to exit the game using an exit choice in the menu bar. The user will be asked if they wish to save progress or exit without saving. If save is chosen their progress will be maintained in their character profile to resume through the main menu at a later time. If a user chooses not to save their progress will be lost and their character profile will not be updated and revert to the last save state. 
+
+
+
+
+10) Main Game Screen>>Character View/Section
+A User in the Main Game Screen will always have this section visible. This portion of the Main Game Screen will consist of an avatar, character(or user) name, relevant statistics, Meta Currency Accumulated  and current inventory items. This will be a view only section and will update as gameplay progresses.
+
+
+11)Main Game Screen>>Combat/Action Center
+
+
+A User in the Main Game Screen will always have this section visible. This portion of the Main Game Screen will include a visual representation of the current action/combat result from a user’s choice selection in gameplay. This will also display any increments or decrements to a user's attributes, meta-currency or inventory that resulted from the most recent choice taken during gameplay. This will be a view only section and will update as gameplay progresses.
+
+
+
+
+12 )Main Game Screen>>Map/Node View
+A User in the Main Game Screen will always have this section visible. This portion of the Main Game Screen will include a visual representation of the progress made. As choices are made by the user the Map will be updated to represent a user’s progression through the game. 
+
+
+This is a visual representation of the decision tree throughout gameplay.  This will be a view only section and will update as gameplay progresses.
+
+
+13)Main Game Screen>>Story Textbox
+A User in the Main Game Screen will always have this section visible. This portion of the Main Game Screen will articulate through text, the story and the choices available to a user as the story progresses. Along with giving information to the user, the Story Textbox will present a choice that will move the game along a decision tree. (Choice A or Choice B). 
+
+
+Once a choice is selected the Story Textbox will update depending upon which choice was made, repeating this loop as the game progresses until a conclusion has been reached or the user chooses to exit/save from the menu bar.
+
+
+This will be a view only section and will update as gameplay progresses.
+
+
+
+
+14)Main Game Screen >>Choice Selection Section
+A User in the Main Game Screen will always have this section visible. This will consist of two clickable buttons that a user will use to select the direction of gameplay. The Story Textbox will provide information to the user from which they will use to determine the best of two choices presented to them. These will likely be YES or NO decisions and the two buttons will be labeled as such. Upon choosing one button to click, the game will progress down that chosen path.
+
+
+The Character View, Combat/Action Center, Map/Node View and Story Textbox will be updated appropriately based upon that choice. 
+
+
+Upon completion of the game the user will use this YES or NO choice to determine whether they would like to play again.
+
+
+15)Main Game Screen>>Menu Bar>>Save/Exit
+A User in the Main Game Screen will always have this section visible in the window menu bar.
+
+
+A user can choose from the drop-down to save or exit. A user may also try and exit from the X in the top right of the Main Game Screen.
+
+
+Anytime a user attempts to exit they will be met with a pop-up dialogue confirming their exit while offering a chance to save progress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[a]Scenarios can/should include
+ A description of the starting situation;
+ A description of the normal flow of events;
+ A description of what can go wrong;
+ Information about other concurrent activities;
+ A description of the state when the scenario finishes.
+[b]I have only added the Requirements  here as a reference for writing the use case scenario paragraphs. I have sifted through the 44 requirements and done my best to try and create a cohesive path for use case. After we get through this week we really need to sit down and hash out specifics for this project.
