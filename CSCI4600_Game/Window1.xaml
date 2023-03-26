@@ -1,0 +1,190 @@
+﻿<Window x:Class="CSCI4600_Game.Window1"
+      
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSCI4600_Game"
+        mc:Ignorable="d"
+        Title="Get Ready for ADVENTURE!!!" Height="600" Width="1200">
+
+    <Grid>
+        <!--Grid Layout-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <!--Menu-->
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <MenuItem Header="_File">
+                <MenuItem Header="New"/>
+                <MenuItem Header="Open"/>
+                <MenuItem Header="Save"/>
+                <Separator/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Extras">
+                <MenuItem Header="MetaShop"/>
+                <MenuItem Header="Wiki"/>
+            </MenuItem>
+        </Menu>
+
+        <!--Character Pane-->
+        <Image 
+            Source="C:\Users\benja\source\repos\GameTestEnvironment\GameTestEnvironment\Images\Avatar_Squirrel.png"  
+            Grid.Column="0" 
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            Margin="50,25,50,50"/>
+        <Label 
+            Content="Name:    _charName" 
+            Grid.Column="0" 
+            Grid.Row="1"
+            FontWeight="Bold"  
+            HorizontalAlignment="Left" 
+            Margin="50,200,0,0"/>
+        <Label 
+            Content="Health:  _health" 
+            Grid.Column="0" 
+            Grid.Row="1" 
+            FontWeight="Bold" 
+            HorizontalAlignment="Left" 
+            Margin="50,225,0,0"/>
+        <Label 
+            Content="Attack:  _attack" 
+            Grid.Column="0" 
+            Grid.Row="1" 
+            FontWeight="Bold" 
+            HorizontalAlignment="Left" 
+            Margin="50,250,0,0"/>
+        <Label 
+            Content="Defense: _def"  
+            Grid.Column="0" 
+            Grid.Row="1"  
+            FontWeight="Bold"
+            HorizontalAlignment="Left" 
+            Margin="50,275,0,0"/>
+        <Separator 
+            Grid.Column="0" 
+            Grid.Row="1" 
+            VerticalAlignment="Bottom" 
+            Margin="25,0,25,0"/>
+
+        <!--Action Center -->
+        <Label 
+            Grid.Column="0" 
+            Grid.Row="2"
+            Content="ActionPane" 
+            FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
+            Margin="50,10,0,0"/>
+        <Label 
+            Grid.Column="0" 
+            Grid.Row="2"
+            Content="_actionOccured" 
+            FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
+            Margin="50,60,0,0"/>
+        <!-- MAIN IMAGE -->
+        <Image 
+            Source="C:\Users\benja\source\repos\GameTestEnvironment\GameTestEnvironment\Images\GameBoard.png"  
+            Grid.Column="1" 
+            Grid.Row="1" 
+            Grid.ColumnSpan="1" 
+            Stretch="Fill" 
+            Margin="0,25,0,0"/>
+
+        <!-- GAME TEXT -->
+        <TextBlock  
+            Grid.Column="1" 
+            Grid.Row="2" 
+            Background="White"
+            Padding="25,25,25,25"
+            FontSize="20"
+            TextWrapping="Wrap"
+            Text="This is where the adveture begins! The storyline presented here will allow you to... Get READY FOR ADVENTURE!!"/>
+
+        <!--Inventory Pane -->
+        <Label 
+            Grid.Column="2" 
+            Grid.Row="1"
+            Content="Character Inventory" 
+            FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
+            Margin="50,25,0,0"/>
+        <Label 
+            Content="Meta Currency:   _availCurrency"  
+            Grid.Column="2" 
+            Grid.Row="1"  
+            FontWeight="Bold"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left" 
+            Margin="50,50,0,0"/>
+        <ListBox 
+            Grid.Column="2" 
+            Grid.Row="1"
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Stretch" 
+            Margin="50,75,50,0">
+            <ListBoxItem>_Item_1</ListBoxItem>
+            <ListBoxItem>_Item_2</ListBoxItem>
+            <ListBoxItem>_Item_3</ListBoxItem>
+        </ListBox>
+        <Image 
+            Grid.Column="2"
+            Grid.Row="1" 
+            Source="C:\Users\benja\source\repos\GameTestEnvironment\GameTestEnvironment\Images\BubbleGum.png" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Bottom" 
+            Margin="50,25,50,75" 
+            Width="100"/>
+        <Separator 
+            Grid.Column="2"
+            Grid.Row="1" 
+            VerticalAlignment="Bottom" 
+            Margin="25,0,25,0"/>
+
+        <!--SELECTION PANE-->
+        <Label
+            Grid.Column="2"   
+            Grid.Row="2" 
+            Content="What is your Choice?!" 
+            HorizontalContentAlignment="Left" 
+            Margin="50,10,50,50" 
+            VerticalAlignment="Top"
+            FontWeight="Bold" />
+        <Button  
+            Grid.Column="2" 
+            Grid.Row="2" 
+            Content="Yes" 
+            HorizontalAlignment="Center" 
+            Margin="50" 
+            Width="75"
+            VerticalAlignment="Top"/>
+        <Button  
+            Grid.Column="2" 
+            Grid.Row="2" 
+            Content="No" 
+            HorizontalAlignment="Center" 
+            Margin="50" 
+            Width="75"
+            VerticalAlignment="Bottom"/>
+
+
+
+
+
+    </Grid>
+</Window>
+
