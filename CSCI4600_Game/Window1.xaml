@@ -39,7 +39,8 @@
 
         <!--Character Pane-->
         <Image 
-            Source="C:\Users\benja\source\repos\GameTestEnvironment\GameTestEnvironment\Images\Avatar_Squirrel.png"  
+            x:Name="characterImage"
+            Source="\Resources\characterImage_Puppers.png"  
             Grid.Column="0" 
             Grid.Row="1"
             VerticalAlignment="Top"
@@ -87,17 +88,18 @@
             VerticalAlignment="Top" 
             HorizontalAlignment="Left" 
             Margin="50,10,0,0"/>
-        <Label 
-            Grid.Column="0" 
-            Grid.Row="2"
-            Content="_actionOccured" 
-            FontWeight="Bold" 
-            VerticalAlignment="Top" 
-            HorizontalAlignment="Left" 
-            Margin="50,60,0,0"/>
+        <Image 
+            Grid.Column="0"
+            Grid.Row="2" 
+            Source="\Resources\itemImage_Swords.png" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Bottom" 
+            Margin="50,50,50,50" 
+            Width="200"/>
         <!-- MAIN IMAGE -->
         <Image 
-            Source="C:\Users\benja\source\repos\GameTestEnvironment\GameTestEnvironment\Images\GameBoard.png"  
+            x:Name="mapImage"
+            Source="\Resources\mapImage_0.png"
             Grid.Column="1" 
             Grid.Row="1" 
             Grid.ColumnSpan="1" 
@@ -106,13 +108,14 @@
 
         <!-- GAME TEXT -->
         <TextBlock  
+            x:Name="Story_TextBlock"
             Grid.Column="1" 
             Grid.Row="2" 
             Background="White"
             Padding="25,25,25,25"
             FontSize="20"
             TextWrapping="Wrap"
-            Text="This is where the adveture begins! The storyline presented here will allow you to... Get READY FOR ADVENTURE!!"/>
+            Text="Are you READY FOR ADVENTURE!!!"/>
 
         <!--Inventory Pane -->
         <Label 
@@ -144,7 +147,7 @@
         <Image 
             Grid.Column="2"
             Grid.Row="1" 
-            Source="C:\Users\benja\source\repos\GameTestEnvironment\GameTestEnvironment\Images\BubbleGum.png" 
+            Source="\Resources\itemImage_Potion.png" 
             HorizontalAlignment="Center" 
             VerticalAlignment="Bottom" 
             Margin="50,25,50,75" 
@@ -165,6 +168,7 @@
             VerticalAlignment="Top"
             FontWeight="Bold" />
         <Button  
+            Click="Yes_Click"
             Grid.Column="2" 
             Grid.Row="2" 
             Content="Yes" 
@@ -172,7 +176,8 @@
             Margin="50" 
             Width="75"
             VerticalAlignment="Top"/>
-        <Button  
+        <Button 
+            Click="No_Click"
             Grid.Column="2" 
             Grid.Row="2" 
             Content="No" 
@@ -187,4 +192,3 @@
 
     </Grid>
 </Window>
-

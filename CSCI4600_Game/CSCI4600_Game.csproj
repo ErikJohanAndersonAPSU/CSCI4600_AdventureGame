@@ -7,4 +7,65 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\characterImage_Boy.png" />
+    <None Remove="Resources\characterImage_Girl.png" />
+    <None Remove="Resources\characterImage_Puppers.png" />
+    <None Remove="Resources\characterImage_Robot.png" />
+    <None Remove="Resources\itemImage_Duct_Tape.png" />
+    <None Remove="Resources\itemImage_Potion.png" />
+    <None Remove="Resources\itemImage_Shield.png" />
+    <None Remove="Resources\itemImage_Swords.png" />
+    <None Remove="Resources\mapImage_0.png" />
+    <None Remove="Resources\mapImage_1.png" />
+    <None Remove="Resources\mapImage_10.png" />
+    <None Remove="Resources\mapImage_11.png" />
+    <None Remove="Resources\mapImage_12.png" />
+    <None Remove="Resources\mapImage_13.png" />
+    <None Remove="Resources\mapImage_14.png" />
+    <None Remove="Resources\mapImage_15.png" />
+    <None Remove="Resources\mapImage_16.png" />
+    <None Remove="Resources\mapImage_2.png" />
+    <None Remove="Resources\mapImage_3.png" />
+    <None Remove="Resources\mapImage_4.png" />
+    <None Remove="Resources\mapImage_5.png" />
+    <None Remove="Resources\mapImage_6.png" />
+    <None Remove="Resources\mapImage_7.png" />
+    <None Remove="Resources\mapImage_8.png" />
+    <None Remove="Resources\mapImage_9.png" />
+    <None Remove="Resources\titlePage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\characterImage_Boy.png" />
+    <Resource Include="Resources\characterImage_Girl.png" />
+    <Resource Include="Resources\characterImage_Puppers.png" />
+    <Resource Include="Resources\characterImage_Robot.png" />
+    <Resource Include="Resources\itemImage_Duct_Tape.png" />
+    <Resource Include="Resources\itemImage_Potion.png" />
+    <Resource Include="Resources\itemImage_Shield.png" />
+    <Resource Include="Resources\itemImage_Swords.png" />
+    <Resource Include="Resources\mapImage_10.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\mapImage_0.png" />
+    <Resource Include="Resources\mapImage_1.png" />
+    <Resource Include="Resources\mapImage_11.png" />
+    <Resource Include="Resources\mapImage_12.png" />
+    <Resource Include="Resources\mapImage_13.png" />
+    <Resource Include="Resources\mapImage_14.png" />
+    <Resource Include="Resources\mapImage_15.png" />
+    <Resource Include="Resources\mapImage_16.png" />
+    <Resource Include="Resources\mapImage_2.png" />
+    <Resource Include="Resources\mapImage_3.png" />
+    <Resource Include="Resources\mapImage_4.png" />
+    <Resource Include="Resources\mapImage_5.png" />
+    <Resource Include="Resources\mapImage_6.png" />
+    <Resource Include="Resources\mapImage_7.png" />
+    <Resource Include="Resources\mapImage_8.png" />
+    <Resource Include="Resources\mapImage_9.png" />
+    <Resource Include="Resources\titlePage.png" />
+  </ItemGroup>
+
 </Project>
