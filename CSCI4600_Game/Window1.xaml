@@ -168,6 +168,7 @@
             VerticalAlignment="Top"
             FontWeight="Bold" />
         <Button  
+			
             Click="Yes_Click"
             Grid.Column="2" 
             Grid.Row="2" 
