@@ -25,10 +25,35 @@ namespace CSCI4600_Game
             InitializeComponent();
         }
 
+
+        //MainWindow Buttons
         private void Test_Click(object sender, RoutedEventArgs e)
         {
             Window1 window1 = new Window1();
             window1.Show();
         }
+        private void NewGame_Click(object sender, RoutedEventArgs e)
+        {  
+
+        }
+        private void LoadGame_Click(object sender, RoutedEventArgs e)
+        {  
+
+        }
+        private void MetaShop_Click(object sender, RoutedEventArgs e)
+        {  
+
+        }
+        private void Wiki_Click(object sender, RoutedEventArgs e)
+        {
+            WikiWindow wikiWindow = new WikiWindow();
+            wikiWindow.Show();
+
+        }
+        private void LeaderBoard_Click(object sender, RoutedEventArgs e)
+        {  
+
+        }
+
     }
 }

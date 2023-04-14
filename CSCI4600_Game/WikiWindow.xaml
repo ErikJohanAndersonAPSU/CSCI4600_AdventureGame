@@ -1,0 +1,105 @@
+﻿<Window x:Class="CSCI4600_Game.WikiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSCI4600_Game"
+        mc:Ignorable="d"
+        Title="AdventureGame Wiki" Height="450" Width="800">
+
+    <ScrollViewer HorizontalAlignment="Right" VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <RichTextBox Height="444">
+                <FlowDocument>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="platea ipsum dolor aptent fusce sit mattis nibh consequat praesent."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Parturient ac lacus molestie potenti iaculis enim nullam tincidunt hendrerit imperdiet velit phasellus."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="posuere justo inceptos arcu justo praesent."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="platea ipsum dolor aptent fusce sit mattis nibh consequat praesent."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Parturient ac lacus molestie potenti iaculis enim nullam tincidunt hendrerit imperdiet velit phasellus."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="posuere justo inceptos arcu justo praesent."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="posuere justo inceptos arcu justo praesent."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="posuere justo inceptos arcu justo praesent."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="posuere justo inceptos arcu justo praesent."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Bold>
+                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
+                        </Bold>
+                        <LineBreak/>
+                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
+                    </Paragraph>
+
+
+                </FlowDocument>
+            </RichTextBox>
+        </StackPanel>
+    </ScrollViewer>
+
+</Window>

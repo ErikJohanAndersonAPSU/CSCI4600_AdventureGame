@@ -45,6 +45,8 @@
         Stretch="Fill"/>
 
         <Button 
+			x:Name="NewGame_Button"
+			Click="NewGame_Click"
             Grid.Column="0"
             Grid.Row="1"
             Content="New Game" 
@@ -53,6 +55,8 @@
             Width="80"
             Margin="200,200,0,175" />
         <Button 
+			x:Name="LoadGame_Button"
+			Click="LoadGame_Click"
             Grid.Column="0"
             Grid.Row="1"
             Content="Load Game" 
@@ -61,6 +65,8 @@
             Width="80"
             Margin="300,200,0,175" />
         <Button 
+			x:Name="MetaShop_Button"
+			Click="MetaShop_Click"
             Grid.Column="0"
             Grid.Row="1"
             Content="Meta Shop" 
@@ -69,16 +75,30 @@
             Width="80"
             Margin="400,200,0,175" />
         <Button 
+			x:Name="Wiki_Button"
+			Click="Wiki_Click"
             Grid.Column="0"
             Grid.Row="1"
             Content="Wiki" 
             HorizontalAlignment="Left" 
             VerticalAlignment="Bottom"
             Width="80"
-            Margin="500,200,0,175" />
+            Margin="500,200,0,175"
+			/>
+		<Button
+		  x:Name="LeaderBoard_Button"
+		  Click="LeaderBoard_Click"
+		  Grid.Column="0"
+		  Grid.Row="1"
+		  Content="Leader Board"
+		  HorizontalAlignment="Left"
+		  VerticalAlignment="Bottom"
+		  Width="80"
+		  Margin="600,200,0,175" />
 
         <Button 
-            x:Name="Test"
+            x:Name="Test_Button"
+			Click="Test_Click"
             Grid.Column="0"
             Grid.Row="1"
             Content="TEST GAME" 
@@ -86,7 +106,9 @@
             VerticalAlignment="Bottom" 
             Width="150"
             Margin="100,100,100,100" 
-            Click="Test_Click"/>
+            />
 
     </Grid>
+	
+	
 </Window>
