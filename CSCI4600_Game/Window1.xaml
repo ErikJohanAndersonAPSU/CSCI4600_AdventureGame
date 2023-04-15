@@ -11,9 +11,11 @@
     <Grid>
         <!--Grid Layout-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="240*" />
+            <ColumnDefinition Width="720*" />
+            <ColumnDefinition Width="229*" />
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -22,7 +24,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
-      
+
 
         <!--Character Pane-->
         <Image 
@@ -31,7 +33,7 @@
             Grid.Column="0" 
             Grid.Row="1"
             VerticalAlignment="Top"
-            Margin="50,25,50,50"/>
+            Margin="50,25,50,0"/>
         <Label 
             Content="Name:    _charName" 
             Grid.Column="0" 
@@ -63,8 +65,8 @@
         <Separator 
             Grid.Column="0" 
             Grid.Row="1" 
-            VerticalAlignment="Bottom" 
-            Margin="25,0,25,0"/>
+            VerticalAlignment="Top" 
+            Margin="25,375,25,0"/>
 
         <!--Action Center -->
         <Label 
@@ -75,13 +77,11 @@
             VerticalAlignment="Top" 
             HorizontalAlignment="Left" 
             Margin="50,10,0,0"/>
-        <Image 
-            Grid.Column="0"
+        <Image
             Grid.Row="2" 
             Source="\Resources\itemImage_Swords.png" 
             HorizontalAlignment="Center" 
-            VerticalAlignment="Bottom" 
-            Margin="50,50,50,50" 
+            VerticalAlignment="Center" 
             Width="200"/>
         <!-- MAIN IMAGE -->
         <Image 
@@ -97,12 +97,12 @@
         <TextBlock  
             x:Name="Story_TextBlock"
             Grid.Column="1" 
-            Grid.Row="2" 
+            Grid.Row="1" 
             Background="White"
             Padding="25,25,25,25"
             FontSize="20"
             TextWrapping="Wrap"
-            Text="Are you READY FOR ADVENTURE!!!"/>
+            Text="Are you READY FOR ADVENTURE!!!" Margin="0,376,0,0" Grid.RowSpan="2"/>
 
         <!--Inventory Pane -->
         <Label 
@@ -120,13 +120,12 @@
             FontWeight="Bold"
             VerticalAlignment="Top"
             HorizontalAlignment="Left" 
-            Margin="50,50,0,0"/>
+            Margin="50,50,0,0" Grid.ColumnSpan="2"/>
         <ListBox 
             Grid.Column="2" 
             Grid.Row="1"
             VerticalAlignment="Top" 
-            HorizontalAlignment="Stretch" 
-            Margin="50,75,50,0">
+            Margin="50,75,39,0">
             <ListBoxItem>_Item_1</ListBoxItem>
             <ListBoxItem>_Item_2</ListBoxItem>
             <ListBoxItem>_Item_3</ListBoxItem>
@@ -135,15 +134,15 @@
             Grid.Column="2"
             Grid.Row="1" 
             Source="\Resources\itemImage_Potion.png" 
-            HorizontalAlignment="Center" 
+            HorizontalAlignment="Left" 
             VerticalAlignment="Bottom" 
-            Margin="50,25,50,75" 
+            Margin="70,0,0,75" 
             Width="100"/>
         <Separator 
             Grid.Column="2"
             Grid.Row="1" 
             VerticalAlignment="Bottom" 
-            Margin="25,0,25,0"/>
+            Margin="25,0,14,0"/>
 
         <!--SELECTION PANE-->
         <Label
@@ -151,7 +150,7 @@
             Grid.Row="2" 
             Content="What is your Choice?!" 
             HorizontalContentAlignment="Left" 
-            Margin="50,10,50,50" 
+            Margin="50,10,39,0" 
             VerticalAlignment="Top"
             FontWeight="Bold" />
         <Button  
@@ -160,19 +159,19 @@
             Grid.Column="2" 
             Grid.Row="2" 
             Content="Yes" 
-            HorizontalAlignment="Center" 
-            Margin="50" 
-            Width="75"
+            HorizontalAlignment="Left" 
+            Margin="80,50,0,0" 
+            Width="76"
             VerticalAlignment="Top"/>
         <Button 
             Click="No_Click"
             Grid.Column="2" 
             Grid.Row="2" 
             Content="No" 
-            HorizontalAlignment="Center" 
-            Margin="50" 
-            Width="75"
-            VerticalAlignment="Bottom"/>
+            HorizontalAlignment="Left" 
+            Margin="80,118,0,0" 
+            Width="76"
+            VerticalAlignment="Top"/>
 
 
 

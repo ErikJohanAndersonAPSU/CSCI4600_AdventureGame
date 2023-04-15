@@ -28,7 +28,10 @@ namespace CSCI4600_Game
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            
+            //If Data is valid Save User Login and open NewGameWindow
+
+            NewGameWindow newGameWindow = new NewGameWindow();  
+            newGameWindow.Show();
         }
 
       
