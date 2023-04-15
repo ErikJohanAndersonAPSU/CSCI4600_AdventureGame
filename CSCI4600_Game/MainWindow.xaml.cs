@@ -33,8 +33,9 @@ namespace CSCI4600_Game
             window1.Show();
         }
         private void NewGame_Click(object sender, RoutedEventArgs e)
-        {  
-
+        {
+            UserRegistration userregistrationWindow = new UserRegistration();
+            userregistrationWindow.Show();
         }
         private void LoadGame_Click(object sender, RoutedEventArgs e)
         {  
