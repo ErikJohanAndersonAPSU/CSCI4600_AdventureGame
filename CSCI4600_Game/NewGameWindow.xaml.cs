@@ -24,25 +24,7 @@ namespace CSCI4600_Game
             InitializeComponent();
         }
 
-        private void setCharacterBoy(object sender, MouseButtonEventArgs e)
-        {
-            //Set Character Type and Avatar
-        }
-
-        private void setCharacterGirl(object sender, MouseButtonEventArgs e)
-        {
-            //Set Character Type and Avatar
-        }
-
-        private void setCharacterPuppers(object sender, MouseButtonEventArgs e)
-        {
-            //Set Character Type and Avatar
-        }
-
-        private void setCharacterRobot(object sender, MouseButtonEventArgs e)
-        {
-            //Set Character Type and Avatar
-        }
+    
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
@@ -55,5 +37,30 @@ namespace CSCI4600_Game
           
            Close();
         }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            //Reset Form
+        }
+
+        private void setGirlClick(object sender, RoutedEventArgs e)
+        {
+            //set Avatar and Character
+        }
+        private void setBoyClick(object sender, RoutedEventArgs e)
+        {
+            //set Avatar and Character
+        }
+        private void setRobotClick(object sender, RoutedEventArgs e)
+        {
+            //set Avatar and Character
+        }
+
+        private void setPuppersClick(object sender, RoutedEventArgs e)
+        {
+            //set Avatar and Character
+        }
+
+    
     }
 }

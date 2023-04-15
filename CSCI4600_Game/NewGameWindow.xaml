@@ -20,26 +20,28 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <!-- First row, first column -->
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Select a Character:" Margin="10" />
-        <Image Source="\Resources\characterImage_Boy.png" Grid.Row="1" Grid.Column="0" Width="75" Height="75" Margin="10" MouseDown="setCharacterBoy" />
-        <Image Source="\Resources\characterImage_Girl.png" Grid.Row="1" Grid.Column="1" Width="75" Height="75" Margin="10" MouseDown="setCharacterGirl" />
-        <Image Source="\Resources\characterImage_Puppers.png" Grid.Row="1" Grid.Column="2" Width="75" Height="75" Margin="10" MouseDown="setCharacterPuppers" />
-        <Image Source="\Resources\characterImage_Robot.png" Grid.Row="1" Grid.Column="3" Width="75" Height="75" Margin="10" MouseDown="setCharacterRobot"/>
+       
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Select a Character:"/>
 
-     
+        <Button x:Name="setGirlButton" Grid.Row="1" Grid.Column="0" Width="75" Height="75" Margin="10" Click="setGirlClick">
+            <Image Source="\Resources\characterImage_Boy.png"/>
+        </Button>
+        <Button x:Name="setBoyButton" Grid.Row="1" Grid.Column="1" Width="75" Height="75" Margin="10" Click="setBoyClick">
+            <Image Source="\Resources\characterImage_Girl.png"/>
+        </Button>
+        <Button x:Name="setPuppersButton" Grid.Row="1" Grid.Column="2" Width="75" Height="75" Margin="10" Click="setPuppersClick">
+            <Image Source="\Resources\characterImage_Puppers.png"/>
+        </Button>
+        <Button x:Name="setRobotButton" Grid.Row="1" Grid.Column="3" Width="75" Height="75" Margin="10" Click="setRobotClick">
+            <Image Source="\Resources\characterImage_Robot.png"/>
+        </Button>
         
-
-        <!-- Second row, first column -->
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Choose a Character Name:" Margin="10" />
-        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="characterName" Margin="10"/>
+     
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Choose a Name:" Margin="10" />
+        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Height="auto" x:Name="characterName" Margin="10"/>
         <Button Grid.Row="3" Grid.Column="1" Content="Submit" Height="23" HorizontalAlignment="Left" Margin="20" Name="submitButton" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
         <Button Grid.Row="3" Grid.Column="2" Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="20" Name="cancelButton" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />
-
-
-
-
-
+        <Button Grid.Row="3" Grid.Column="3" Content="Reset" Height="23" HorizontalAlignment="Left" Margin="20" Name="resetButton" VerticalAlignment="Top" Width="70" Click="Reset_Click" />
 
     </Grid>
 </Window>
