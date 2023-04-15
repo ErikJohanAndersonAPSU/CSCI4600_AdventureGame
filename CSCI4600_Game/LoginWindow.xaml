@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="Login" Height="auto" Width="auto">
+        Title="Login" Height="250" Width="500">
     <Grid  Height="Auto" Width="auto">
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Text="Login:" VerticalAlignment="Top" Width="146"  FontSize="17" FontStretch="ExtraCondensed"/>
         <!--Button as a Link button using style-->
@@ -13,7 +13,7 @@
         <Grid Margin="31,63,29,0" Background="White" Height="150" VerticalAlignment="Top">
             <Grid.RowDefinitions>
                 <RowDefinition Height="252*" />
-                <!--   <RowDefinition Height="12*" />-->
+          
             </Grid.RowDefinitions>
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="textBlockUserName" Text="User Name:" VerticalAlignment="Top" Width="110" />
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,48,0,0" Name="textBlockPassword" Text="Password:" VerticalAlignment="Top" Width="110"  />
@@ -21,7 +21,7 @@
 
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="textBoxUserName" VerticalAlignment="Top" Width="222" />
             <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,48,0,0" Name="textBoxPassword" VerticalAlignment="Top" Width="222" />
-            <!--For password-->
+         
             <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="183,76,0,0" Name="submitButton" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
             <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="258,76,0,0" Name="resetButton" VerticalAlignment="Top" Width="70" Click="Reset_Click" />
             <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="335,76,0,0" Name="cancelButton" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />

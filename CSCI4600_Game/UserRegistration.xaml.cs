@@ -42,7 +42,11 @@ namespace CSCI4600_Game
             Close();
         }
 
-        
-       
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
+            Close();
+        }
     }
 }

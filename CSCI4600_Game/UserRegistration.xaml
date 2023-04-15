@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="User Registration" Height="Auto" Width="Auto">
+        Title="User Registration" Height="300" Width="500">
     <Grid  Height="Auto" Width="auto">
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Text="User Registration:" VerticalAlignment="Top" Width="146"  FontSize="17" FontStretch="ExtraCondensed"/>
         <!--Button as a Link button using style-->
@@ -23,9 +23,12 @@
             <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,48,0,0" Name="textBoxPassword" VerticalAlignment="Top" Width="222" />
             <!--For password-->
             <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,76,0,0" Name="textBoxConfirmPassword" VerticalAlignment="Top" Width="222" />
-            <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="183,0,0,0" Name="Submit" VerticalAlignment="Center" Width="70" Click="Submit_Click" />
-            <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="258,0,0,0" Name="button2" VerticalAlignment="Center" Width="70" Click="Reset_Click" />
-            <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="335,0,0,0" Name="button3" VerticalAlignment="Center" Width="70" Click="Cancel_Click" />
+            <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="259,154,0,0" Name="LoginButton" VerticalAlignment="Top" Width="70" Click="Login_Click" />
+
+            <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="183,0,0,0" Name="SubmitButton" VerticalAlignment="Center" Width="70" Click="Submit_Click" />
+            <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="258,0,0,0" Name="ResetButton" VerticalAlignment="Center" Width="70" Click="Reset_Click" />
+            <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="335,0,0,0" Name="CancelButton" VerticalAlignment="Center" Width="70" Click="Cancel_Click" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,154,0,0" x:Name="textBlockConfirmPassword_Copy" Text="Already Have an Account?" VerticalAlignment="Top" Width="158" RenderTransformOrigin="0.366,3.424" />
         </Grid>
     </Grid>
 </Window>

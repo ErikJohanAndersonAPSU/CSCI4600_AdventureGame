@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="AdventureGame Wiki" Height="450" Width="800">
+        Title="AdventureGame Wiki" Height="600" Width="800">
 
     <ScrollViewer HorizontalAlignment="Right" VerticalScrollBarVisibility="Auto">
         <StackPanel>
@@ -99,6 +99,7 @@
 
                 </FlowDocument>
             </RichTextBox>
+            <Button Content="Done" HorizontalAlignment="Center" Name="DoneButton" Click="DoneButton_Click"/>
         </StackPanel>
     </ScrollViewer>
 

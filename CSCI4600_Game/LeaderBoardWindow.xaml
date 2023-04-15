@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="Leaderboard" Height="450" Width="800">
+        Title="Leaderboard" Height="400" Width="800">
     <Grid>
-        
+        <Button Content="Done" Name="DoneButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="DoneButtone_Click" Margin="10"/>
+
     </Grid>
 </Window>

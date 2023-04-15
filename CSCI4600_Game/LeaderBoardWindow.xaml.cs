@@ -23,5 +23,10 @@ namespace CSCI4600_Game
         {
             InitializeComponent();
         }
+
+        private void DoneButtone_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

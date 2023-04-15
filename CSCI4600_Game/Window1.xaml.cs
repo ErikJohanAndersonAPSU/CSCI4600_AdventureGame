@@ -73,7 +73,7 @@ namespace CSCI4600_Game
 
 
         private void Yes_Click(object sender, RoutedEventArgs e) {
-         
+         //choiceYes(position)
              int position = postionCounter;
             if (position == 0)
             {
@@ -150,6 +150,9 @@ namespace CSCI4600_Game
         }
         private void No_Click(object sender, RoutedEventArgs e)
         {
+
+            //Create option class/call function?
+            //choiceNo(position)
             int position = postionCounter;
             if (position == 0)
             {
@@ -227,6 +230,7 @@ namespace CSCI4600_Game
 
 
         //Begin GamePlay() 
+        //Put in class/function call?
         /**********************************************************************/
         public void  GamePlay(int positionCounter)
             {

@@ -32,6 +32,7 @@ namespace CSCI4600_Game
 
             NewGameWindow newGameWindow = new NewGameWindow();  
             newGameWindow.Show();
+            Close();
         }
 
       
