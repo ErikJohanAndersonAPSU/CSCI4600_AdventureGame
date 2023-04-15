@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-       Title="The Adventure Game" Height="600" Width="1200">
+       Title="GET READY FOR ADVENTURE!!!" Height="600" Width="1200">
     <Grid>
         <!--Grid Layout-->
         <Grid.ColumnDefinitions>
@@ -19,21 +19,7 @@
 
         </Grid.RowDefinitions>
 
-        <!--Menu-->
-        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
-            <MenuItem Header="_File">
-                <MenuItem Header="New"/>
-                <MenuItem Header="Open"/>
-                <MenuItem Header="Save"/>
-                <Separator/>
-                <MenuItem Header="Exit"/>
-            </MenuItem>
-            <MenuItem Header="_Extras">
-                <MenuItem Header="MetaShop"/>
-                <MenuItem Header="Wiki"/>
-            </MenuItem>
-        </Menu>
-
+     
 		
 		<Image 
         Grid.Column="0"

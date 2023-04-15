@@ -15,34 +15,31 @@ using System.Windows.Shapes;
 namespace CSCI4600_Game
 {
     /// <summary>
-    /// Interaction logic for UserRegistration.xaml
+    /// Interaction logic for LoginWindow.xaml
     /// </summary>
-    public partial class UserRegistration : Window
+    public partial class LoginWindow : Window
     {
-        public UserRegistration()
+        public LoginWindow()
         {
             InitializeComponent();
         }
 
-        //Buttons for User Registration Window
+      
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
+
+      
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
-            textBoxUserName.Clear();
             textBoxPassword.Clear();
-            textBoxConfirmPassword.Clear();
+            textBoxUserName.Clear();
         }
-
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
-
-        
-       
     }
 }

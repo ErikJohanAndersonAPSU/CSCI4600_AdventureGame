@@ -22,20 +22,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
-        <!--Menu-->
-        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
-            <MenuItem Header="_File">
-                <MenuItem Header="New"/>
-                <MenuItem Header="Open"/>
-                <MenuItem Header="Save"/>
-                <Separator/>
-                <MenuItem Header="Exit"/>
-            </MenuItem>
-            <MenuItem Header="_Extras">
-                <MenuItem Header="MetaShop"/>
-                <MenuItem Header="Wiki"/>
-            </MenuItem>
-        </Menu>
+      
 
         <!--Character Pane-->
         <Image 
