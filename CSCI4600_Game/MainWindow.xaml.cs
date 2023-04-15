@@ -33,16 +33,19 @@ namespace CSCI4600_Game
             window1.Show();
         }
         private void NewGame_Click(object sender, RoutedEventArgs e)
-        {  
-
+        {
+            UserRegistration userregistrationWindow = new UserRegistration();
+            userregistrationWindow.Show();
         }
         private void LoadGame_Click(object sender, RoutedEventArgs e)
-        {  
-
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
         }
         private void MetaShop_Click(object sender, RoutedEventArgs e)
-        {  
-
+        {
+            MetaShopWindow metaShopWindow = new MetaShopWindow();
+            metaShopWindow.Show();
         }
         private void Wiki_Click(object sender, RoutedEventArgs e)
         {
@@ -52,7 +55,8 @@ namespace CSCI4600_Game
         }
         private void LeaderBoard_Click(object sender, RoutedEventArgs e)
         {  
-
+            LeaderBoardWindow leaderBoardWindow = new LeaderBoardWindow();
+            leaderBoardWindow.Show();
         }
 
     }

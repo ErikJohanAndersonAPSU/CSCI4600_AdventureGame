@@ -9,11 +9,11 @@
 
     <ScrollViewer HorizontalAlignment="Right" VerticalScrollBarVisibility="Auto">
         <StackPanel>
-            <RichTextBox Height="444">
+            <RichTextBox Height="auto" Margin="50">
                 <FlowDocument>
                     <Paragraph>
                         <Bold>
-                            <Run Text="platea ipsum dolor aptent fusce sit mattis nibh consequat praesent."/>
+                            <Run Text="WELCOME TO THE WIKI!!"/>
                         </Bold>
                         <LineBreak/>
                         <Run Text="Parturient ac lacus molestie potenti iaculis enim nullam tincidunt hendrerit imperdiet velit phasellus."/>
