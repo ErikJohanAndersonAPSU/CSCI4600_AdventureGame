@@ -99,7 +99,7 @@
 
                 </FlowDocument>
             </RichTextBox>
-            <Button Content="Done" HorizontalAlignment="Center" Name="DoneButton" Click="DoneButton_Click"/>
+            <Button Content="Done" HorizontalAlignment="Center" Name="DoneButton" Click="DoneButton_Click" Margin="20"/>
         </StackPanel>
     </ScrollViewer>
 

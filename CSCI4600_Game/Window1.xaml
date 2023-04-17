@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="Get Ready for ADVENTURE!!!" Height="600" Width="1200">
+        Title="Get Ready for ADVENTURE!!!" Height="auto" Width="auto">
 
     <Grid>
         <!--Grid Layout-->
@@ -33,34 +33,38 @@
             Grid.Column="0" 
             Grid.Row="1"
             VerticalAlignment="Top"
-            Margin="50,25,50,0"/>
+            Margin="50,20,50,80"/>
         <Label 
-            Content="Name:    _charName" 
+            Content="Name: [Character Name]" 
             Grid.Column="0" 
             Grid.Row="1"
             FontWeight="Bold"  
-            HorizontalAlignment="Left" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
             Margin="50,200,0,0"/>
         <Label 
-            Content="Health:  _health" 
+            Content="Health:[Health]" 
             Grid.Column="0" 
             Grid.Row="1" 
             FontWeight="Bold" 
             HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
             Margin="50,225,0,0"/>
         <Label 
-            Content="Attack:  _attack" 
+            Content="Strength:[Strength]" 
             Grid.Column="0" 
             Grid.Row="1" 
             FontWeight="Bold" 
             HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
             Margin="50,250,0,0"/>
         <Label 
-            Content="Defense: _def"  
+            Content="Defense: [Defense]"  
             Grid.Column="0" 
             Grid.Row="1"  
             FontWeight="Bold"
             HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
             Margin="50,275,0,0"/>
         <Separator 
             Grid.Column="0" 
@@ -72,16 +76,18 @@
         <Label 
             Grid.Column="0" 
             Grid.Row="2"
-            Content="ActionPane" 
+            Content="ACTION!" 
             FontWeight="Bold" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Left" 
             Margin="50,10,0,0"/>
         <Image
-            Grid.Row="2" 
+            Grid.Row="2"
+            x:Name="actionImage"
             Source="\Resources\itemImage_Swords.png" 
             HorizontalAlignment="Center" 
             VerticalAlignment="Center" 
+            Margin="10"
             Width="200"/>
         <!-- MAIN IMAGE -->
         <Image 
@@ -91,18 +97,19 @@
             Grid.Row="1" 
             Grid.ColumnSpan="1" 
             Stretch="Fill" 
-            Margin="0,25,0,0"/>
+            Margin="25"/>
 
         <!-- GAME TEXT -->
         <TextBlock  
             x:Name="Story_TextBlock"
             Grid.Column="1" 
-            Grid.Row="1" 
+            Grid.Row="2" 
             Background="White"
             Padding="25,25,25,25"
             FontSize="20"
             TextWrapping="Wrap"
-            Text="Are you READY FOR ADVENTURE!!!" Margin="0,376,0,0" Grid.RowSpan="2"/>
+            Text="Are you READY FOR ADVENTURE!!!" Margin="0" 
+            Grid.RowSpan="2"/>
 
         <!--Inventory Pane -->
         <Label 
@@ -114,7 +121,7 @@
             HorizontalAlignment="Left" 
             Margin="50,25,0,0"/>
         <Label 
-            Content="Meta Currency:   _availCurrency"  
+            Content="MetaCurrency: [$$$$]"  
             Grid.Column="2" 
             Grid.Row="1"  
             FontWeight="Bold"
@@ -148,10 +155,10 @@
         <Label
             Grid.Column="2"   
             Grid.Row="2" 
-            Content="What is your Choice?!" 
+            Content="" 
             HorizontalContentAlignment="Left" 
-            Margin="50,10,39,0" 
-            VerticalAlignment="Top"
+            Margin="20" 
+            VerticalAlignment="Bottom"
             FontWeight="Bold" />
         <Button  
 			
@@ -159,19 +166,21 @@
             Grid.Column="2" 
             Grid.Row="2" 
             Content="Yes" 
-            HorizontalAlignment="Left" 
-            Margin="80,50,0,0" 
-            Width="76"
+            HorizontalAlignment="Center" 
+            Margin="30" 
+            Width="80"
+            Height="50"
             VerticalAlignment="Top"/>
         <Button 
             Click="No_Click"
             Grid.Column="2" 
             Grid.Row="2" 
             Content="No" 
-            HorizontalAlignment="Left" 
-            Margin="80,118,0,0" 
-            Width="76"
-            VerticalAlignment="Top"/>
+            HorizontalAlignment="Center" 
+            Margin="30" 
+            Height="50"
+            Width="80"
+            VerticalAlignment="Bottom"/>
 
 
 

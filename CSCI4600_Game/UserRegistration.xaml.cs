@@ -28,7 +28,9 @@ namespace CSCI4600_Game
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-
+            NewGameWindow newGameWindow = new NewGameWindow();
+            newGameWindow.Show();
+            Close();    
         }
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
