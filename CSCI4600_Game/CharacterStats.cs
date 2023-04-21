@@ -29,7 +29,9 @@ namespace CSCI4600_Game
 
         public Boolean DoStatsPass(CharacterStats stats)
         {
-            return true;
+            return (Health >= stats.Health
+                && Attack >= stats.Attack
+                && Defense >= stats.Defense);
         }
     }
 }

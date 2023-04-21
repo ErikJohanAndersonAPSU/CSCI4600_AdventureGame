@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,8 @@ namespace CSCI4600_Game
             {
                 //Resets position counter when window1 opened
                 postionCounter=0;
+
+                AdventureGameManager.Test();
             }
         }
 

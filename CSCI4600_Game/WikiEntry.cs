@@ -16,5 +16,9 @@ namespace CSCI4600_Game
             _name = name;
             _desc = desc;
         }
+
+        public string Name { get { return _name; } }
+
+        public string Desc { get { return _desc; } }
     }
 }
