@@ -11,6 +11,11 @@ namespace CSCI4600_Game
 {
     internal class AdventureGameManager
     {
+        internal static Account[] accounts;
+        internal static Account currentAccount;
+
+        internal static Save[] saves;
+
         public static void Test()
         {
             //-------------------------------------------------------------------------------------------------------------------------------------

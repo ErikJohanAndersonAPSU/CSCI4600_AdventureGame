@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Account\0.txt" />
+    <None Remove="Resources\Account\1.txt" />
+    <None Remove="Resources\Account\21.txt" />
+    <None Remove="Resources\Account\32.txt" />
+    <None Remove="Resources\Account\81.txt" />
     <None Remove="Resources\characterImage_Boy.png" />
     <None Remove="Resources\characterImage_Girl.png" />
     <None Remove="Resources\characterImage_Puppers.png" />
@@ -16,6 +21,14 @@
     <None Remove="Resources\itemImage_Potion.png" />
     <None Remove="Resources\itemImage_Shield.png" />
     <None Remove="Resources\itemImage_Swords.png" />
+    <None Remove="Resources\Leaderboard\0.txt" />
+    <None Remove="Resources\Leaderboard\100.txt" />
+    <None Remove="Resources\Leaderboard\101.txt" />
+    <None Remove="Resources\Leaderboard\102.txt" />
+    <None Remove="Resources\Leaderboard\103.txt" />
+    <None Remove="Resources\Leaderboard\2.txt" />
+    <None Remove="Resources\Leaderboard\20.txt" />
+    <None Remove="Resources\Leaderboard\example.txt" />
     <None Remove="Resources\mapImage_0.png" />
     <None Remove="Resources\mapImage_1.png" />
     <None Remove="Resources\mapImage_10.png" />
@@ -33,10 +46,19 @@
     <None Remove="Resources\mapImage_7.png" />
     <None Remove="Resources\mapImage_8.png" />
     <None Remove="Resources\mapImage_9.png" />
+    <None Remove="Resources\MapNodes\1.txt" />
     <None Remove="Resources\titlePage.png" />
+    <None Remove="Resources\Wiki\00_str.txt" />
+    <None Remove="Resources\Wiki\01_health.txt" />
+    <None Remove="Resources\Wiki\99_example.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Account\0.txt" />
+    <Resource Include="Resources\Account\1.txt" />
+    <Resource Include="Resources\Account\21.txt" />
+    <Resource Include="Resources\Account\32.txt" />
+    <Resource Include="Resources\Account\81.txt" />
     <Resource Include="Resources\characterImage_Boy.png" />
     <Resource Include="Resources\characterImage_Girl.png" />
     <Resource Include="Resources\characterImage_Puppers.png" />
@@ -45,6 +67,14 @@
     <Resource Include="Resources\itemImage_Potion.png" />
     <Resource Include="Resources\itemImage_Shield.png" />
     <Resource Include="Resources\itemImage_Swords.png" />
+    <Resource Include="Resources\Leaderboard\0.txt" />
+    <Resource Include="Resources\Leaderboard\100.txt" />
+    <Resource Include="Resources\Leaderboard\101.txt" />
+    <Resource Include="Resources\Leaderboard\102.txt" />
+    <Resource Include="Resources\Leaderboard\103.txt" />
+    <Resource Include="Resources\Leaderboard\2.txt" />
+    <Resource Include="Resources\Leaderboard\20.txt" />
+    <Resource Include="Resources\Leaderboard\example.txt" />
     <Resource Include="Resources\mapImage_10.png" />
   </ItemGroup>
 
@@ -65,7 +95,11 @@
     <Resource Include="Resources\mapImage_7.png" />
     <Resource Include="Resources\mapImage_8.png" />
     <Resource Include="Resources\mapImage_9.png" />
+    <Resource Include="Resources\MapNodes\1.txt" />
     <Resource Include="Resources\titlePage.png" />
+    <Resource Include="Resources\Wiki\00_str.txt" />
+    <Resource Include="Resources\Wiki\01_health.txt" />
+    <Resource Include="Resources\Wiki\99_example.txt" />
   </ItemGroup>
 
 </Project>
