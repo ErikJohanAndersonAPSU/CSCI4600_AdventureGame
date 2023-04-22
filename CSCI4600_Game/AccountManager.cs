@@ -11,13 +11,14 @@ namespace CSCI4600_Game
 {
     internal class AccountManager
     {
-        private static string _dir = Path.Combine(Environment.CurrentDirectory, @"Account\");
+        //private static string _dir = Path.Combine(Environment.CurrentDirectory, @"Account\");
+        private static string _dir = "../../../Resources/Account/";
 
         public static Account[] ReadAccountsFromFile()
         {
             string[] fileEntries = Directory.GetFiles(_dir);
 
-            Account[] accounts = new Account[fileEntries.Length];
+            List<Account> accounts = new List<Account>();
 
             int i = 0;
 
@@ -54,7 +55,7 @@ namespace CSCI4600_Game
 
                     sr.Close();
 
-                    accounts[i] = new Account(id, name, pass, metaCurrency, numGamesPlayed, metaShopPurchases.ToArray(), numSavesSaved);
+                    accounts.Add(new Account(id, name, pass, metaCurrency, numGamesPlayed, metaShopPurchases.ToArray(), numSavesSaved));
                 }
                 catch (Exception e)
                 {
@@ -70,15 +71,16 @@ namespace CSCI4600_Game
 
 
 
-            return accounts;
+            return accounts.ToArray();
         }
 
         public static void WriteAccountsToFile(Account[] accounts)
         {
             foreach (Account account in accounts)
             {
-                string filepath = getFilepath(account);
+                string filepath = GetFilepath(account);
 
+                /*
                 if (File.Exists(filepath))
                 {
                     File.Delete(filepath);
@@ -104,6 +106,27 @@ namespace CSCI4600_Game
                 sw.WriteLine(account.NumSavesSaved);
 
                 sw.Close();
+                */
+
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine(account.Name);
+                sb.AppendLine(account.Pass);
+                sb.AppendLine(account.MetaCurrency.ToString());
+                sb.AppendLine(account.NumGamesPlayed.ToString());
+
+                for (int i = 0; i < account.MetaShopPurchases.Length; i++)
+                {
+                    sb.Append(account.MetaShopPurchases[i]);
+
+                    if (i != account.MetaShopPurchases.Length - 1)
+                    {
+                        sb.Append(",");
+                    }
+                }
+                sb.AppendLine(" ");
+                sb.Append(account.NumSavesSaved.ToString());
+
+                File.WriteAllText(filepath, sb.ToString());
             }
         }
 
@@ -116,7 +139,7 @@ namespace CSCI4600_Game
 
         public static void DeleteAccount(Account account)
         {
-            string filepath = getFilepath(account);
+            string filepath = GetFilepath(account);
 
             if (File.Exists(filepath))
             {
@@ -131,7 +154,7 @@ namespace CSCI4600_Game
             WriteAccountsToFile(accountArr);
         }
 
-        private static string getFilepath(Account account)
+        private static string GetFilepath(Account account)
         {
             string filename = account.ID + ".txt";
             string filepath = Path.Combine(_dir, filename);

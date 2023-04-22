@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,11 +78,32 @@ namespace CSCI4600_Game
         {
             ID = id;
             Name = name ?? "default";
-            Pass = pass ?? "default";
+            Pass = pass ?? "";
             MetaCurrency = metaCurrency;
             NumGamesPlayed = numGamesPlayed;
             MetaShopPurchases = metaShopPurchases ?? Array.Empty<int>();
             NumSavesSaved = numSavesSaved;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(ID.ToString());
+            sb.AppendLine(Name);
+            sb.AppendLine(Pass);
+            sb.AppendLine(MetaCurrency.ToString());
+            sb.AppendLine(NumGamesPlayed.ToString());
+
+            foreach (var item in MetaShopPurchases)
+            {
+                sb.Append(item.ToString() + " ");
+            }
+            sb.AppendLine();
+
+            sb.AppendLine(NumSavesSaved.ToString());
+
+            return sb.ToString();
         }
     }
 }

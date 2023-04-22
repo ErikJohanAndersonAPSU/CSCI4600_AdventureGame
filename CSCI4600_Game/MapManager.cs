@@ -8,6 +8,8 @@ namespace CSCI4600_Game
 {
     internal class MapManager
     {
+        private static string _dir = "../../../Resources/MapNodes/";
+
         public void ReadNodesFromFile()
         {
 
