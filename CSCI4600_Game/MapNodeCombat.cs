@@ -22,10 +22,10 @@ namespace CSCI4600_Game
         public string RightCombatDesc { get { return _rightCombatDesc; } }
 
 
-        public MapNodeCombat(int id, MapNodeType type, int prev, int left, int right, bool unlocked,
+        public MapNodeCombat(int id, MapNodeType type, int prev, int left, int right, bool unlocked, int unlockItemID,
             string name, string desc, string leftDescUnlocked, string leftDescLocked, string rightDescUnlocked, string rightDescLocked,
             Character enemyChar, bool combatCompleted, string leftCombatDesc, string rightCombatDesc):
-            base(id, type, prev, left, right, unlocked, name, desc, leftDescUnlocked, leftDescLocked, rightDescUnlocked, rightDescLocked)
+            base(id, type, prev, left, right, unlocked, unlockItemID, name, desc, leftDescUnlocked, leftDescLocked, rightDescUnlocked, rightDescLocked)
         {
             _enemyChar = enemyChar;
             _combatCompleted = combatCompleted;
@@ -42,18 +42,7 @@ namespace CSCI4600_Game
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine(ID.ToString());
-            sb.AppendLine(Type.ToString());
-            sb.AppendLine(Prev + " " + Left + " " + Right);
-            sb.AppendLine(Unlocked.ToString());
-
-            sb.AppendLine(">----");
-
-            sb.AppendLine(Name + " : " + Desc);
-            sb.AppendLine(LeftDescUnlocked);
-            sb.AppendLine(LeftDescLocked);
-            sb.AppendLine(RightDescUnlocked);
-            sb.AppendLine(RightDescLocked);
+            sb.AppendLine(base.ToString());
 
             sb.AppendLine(">----");
 

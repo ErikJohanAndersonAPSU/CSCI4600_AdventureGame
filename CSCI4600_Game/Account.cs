@@ -14,7 +14,7 @@ namespace CSCI4600_Game
         private string _pass;
         private int _metaCurrency;
         private int _numGamesPlayed;
-        private int[] _metaShopPurchases;
+        private List<int> _metaShopPurchases;
         private int _numSavesSaved;
 
         public int ID
@@ -56,7 +56,7 @@ namespace CSCI4600_Game
             }
         }
 
-        public int[] MetaShopPurchases
+        public List<int> MetaShopPurchases
         {
             get { return _metaShopPurchases; }
             set
@@ -74,14 +74,14 @@ namespace CSCI4600_Game
             }
         }
 
-        public Account(int id, string name, string pass, int metaCurrency, int numGamesPlayed, int[] metaShopPurchases, int numSavesSaved)
+        public Account(int id, string name, string pass, int metaCurrency, int numGamesPlayed, List<int> metaShopPurchases, int numSavesSaved)
         {
             ID = id;
             Name = name ?? "default";
             Pass = pass ?? "";
             MetaCurrency = metaCurrency;
             NumGamesPlayed = numGamesPlayed;
-            MetaShopPurchases = metaShopPurchases ?? Array.Empty<int>();
+            MetaShopPurchases = metaShopPurchases ?? new List<int>();
             NumSavesSaved = numSavesSaved;
         }
 

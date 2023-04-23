@@ -9,32 +9,43 @@ namespace CSCI4600_Game
 {
     internal class Inventory
     {
-        private ArrayList _items;
+        private List<Item> _items;
 
-        public ArrayList Items
+        public List<Item> Items
         {
             get { return _items; }
             set { _items = value; }
         }
 
+        public Inventory()
+        {
+            _items = new List<Item>();
+        }
+
         public void AddItem(Item item)
         {
-
+            if (item != null && !Items.Contains(item))
+            {
+                Items.Add(item);
+            }
         }
 
         public void RemoveItem(Item item)
         {
-
+            if (item != null && Items.Contains(item))
+            {
+                Items.Remove(item);
+            }
         }
 
         public void ClearInventory()
         {
-
+            Items.Clear();
         }
 
-        public Boolean HasItem(Item item)
+        public bool HasItem(Item item)
         {
-            return true;
+            return Items.Contains(item);
         }
     }
 }

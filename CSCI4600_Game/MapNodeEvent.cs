@@ -14,6 +14,7 @@ namespace CSCI4600_Game
         private string _leftDescLocked;
         private string _rightDescUnlocked;
         private string _rightDescLocked;
+        private int _unlockItemID;
 
         public string Name { get { return _name; } }
         public string Desc { get { return _desc; } }
@@ -22,9 +23,9 @@ namespace CSCI4600_Game
         public string RightDescUnlocked { get { return _rightDescUnlocked; } }
         public string RightDescLocked { get { return _rightDescLocked; } }
 
-        public MapNodeEvent(int id, MapNodeType type, int prev, int left, int right, bool unlocked,
+        public MapNodeEvent(int id, MapNodeType type, int prev, int left, int right, bool unlocked, int unlockItemID,
             string name, string desc, string leftDescUnlocked, string leftDescLocked, string rightDescUnlocked, string rightDescLocked):
-            base(id, type, prev, left, right, unlocked)
+            base(id, type, prev, left, right, unlocked, unlockItemID)
         {
             _name = name;
             _desc = desc;
@@ -38,10 +39,7 @@ namespace CSCI4600_Game
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine(ID.ToString());
-            sb.AppendLine(Type.ToString());
-            sb.AppendLine(Prev + " " + Left + " " + Right);
-            sb.AppendLine(Unlocked.ToString());
+            sb.AppendLine(base.ToString());
 
             sb.AppendLine(">----");
 

@@ -9,6 +9,7 @@ Go left
 Left is locked
 Go right
 Right is locked
+35
 Skeleton,20,4,6
 false
 Attack

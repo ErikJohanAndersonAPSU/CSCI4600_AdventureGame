@@ -54,6 +54,7 @@ namespace CSCI4600_Game
                 catch (Exception e)
                 {
                     Debug.WriteLine("Exception: " + e.Message);
+                    leaderboardEntries[i] = new LeaderboardEntry("Example", "Example", "Example", 0, -1);
                 }
                 finally
                 {
@@ -119,7 +120,7 @@ namespace CSCI4600_Game
                 string fileName = max + ".txt";
 
                 string newFileEntry = Path.Combine(_dir, fileName);
-                Debug.WriteLine(newFileEntry);
+                //Debug.WriteLine(newFileEntry);
 
                 StreamWriter sw = new StreamWriter(newFileEntry);
 

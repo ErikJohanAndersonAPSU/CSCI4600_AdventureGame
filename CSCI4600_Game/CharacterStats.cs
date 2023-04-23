@@ -44,6 +44,18 @@ namespace CSCI4600_Game
             Defense = int.Parse(defense);
         }
 
+        public CharacterStats(string[] stats)
+        {
+            Health = int.Parse(stats[0]);
+            Attack = int.Parse(stats[1]);
+            Defense = int.Parse(stats[2]);
+        }
+
+        public override string ToString()
+        {
+            return "(" + Health.ToString() + "," + Attack.ToString() + "," + Defense.ToString() + ")";
+        }
+
         public Boolean DoStatsPass(CharacterStats stats)
         {
             return (Health >= stats.Health

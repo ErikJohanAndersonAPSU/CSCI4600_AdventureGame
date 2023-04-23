@@ -12,7 +12,7 @@ namespace CSCI4600_Game
     {
         private static string _dir = "../../../Resources/MapNodes/";
 
-        public static MapNode[] ReadNodesFromFile()
+        public static List<MapNode> ReadNodesFromFile()
         {
             string[] fileEntries = Directory.GetFiles(_dir);
 
@@ -22,7 +22,7 @@ namespace CSCI4600_Game
 
             foreach (string entry in fileEntries)
             {
-                int id, prev, left, right;
+                int id, prev, left, right, unlockItemID;
                 MapNodeType mapNodeType;
                 bool unlocked;
 
@@ -50,10 +50,11 @@ namespace CSCI4600_Game
                         leftDescLocked = sr.ReadLine();
                         rightDescUnlocked = sr.ReadLine();
                         rightDescLocked = sr.ReadLine();
+                        unlockItemID = int.Parse(sr.ReadLine());
 
                         if (mapNodeType.Equals(MapNodeType.Event))
                         {
-                            MapNodeEvent mapNodeEvent = new MapNodeEvent(id, MapNodeType.Event, prev, left, right, unlocked, eventName, eventDesc, leftDescUnlocked, leftDescLocked, rightDescUnlocked, rightDescLocked);
+                            MapNodeEvent mapNodeEvent = new MapNodeEvent(id, MapNodeType.Event, prev, left, right, unlocked, unlockItemID, eventName, eventDesc, leftDescUnlocked, leftDescLocked, rightDescUnlocked, rightDescLocked);
                         
                             nodes.Add(mapNodeEvent);
                         }
@@ -71,7 +72,7 @@ namespace CSCI4600_Game
                             string leftCombatDesc = sr.ReadLine();
                             string rightCombatDesc = sr.ReadLine();
 
-                            MapNodeCombat mapNodeCombat = new MapNodeCombat(id, MapNodeType.Event, prev, left, right, unlocked, eventName, eventDesc, leftDescUnlocked, leftDescLocked, rightDescUnlocked, rightDescLocked, enemyChar, combatCompleted, leftCombatDesc, rightCombatDesc);
+                            MapNodeCombat mapNodeCombat = new MapNodeCombat(id, MapNodeType.Event, prev, left, right, unlocked, unlockItemID, eventName, eventDesc, leftDescUnlocked, leftDescLocked, rightDescUnlocked, rightDescLocked, enemyChar, combatCompleted, leftCombatDesc, rightCombatDesc);
 
                             nodes.Add(mapNodeCombat);
                         }
@@ -91,12 +92,12 @@ namespace CSCI4600_Game
 
 
 
-            return nodes.ToArray();
+            return nodes;
         }
 
-        public static void CalculateMap(Account account)
+        /*public static void CalculateMap(Account account)
         {
 
-        }
+        }*/
     }
 }

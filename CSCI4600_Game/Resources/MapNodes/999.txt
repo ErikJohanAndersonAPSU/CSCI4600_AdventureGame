@@ -9,3 +9,4 @@ Go left
 Left is locked
 Go right
 Right is locked
+27

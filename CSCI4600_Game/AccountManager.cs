@@ -14,7 +14,7 @@ namespace CSCI4600_Game
         //private static string _dir = Path.Combine(Environment.CurrentDirectory, @"Account\");
         private static string _dir = "../../../Resources/Account/";
 
-        public static Account[] ReadAccountsFromFile()
+        public static List<Account> ReadAccountsFromFile()
         {
             string[] fileEntries = Directory.GetFiles(_dir);
 
@@ -55,7 +55,7 @@ namespace CSCI4600_Game
 
                     sr.Close();
 
-                    accounts.Add(new Account(id, name, pass, metaCurrency, numGamesPlayed, metaShopPurchases.ToArray(), numSavesSaved));
+                    accounts.Add(new Account(id, name, pass, metaCurrency, numGamesPlayed, metaShopPurchases, numSavesSaved));
                 }
                 catch (Exception e)
                 {
@@ -71,10 +71,10 @@ namespace CSCI4600_Game
 
 
 
-            return accounts.ToArray();
+            return accounts;
         }
 
-        public static void WriteAccountsToFile(Account[] accounts)
+        public static void WriteAccountsToFile(List<Account> accounts)
         {
             foreach (Account account in accounts)
             {
@@ -114,11 +114,11 @@ namespace CSCI4600_Game
                 sb.AppendLine(account.MetaCurrency.ToString());
                 sb.AppendLine(account.NumGamesPlayed.ToString());
 
-                for (int i = 0; i < account.MetaShopPurchases.Length; i++)
+                for (int i = 0; i < account.MetaShopPurchases.Count; i++)
                 {
                     sb.Append(account.MetaShopPurchases[i]);
 
-                    if (i != account.MetaShopPurchases.Length - 1)
+                    if (i != account.MetaShopPurchases.Count - 1)
                     {
                         sb.Append(",");
                     }
@@ -132,7 +132,7 @@ namespace CSCI4600_Game
 
         public static void AddAccount(Account account)
         {
-            Account[] accountArr = new Account[] { account };
+            List<Account> accountArr = new List<Account>{ account };
 
             WriteAccountsToFile(accountArr);
         }
@@ -149,7 +149,7 @@ namespace CSCI4600_Game
 
         public static void ModifyAccount(Account newAccount)
         {
-            Account[] accountArr = new Account[] { newAccount };
+            List<Account> accountArr = new List<Account> { newAccount };
 
             WriteAccountsToFile(accountArr);
         }
