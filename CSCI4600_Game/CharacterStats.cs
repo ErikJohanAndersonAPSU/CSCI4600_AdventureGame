@@ -15,16 +15,33 @@ namespace CSCI4600_Game
         public int Health
         {
             get { return _health; }
+            set { _health = value; }
         }
 
         public int Attack
         {
             get { return _attack; }
+            set { _attack = value; }
         }
 
         public int Defense
         {
             get { return _defense; }
+            set { _defense = value; }
+        }
+
+        public CharacterStats(int health, int attack, int defense)
+        {
+            Health = health;
+            Attack = attack;
+            Defense = defense;
+        }
+
+        public CharacterStats(string health, string attack, string defense)
+        {
+            Health = int.Parse(health);
+            Attack = int.Parse(attack);
+            Defense = int.Parse(defense);
         }
 
         public Boolean DoStatsPass(CharacterStats stats)

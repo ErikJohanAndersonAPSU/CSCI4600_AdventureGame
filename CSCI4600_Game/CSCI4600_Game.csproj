@@ -47,6 +47,8 @@
     <None Remove="Resources\mapImage_8.png" />
     <None Remove="Resources\mapImage_9.png" />
     <None Remove="Resources\MapNodes\1.txt" />
+    <None Remove="Resources\MapNodes\1000.txt" />
+    <None Remove="Resources\MapNodes\999.txt" />
     <None Remove="Resources\titlePage.png" />
     <None Remove="Resources\Wiki\00_str.txt" />
     <None Remove="Resources\Wiki\01_health.txt" />
@@ -95,7 +97,8 @@
     <Resource Include="Resources\mapImage_7.png" />
     <Resource Include="Resources\mapImage_8.png" />
     <Resource Include="Resources\mapImage_9.png" />
-    <Resource Include="Resources\MapNodes\1.txt" />
+    <Resource Include="Resources\MapNodes\1000.txt" />
+    <Resource Include="Resources\MapNodes\999.txt" />
     <Resource Include="Resources\titlePage.png" />
     <Resource Include="Resources\Wiki\00_str.txt" />
     <Resource Include="Resources\Wiki\01_health.txt" />

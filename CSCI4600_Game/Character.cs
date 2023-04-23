@@ -9,12 +9,18 @@ namespace CSCI4600_Game
     internal class Character
     {
         private string _name;
-        private string _desc;
+        private string _desc = "";
         private CharacterClass? _charClass = null;
         private CharacterStats _charStats;
-        private Inventory _charInventory;
+        private Inventory _charInventory = new();
 
-        public Character(string name, string desc, CharacterClass? charClass, CharacterStats charStats, Inventory charInventory)
+        public string Name { get { return _name; } set { _name = value; } }
+        public string Desc { get { return _desc; } set { _desc = value; } }
+        public CharacterClass CharClass { get { return _charClass; } set { _charClass = value; } }
+        public CharacterStats CharStats { get { return _charStats; } set { _charStats = value; } }
+        public Inventory CharInventory { get { return _charInventory; } set { _charInventory = value; } }
+
+        public Character(string name, string desc, CharacterClass charClass, CharacterStats charStats, Inventory charInventory)
         {
             _name = name;
             _desc = desc;
@@ -22,10 +28,24 @@ namespace CSCI4600_Game
             _charStats = charStats;
             _charInventory = charInventory;
         }
+        public Character(string name, string desc, CharacterClass charClass, Inventory charInventory)
+        {
+            _name = name;
+            _desc = desc;
+            _charClass = charClass;
+            _charStats = charClass.CharacterStats;
+            _charInventory = charInventory;
+        }
+
+        public Character(string name, CharacterStats charStats)
+        {
+            _name = name;
+            _charStats = charStats;
+        }
 
         public CharacterStats GetStartingStats()
         {
-            return new CharacterStats();
+            return new CharacterStats(0, 0, 0);
         }
     }
 }

@@ -11,6 +11,9 @@ namespace CSCI4600_Game
         private string _className;
         private CharacterStats _characterStats;
 
+        public string ClassName { get { return _className; } }
+        public CharacterStats CharacterStats { get { return _characterStats; } }
+
         public CharacterClass(string className, CharacterStats stats)
         {
             _className = className;

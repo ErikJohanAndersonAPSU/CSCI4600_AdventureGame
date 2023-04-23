@@ -15,7 +15,14 @@ namespace CSCI4600_Game
         private string _rightDescUnlocked;
         private string _rightDescLocked;
 
-        public MapNodeEvent(int id, MapNodeType type, MapNode prev, MapNode left, MapNode right, bool unlocked,
+        public string Name { get { return _name; } }
+        public string Desc { get { return _desc; } }
+        public string LeftDescUnlocked { get { return _leftDescUnlocked; } }
+        internal string LeftDescLocked { get { return _leftDescLocked; } }
+        public string RightDescUnlocked { get { return _rightDescUnlocked; } }
+        public string RightDescLocked { get { return _rightDescLocked; } }
+
+        public MapNodeEvent(int id, MapNodeType type, int prev, int left, int right, bool unlocked,
             string name, string desc, string leftDescUnlocked, string leftDescLocked, string rightDescUnlocked, string rightDescLocked):
             base(id, type, prev, left, right, unlocked)
         {
@@ -25,6 +32,26 @@ namespace CSCI4600_Game
             _leftDescLocked = leftDescLocked;
             _rightDescUnlocked = rightDescUnlocked;
             _rightDescLocked = rightDescLocked;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(ID.ToString());
+            sb.AppendLine(Type.ToString());
+            sb.AppendLine(Prev + " " + Left + " " + Right);
+            sb.AppendLine(Unlocked.ToString());
+
+            sb.AppendLine(">----");
+
+            sb.AppendLine(Name + " : " + Desc);
+            sb.AppendLine(LeftDescUnlocked);
+            sb.AppendLine(LeftDescLocked);
+            sb.AppendLine(RightDescUnlocked);
+            sb.AppendLine(RightDescLocked);
+
+            return sb.ToString();
         }
     }
 }
