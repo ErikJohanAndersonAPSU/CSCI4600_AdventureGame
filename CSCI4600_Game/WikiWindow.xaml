@@ -5,102 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="AdventureGame Wiki" Height="600" Width="800">
+        Title="AdventureGame Wiki" Height="400" Width="600">
 
     <ScrollViewer HorizontalAlignment="Right" VerticalScrollBarVisibility="Auto">
-        <StackPanel>
-            <RichTextBox Height="auto" Margin="50">
-                <FlowDocument>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="WELCOME TO THE WIKI!!"/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Parturient ac lacus molestie potenti iaculis enim nullam tincidunt hendrerit imperdiet velit phasellus."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="posuere justo inceptos arcu justo praesent."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="platea ipsum dolor aptent fusce sit mattis nibh consequat praesent."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Parturient ac lacus molestie potenti iaculis enim nullam tincidunt hendrerit imperdiet velit phasellus."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="posuere justo inceptos arcu justo praesent."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="posuere justo inceptos arcu justo praesent."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="posuere justo inceptos arcu justo praesent."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="posuere justo inceptos arcu justo praesent."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Dictumst tempus suspendisse fusce nisi ipsum parturient nascetur aenean condimentum praesent praesent litora. Venenatis convallis montes metus ullamcorper himenaeos ridiculus enim."/>
-                    </Paragraph>
-                    <Paragraph>
-                        <Bold>
-                            <Run Text="elementum et lacus vestibulum massa consectetur etiam non nascetur non."/>
-                        </Bold>
-                        <LineBreak/>
-                        <Run Text="Tempor mollis dolor mauris imperdiet etiam mollis etiam laoreet."/>
-                    </Paragraph>
-
-
-                </FlowDocument>
-            </RichTextBox>
-            <Button Content="Done" HorizontalAlignment="Center" Name="DoneButton" Click="DoneButton_Click" Margin="20"/>
-        </StackPanel>
+        <ListBox Name="WikiListBox" Margin="5">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="600"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0">
+                            <TextBlock.Inlines>
+                                <Run FontWeight="Bold" Text="{Binding Path=Name, Mode=OneWay}"/>
+                            </TextBlock.Inlines>
+                        </TextBlock>
+                        <TextBlock Grid.Row="1" TextWrapping="Wrap">
+                            <TextBlock.Inlines>
+                                <Run Text="{Binding Path=Desc, Mode=OneWay}"/>
+                            </TextBlock.Inlines>
+                        </TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </ScrollViewer>
 
 </Window>

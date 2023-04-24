@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class Account
+    internal class Account : IComparable
     {
         private int _id;
         private string _name;
@@ -85,6 +85,17 @@ namespace CSCI4600_Game
             NumSavesSaved = numSavesSaved;
         }
 
+        public Account(string name, string pass)
+        {
+            ID = AdventureGameManager.nextAccountID;
+            Name = name ?? "default";
+            Pass = pass ?? "";
+            MetaCurrency = 0;
+            NumGamesPlayed = 0;
+            MetaShopPurchases = new List<int> { -1 };
+            NumSavesSaved = 0;
+        }
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -104,6 +115,22 @@ namespace CSCI4600_Game
             sb.AppendLine(NumSavesSaved.ToString());
 
             return sb.ToString();
+        }
+
+        public int CompareTo(object? obj)
+        {
+            if (obj == null) return 1;
+
+            Account otherAccountObj = obj as Account;
+
+            if (otherAccountObj != null)
+            {
+                return this.ID.CompareTo(otherAccountObj.ID);
+            }
+            else
+            {
+                throw new ArgumentException("Object is not an Account");
+            }
         }
     }
 }
