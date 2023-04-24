@@ -28,10 +28,11 @@ namespace CSCI4600_Game
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            //If Data is valid Save User Login and open NewGameWindow
+            //Pass Username and Password 
+            //if true then open Account window attached to username and password
 
-            NewGameWindow newGameWindow = new NewGameWindow();  
-            newGameWindow.Show();
+            AccountWindow accountWindow = new AccountWindow(); 
+            accountWindow.Show();
             Close();
         }
 

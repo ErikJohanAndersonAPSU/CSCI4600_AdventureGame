@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="Leaderboard" Height="400" Width="800">
+        Title="Leaderboard" Height="300" Width="600">
     <Grid>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
+
         <Button Content="Done" Name="DoneButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="DoneButtone_Click" Margin="10"/>
 
     </Grid>

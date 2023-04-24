@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="New Game" Height="300" Width="380" Margin="10">
+        Title="New Game" Height="auto" Width="auto">
     
-    <Grid>
+    <Grid Height="Auto" Width="auto" Margin="20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />

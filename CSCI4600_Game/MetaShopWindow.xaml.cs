@@ -28,5 +28,16 @@ namespace CSCI4600_Game
         {
             Close();
         }
+
+        private void PurchaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Moves item from Available list to Owned List
+          
+        }
+
+        private void SellButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Moves Item from Owned List TO Available List
+        }
     }
 }
