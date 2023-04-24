@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class LeaderboardManager
+    internal static class LeaderboardManager
     {
         //private static string _dir = Path.Combine(Environment.CurrentDirectory, @"Leaderboard\");
         private static string _dir = "../../../Resources/Leaderboard/";

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class MapManager
+    internal static class MapManager
     {
         private static string _dir = "../../../Resources/MapNodes/";
 

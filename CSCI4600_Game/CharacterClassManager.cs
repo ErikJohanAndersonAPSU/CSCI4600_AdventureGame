@@ -5,41 +5,37 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CSCI4600_Game
 {
-    internal static class ItemManager
+    internal static class CharacterClassManager
     {
-        private static string _dir = "../../../Resources/Item/";
+        private static string _dir = "../../../Resources/CharacterClass/";
 
-        public static List<Item> ReadItemsFromFile()
+        public static List<CharacterClass> ReadCharacterClassFromFile()
         {
             string[] fileEntries = Directory.GetFiles(_dir);
 
-            List<Item> items = new List<Item>();
+            List<CharacterClass> characterClasses = new List<CharacterClass>();
 
 
 
             foreach (string entry in fileEntries)
             {
-                int id = -1;
-                string name, desc;
+                string className;
 
                 try
                 {
                     StreamReader sr = new StreamReader(entry);
 
-                    id = int.Parse(Path.GetFileNameWithoutExtension(entry));
-
-                    name = sr.ReadLine() ?? "ERROR";
-
-                    desc = sr.ReadLine() ?? "ERROR";
+                    className = Path.GetFileNameWithoutExtension(entry);
 
                     string[] statModArr = (sr.ReadLine() ?? "0,0,0").Split(",");
 
-                    sr.Close();
+                    characterClasses.Add(new CharacterClass(className, new CharacterStats(statModArr)));
 
-                    items.Add(new Item(id, name, desc, new CharacterStats(statModArr)));
+                    sr.Close();
                 }
                 catch (Exception e)
                 {
@@ -53,7 +49,12 @@ namespace CSCI4600_Game
 
 
 
-            return items;
+            return characterClasses;
         }
+
+        /*public static CharacterClass GetCharacterClass(string charClassName)
+        {
+            return null;
+        }*/
     }
 }
