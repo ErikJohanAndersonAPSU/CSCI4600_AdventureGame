@@ -26,12 +26,15 @@ namespace CSCI4600_Game
         }
 
 
-        //MainWindow Buttons
+        //TEST BUTTON to Window1
+        /*
         private void Test_Click(object sender, RoutedEventArgs e)
         {
             Window1 window1 = new Window1();
             window1.Show();
         }
+        */
+        //MainWindow Buttons
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
             UserRegistration userregistrationWindow = new UserRegistration();
