@@ -14,7 +14,7 @@ namespace CSCI4600_Game
         private int _score;
         private int _id;
 
-        public LeaderboardEntry(GameState gameState)
+        public LeaderboardEntry(SaveGameState gameState)
         {
 
         }

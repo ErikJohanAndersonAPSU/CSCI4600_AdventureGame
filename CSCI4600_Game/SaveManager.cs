@@ -1,38 +1,131 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CSCI4600_Game
 {
-    internal class SaveManager
+    internal static class SaveManager
     {
-        private string _dir = "";
+        private static string _dir = "../../../Resources/Save/";
 
-        public void ReadSavesFromFile()
+        public static List<SaveGameState> ReadSavesFromFile()
         {
+            string[] fileEntries = Directory.GetFiles(_dir);
 
+            List<SaveGameState> saves = new List<SaveGameState>();
+
+            foreach (string entry in fileEntries)
+            {
+                int accountID = -1, saveID = -1, currentMapNode = -1;
+                string charName, charDesc, charClassStr;
+
+                try
+                {
+                    StreamReader sr = new StreamReader(entry);
+
+                    string[] idStrArr = Path.GetFileNameWithoutExtension(entry).Split("_");
+
+                    accountID = int.Parse(idStrArr[0]);
+                    saveID = int.Parse(idStrArr[1]);
+
+                    currentMapNode = int.Parse(sr.ReadLine());
+
+                    charName = sr.ReadLine();
+                    charDesc = sr.ReadLine();
+
+                    charClassStr = sr.ReadLine() ?? "default";
+                    CharacterClass charClass = AdventureGameManager.charClasses.Find(x => x.ClassName.Equals(charClassStr));
+
+                    string[] charStatArr = (sr.ReadLine() ?? "0,0,0").Split(",");
+                    CharacterStats charStats = new CharacterStats(charStatArr);
+
+                    Inventory charInventory = new Inventory();
+                    string[] charItemIDArr = (sr.ReadLine() ?? "").Split(",");
+                    foreach (string charItemID in charItemIDArr)
+                    {
+                        int itemID = int.Parse(charItemID);
+                        charInventory.AddItem(AdventureGameManager.items.Find(x => x.ID == itemID));
+                    }
+
+
+                    sr.Close();
+
+                    saves.Add(new SaveGameState(accountID, saveID, currentMapNode, new Character(charName, charDesc, charClass, charStats, charInventory)));
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine("Exception: " + e.Message);
+                }
+                finally
+                {
+                    Debug.WriteLine("Executing finally block.");
+                }
+            }
+
+
+
+            return saves;
         }
 
-        public void LoadAccountSaves(Account account)
+        public static List<SaveGameState> LoadAccountSaves(Account account, List<SaveGameState> saves)
         {
-
+            return saves.FindAll(x => x.AccountID == account.ID);
         }
 
-        public void CreateSave()
+        public static void WriteSavesToFile(List<SaveGameState> saves)
         {
+            foreach (SaveGameState save in saves)
+            {
+                string filepath = GetFilepath(save);
 
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendLine(save.CurrentMapNode.ToString());
+                sb.AppendLine(save.Character.Name);
+                sb.AppendLine(save.Character.Desc);
+                sb.AppendLine(save.Character.CharClass.ClassName);
+
+                sb.Append(save.Character.CharStats.Health + ",");
+                sb.Append(save.Character.CharStats.Attack + ",");
+                sb.AppendLine(save.Character.CharStats.Defense.ToString());
+
+                List<Item> items = save.Character.CharInventory.Items;
+                int bound = save.Character.CharInventory.Items.Count;
+                for (int i = 0; i < bound; i++)
+                {
+                    sb.Append(items[i].ID.ToString());
+                    if (i != bound - 1)
+                    {
+                        sb.Append(',');
+                    }
+                }
+                //sb.AppendLine(" ");
+
+                File.WriteAllText(filepath, sb.ToString());
+            }
         }
 
-        public void WriteSavesToFile()
+        /*public static void CreateSave(SaveGameState saveGameState, List<SaveGameState> saves)
         {
 
-        }
+        }*/
 
-        public void PlaySave(Save save)
+        /*public static void PlaySave(SaveGameState save)
         {
 
+        }*/
+
+        private static string GetFilepath(SaveGameState save)
+        {
+            string filename = save.AccountID + "_" + save.SaveID + ".txt";
+            string filepath = Path.Combine(_dir, filename);
+
+            return filepath;
         }
     }
 }

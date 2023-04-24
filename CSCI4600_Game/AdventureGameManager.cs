@@ -9,46 +9,16 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class AdventureGameManager
+    internal static class AdventureGameManager
     {
-        internal static Account[] accounts;
+        internal static List<Item> items = ItemManager.ReadItemsFromFile();
+
+        internal static List<CharacterClass> charClasses = CharacterClassManager.ReadCharacterClassFromFile();
+
+        internal static List<Account> accounts = AccountManager.ReadAccountsFromFile();
         internal static Account currentAccount;
 
-        internal static Save[] saves;
-
-        internal static List<Item> itemsList;
-        internal static Item[] itemsArr = {
-            new Item(
-                1,
-                "name1",
-                "desc1",
-                new CharacterStats(0,0,0)
-            ),
-            new Item(
-                2,
-                "name2",
-                "desc2",
-                new CharacterStats(0,0,0)
-            ),
-            new Item(
-                3,
-                "name3",
-                "desc3",
-                new CharacterStats(0,0,0)
-            ),
-            new Item(
-                4,
-                "name4",
-                "desc4",
-                new CharacterStats(0,0,0)
-            ),
-            new Item(
-                5,
-                "name5",
-                "desc5",
-                new CharacterStats(0,0,0)
-            ),
-        };
+        internal static List<SaveGameState> saves = SaveManager.ReadSavesFromFile();
 
         public static void Test()
         {
@@ -120,7 +90,8 @@ namespace CSCI4600_Game
             LeaderboardEntry[] newLeaderboardEntries = new LeaderboardEntry[1];
             newLeaderboardEntries[0] = new LeaderboardEntry("kate", "kate", "", 450, 22);
 
-            LeaderboardManager.WriteNewLeaderboardsToFile(newLeaderboardEntries);
+            //Commented to stop 20 new leaderboard files from existing after testing
+            //LeaderboardManager.WriteNewLeaderboardsToFile(newLeaderboardEntries);
 
             Debug.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
             //-------------------------------------------------------------------------------------------------------------------------------------
@@ -300,6 +271,91 @@ namespace CSCI4600_Game
                 Debug.WriteLine(metashopOffer);
                 Debug.WriteLine("----------------------------------------\n");
             }
+
+            Debug.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
+            //-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------
+            // Test reading character classes
+            Debug.WriteLine("Testing ReadCharacterClassFromFile()");
+            Debug.WriteLine("");
+
+            foreach (CharacterClass characterClass in charClasses)
+            {
+                Debug.WriteLine(characterClass);
+                Debug.WriteLine("----------------------------------------\n");
+            }
+
+            Debug.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
+            //-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------
+            // Test reading saves
+            Debug.WriteLine("Testing ReadSavesFromFile()");
+            Debug.WriteLine("");
+
+            saves = SaveManager.ReadSavesFromFile();
+            foreach (SaveGameState save in saves)
+            {
+                Debug.WriteLine(save.ToString());
+                Debug.WriteLine("----------------------------------------\n");
+            }
+
+            Debug.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
+            //-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------
+            // Test loading account-specific saves
+            Debug.WriteLine("Testing LoadAccountSaves()");
+
+            Debug.WriteLine("Looking for Bobby's saves");
+
+            currentAccount = accounts.Find(x => x.ID == 21);
+            Debug.WriteLine(currentAccount);
+
+            saves = SaveManager.LoadAccountSaves(currentAccount, saves);
+            foreach (SaveGameState save in saves)
+            {
+                Debug.WriteLine(save);
+                Debug.WriteLine("----------------------------------------\n");
+            }
+
+
+
+            saves = SaveManager.ReadSavesFromFile();
+
+            Debug.WriteLine("Looking for nana's saves");
+
+            currentAccount = accounts.Find(x => x.ID == 32);
+            Debug.WriteLine(currentAccount);
+
+            saves = SaveManager.LoadAccountSaves(accounts.Find(x => x.ID == 32), saves);
+            foreach (SaveGameState save in saves)
+            {
+                Debug.WriteLine(save);
+                Debug.WriteLine("----------------------------------------\n");
+            }
+
+            Debug.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
+            //-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------
+            // Test writing saves
+            Debug.WriteLine("Testing WriteSavesToFile()");
+            Debug.WriteLine("");
+
+            Character testChar = new Character("giradeli", "a chocolatey explorer", charClasses.Find(x => x.ClassName == "robot"), new Inventory(items.Find(x => x.ID == -1)));
+            saves.Add(new SaveGameState(22, testChar));
+
+            SaveManager.WriteSavesToFile(saves);
 
             Debug.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
             //-------------------------------------------------------------------------------------------------------------------------------------

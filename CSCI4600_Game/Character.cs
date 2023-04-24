@@ -20,6 +20,7 @@ namespace CSCI4600_Game
         public CharacterStats CharStats { get { return _charStats; } set { _charStats = value; } }
         public Inventory CharInventory { get { return _charInventory; } set { _charInventory = value; } }
 
+        // Create a character with specified stats
         public Character(string name, string desc, CharacterClass charClass, CharacterStats charStats, Inventory charInventory)
         {
             _name = name;
@@ -28,6 +29,8 @@ namespace CSCI4600_Game
             _charStats = charStats;
             _charInventory = charInventory;
         }
+
+        // Create a character with their class's base stats
         public Character(string name, string desc, CharacterClass charClass, Inventory charInventory)
         {
             _name = name;
@@ -37,15 +40,21 @@ namespace CSCI4600_Game
             _charInventory = charInventory;
         }
 
+        // Create an (enemy) character with only name and stats
         public Character(string name, CharacterStats charStats)
         {
             _name = name;
             _charStats = charStats;
         }
 
-        public CharacterStats GetStartingStats()
+        public override string ToString()
+        {
+            return Name + " : " + Desc + "\n" + CharClass + "\n" + CharStats + "\n" + CharInventory;
+        }
+
+        /*public CharacterStats GetStartingStats()
         {
             return new CharacterStats(0, 0, 0);
-        }
+        }*/
     }
 }

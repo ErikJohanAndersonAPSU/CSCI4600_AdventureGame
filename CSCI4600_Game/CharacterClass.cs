@@ -19,5 +19,10 @@ namespace CSCI4600_Game
             _className = className;
             _characterStats = stats;
         }
+
+        public override string ToString()
+        {
+            return ClassName + " : " + CharacterStats.ToString();
+        }
     }
 }
