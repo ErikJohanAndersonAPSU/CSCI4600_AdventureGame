@@ -50,18 +50,12 @@ namespace CSCI4600_Game
                 i++;
             }
 
-            /*foreach (WikiEntry entry in wikiEntries)
-            {
-                Debug.WriteLine(entry.Name);
-                Debug.WriteLine(entry.Desc);
-            }*/
-
             return wikiEntries;
         }
 
-        public static void ShowWikiEntry()
+        /*public static void ShowWikiEntry()
         {
 
-        }
+        }*/
     }
 }

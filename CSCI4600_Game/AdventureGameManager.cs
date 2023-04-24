@@ -11,14 +11,60 @@ namespace CSCI4600_Game
 {
     internal static class AdventureGameManager
     {
+        // Variables that only need to be initialized once
         internal static List<Item> items = ItemManager.ReadItemsFromFile();
-
         internal static List<CharacterClass> charClasses = CharacterClassManager.ReadCharacterClassFromFile();
+        internal static List<MapNode> mapNodes = MapManager.ReadNodesFromFile();
+        internal static WikiEntry[] wikiEntries = WikiManager.ReadWikiEntryFromFile();
 
+        // Variables that need to be updated to avoid mixups
         internal static List<Account> accounts = AccountManager.ReadAccountsFromFile();
         internal static Account currentAccount;
+        internal static int currentAccountID = -1;
+        internal static int nextAccountID = 1;
+        internal static bool changedAccount = false;
 
         internal static List<SaveGameState> saves = SaveManager.ReadSavesFromFile();
+
+        internal static LeaderboardEntry[] leaderboardEntries = LeaderboardManager.ReadLeaderboardsFromFile();
+
+        internal static List<MetaShopOffer> metaShopOffers = MetaShopManager.ReadMetaShopOffersFromFile();
+
+        public static void UpdateNextAccountID()
+        {
+            accounts = AccountManager.ReadAccountsFromFile();
+            accounts.Sort();
+
+            foreach(var account in accounts)
+            {
+                if (account != null && account.ID == nextAccountID)
+                {
+                    nextAccountID++;
+                }
+            }
+        }
+
+        public static void UpdateAccounts()
+        {
+            accounts = AccountManager.ReadAccountsFromFile();
+        }
+
+        public static void UpdateAccountsAndID(int currentAccountID)
+        {
+            accounts = AccountManager.ReadAccountsFromFile();
+            AdventureGameManager.currentAccountID = currentAccountID;
+        }
+
+        public static void UpdateAccountsAndID(Account currentAccount)
+        {
+            accounts = AccountManager.ReadAccountsFromFile();
+            currentAccountID = currentAccount.ID;
+        }
+
+        public static void UpdateGameVariablesEndOfGame()
+        {
+
+        }
 
         public static void Test()
         {
@@ -315,7 +361,6 @@ namespace CSCI4600_Game
             Debug.WriteLine("Testing LoadAccountSaves()");
 
             Debug.WriteLine("Looking for Bobby's saves");
-
             currentAccount = accounts.Find(x => x.ID == 21);
             Debug.WriteLine(currentAccount);
 

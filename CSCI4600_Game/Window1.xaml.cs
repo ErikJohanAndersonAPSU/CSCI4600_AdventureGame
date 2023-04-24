@@ -28,8 +28,6 @@ namespace CSCI4600_Game
             {
                 //Resets position counter when window1 opened
                 postionCounter=0;
-
-                AdventureGameManager.Test();
             }
         }
 

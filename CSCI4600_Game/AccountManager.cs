@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class AccountManager
+    internal static class AccountManager
     {
         //private static string _dir = Path.Combine(Environment.CurrentDirectory, @"Account\");
         private static string _dir = "../../../Resources/Account/";
@@ -128,6 +128,11 @@ namespace CSCI4600_Game
 
                 File.WriteAllText(filepath, sb.ToString());
             }
+        }
+
+        public static void WriteAccountsToFile()
+        {
+            WriteAccountsToFile(AdventureGameManager.accounts);
         }
 
         public static void AddAccount(Account account)

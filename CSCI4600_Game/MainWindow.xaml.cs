@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,8 @@ namespace CSCI4600_Game
         public MainWindow()
         {
             InitializeComponent();
+
+            //AdventureGameManager.Test();
         }
 
 
@@ -39,24 +42,43 @@ namespace CSCI4600_Game
         }
         private void LoadGame_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
-            loginWindow.Show();
+            if (AdventureGameManager.currentAccount != null)
+            {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.Show();
+            } 
+            else
+            {
+                MessageBox.Show("Please log in.");
+            }
         }
         private void MetaShop_Click(object sender, RoutedEventArgs e)
         {
-            MetaShopWindow metaShopWindow = new MetaShopWindow();
-            metaShopWindow.Show();
+            if (AdventureGameManager.currentAccount != null)
+            {
+                MetaShopWindow metaShopWindow = new MetaShopWindow();
+                metaShopWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please log in.");
+            }
         }
         private void Wiki_Click(object sender, RoutedEventArgs e)
         {
             WikiWindow wikiWindow = new WikiWindow();
-            wikiWindow.Show();
+            wikiWindow.ShowDialog();
 
+            /*WikiWindow wikiWindow = new WikiWindow();
+            wikiWindow.Show();*/
         }
         private void LeaderBoard_Click(object sender, RoutedEventArgs e)
         {  
             LeaderBoardWindow leaderBoardWindow = new LeaderBoardWindow();
-            leaderBoardWindow.Show();
+            leaderBoardWindow.ShowDialog();
+
+            /*LeaderBoardWindow leaderBoardWindow = new LeaderBoardWindow();
+            leaderBoardWindow.Show();*/
         }
 
     }

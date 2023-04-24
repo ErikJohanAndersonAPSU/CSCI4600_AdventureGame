@@ -22,11 +22,15 @@ namespace CSCI4600_Game
         public WikiWindow()
         {
             InitializeComponent();
+
+            List<WikiEntry> entries = AdventureGameManager.wikiEntries.ToList();
+
+            WikiListBox.ItemsSource = entries;
         }
 
-        private void DoneButton_Click(object sender, RoutedEventArgs e)
+        /*private void DoneButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
+        }*/
     }
 }

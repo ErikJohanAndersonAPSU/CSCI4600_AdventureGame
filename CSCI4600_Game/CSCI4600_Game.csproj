@@ -13,6 +13,10 @@
     <None Remove="Resources\Account\21.txt" />
     <None Remove="Resources\Account\32.txt" />
     <None Remove="Resources\Account\81.txt" />
+    <None Remove="Resources\CharacterClass\default.txt" />
+    <None Remove="Resources\CharacterClass\dog.txt" />
+    <None Remove="Resources\CharacterClass\example.txt" />
+    <None Remove="Resources\CharacterClass\robot.txt" />
     <None Remove="Resources\characterImage_Boy.png" />
     <None Remove="Resources\characterImage_Girl.png" />
     <None Remove="Resources\characterImage_Puppers.png" />
@@ -21,6 +25,7 @@
     <None Remove="Resources\itemImage_Potion.png" />
     <None Remove="Resources\itemImage_Shield.png" />
     <None Remove="Resources\itemImage_Swords.png" />
+    <None Remove="Resources\Item\-1.txt" />
     <None Remove="Resources\Item\800.txt" />
     <None Remove="Resources\Item\900.txt" />
     <None Remove="Resources\Leaderboard\0.txt" />
@@ -59,6 +64,8 @@
     <None Remove="Resources\Metashop\4.txt" />
     <None Remove="Resources\Metashop\5.txt" />
     <None Remove="Resources\Metashop\example.txt" />
+    <None Remove="Resources\Save\32_22.txt" />
+    <None Remove="Resources\Save\32_23.txt" />
     <None Remove="Resources\titlePage.png" />
     <None Remove="Resources\Wiki\00_str.txt" />
     <None Remove="Resources\Wiki\01_health.txt" />
@@ -71,6 +78,10 @@
     <Resource Include="Resources\Account\21.txt" />
     <Resource Include="Resources\Account\32.txt" />
     <Resource Include="Resources\Account\81.txt" />
+    <Resource Include="Resources\CharacterClass\default.txt" />
+    <Resource Include="Resources\CharacterClass\dog.txt" />
+    <Resource Include="Resources\CharacterClass\example.txt" />
+    <Resource Include="Resources\CharacterClass\robot.txt" />
     <Resource Include="Resources\characterImage_Boy.png" />
     <Resource Include="Resources\characterImage_Girl.png" />
     <Resource Include="Resources\characterImage_Puppers.png" />
@@ -79,6 +90,7 @@
     <Resource Include="Resources\itemImage_Potion.png" />
     <Resource Include="Resources\itemImage_Shield.png" />
     <Resource Include="Resources\itemImage_Swords.png" />
+    <Resource Include="Resources\Item\-1.txt" />
     <Resource Include="Resources\Item\800.txt" />
     <Resource Include="Resources\Item\900.txt" />
     <Resource Include="Resources\Leaderboard\0.txt" />
@@ -118,6 +130,8 @@
     <Resource Include="Resources\Metashop\4.txt" />
     <Resource Include="Resources\Metashop\5.txt" />
     <Resource Include="Resources\Metashop\example.txt" />
+    <Resource Include="Resources\Save\32_22.txt" />
+    <Resource Include="Resources\Save\32_23.txt" />
     <Resource Include="Resources\titlePage.png" />
     <Resource Include="Resources\Wiki\00_str.txt" />
     <Resource Include="Resources\Wiki\01_health.txt" />
