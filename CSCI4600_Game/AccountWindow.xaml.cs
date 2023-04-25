@@ -208,13 +208,7 @@ namespace CSCI4600_Game
                         {
                             if (accountAction == AccountAction.Login)
                             {
-                                // Open main game window
-                                /*Window1 window1 = new Window1();
-                                window1.Show();
-
-                                //this.DialogResult = true;
-                                Close();*/
-
+                                AdventureGameManager.SetCurrentAccount(selectedAccount);
                                 ContinueToMainScreen = true;
                             }
                             else if (accountAction == AccountAction.Modify)
@@ -263,8 +257,6 @@ namespace CSCI4600_Game
             if (userRegistration.ShowDialog() == true)
             {
                 // Account was created
-                //this.DialogResult = true;
-
                 ContinueToMainScreen = true;
             }
             else
@@ -284,8 +276,6 @@ namespace CSCI4600_Game
             if (userRegistration.ShowDialog() == true)
             {
                 // Account was modified
-                //this.DialogResult = true;
-
                 ContinueToMainScreen = true;
             }
             else

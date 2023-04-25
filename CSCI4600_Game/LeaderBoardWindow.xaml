@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="Leaderboard" Height="400" Width="560">
+        Title="Global Leaderboard" Height="435" Width="560">
     <Grid>
-        <ListBox Name="LeaderboardListbox" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="0" Name="LeaderboardListbox" Margin="5">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -28,5 +32,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button Name="ChangeLeaderboardButton" Grid.Row="1" Content="View local leaderboard" Width="140" Height="30" Margin="5" Click="ChangeLeaderboardButton_Click"/>
     </Grid>
 </Window>

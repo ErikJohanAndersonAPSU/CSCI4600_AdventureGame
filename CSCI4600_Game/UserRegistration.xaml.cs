@@ -41,8 +41,6 @@ namespace CSCI4600_Game
             }
         }
 
-        //Buttons for User Registration Window
-
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             string untrimmedUsername = textBoxUserName.Text;

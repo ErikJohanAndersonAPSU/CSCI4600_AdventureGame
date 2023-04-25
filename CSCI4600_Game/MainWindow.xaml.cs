@@ -39,8 +39,8 @@ namespace CSCI4600_Game
             /*AccountWindow accountWindow = new AccountWindow();
             accountWindow.Show();*/
 
-            StartWindow startWindow = new StartWindow();
-            startWindow.ShowDialog();
+            /*StartWindow startWindow = new StartWindow();
+            startWindow.ShowDialog();*/
         }
         
         //MainWindow Buttons
@@ -90,5 +90,9 @@ namespace CSCI4600_Game
             leaderBoardWindow.Show();*/
         }
 
+        private void Logout_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

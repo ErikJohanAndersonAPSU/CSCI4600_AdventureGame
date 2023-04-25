@@ -19,19 +19,60 @@ namespace CSCI4600_Game
     /// </summary>
     public partial class LeaderBoardWindow : Window
     {
+        public enum LeaderboardVisibility
+        {
+            Account,
+            Global
+        }
+
+        public LeaderboardVisibility leaderboardVisibility { get; set; }
+
         public LeaderBoardWindow()
         {
             InitializeComponent();
 
-            List<LeaderboardEntryFormatted> leaderboardEntryFormatted = new List<LeaderboardEntryFormatted>();
+            leaderboardVisibility = LeaderboardVisibility.Global;
 
-            foreach(var entry in AdventureGameManager.leaderboardEntries)
+            SetLeaderboardListboxVisiblity(leaderboardVisibility);
+        }
+
+        private void ChangeLeaderboardButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (leaderboardVisibility == LeaderboardVisibility.Account)
             {
-                leaderboardEntryFormatted.Add(new LeaderboardEntryFormatted(entry));
+                leaderboardVisibility = LeaderboardVisibility.Global;
+                ChangeLeaderboardButton.Content = "View local leaderboard";
             }
-            leaderboardEntryFormatted.Sort();
+            else
+            {
+                leaderboardVisibility = LeaderboardVisibility.Account;
+                ChangeLeaderboardButton.Content = "View global leaderboard";
+            }
 
-            LeaderboardListbox.ItemsSource = leaderboardEntryFormatted;
+            SetLeaderboardListboxVisiblity(leaderboardVisibility);
+        }
+
+        private void SetLeaderboardListboxVisiblity(LeaderboardVisibility newLeaderboardVisibility)
+        {
+            List<LeaderboardEntry> leaderboardEntries = AdventureGameManager.leaderboardEntries.ToList();
+            List<LeaderboardEntryFormatted> leaderboardEntriesFormatted = new List<LeaderboardEntryFormatted>();
+
+            if (newLeaderboardVisibility == LeaderboardVisibility.Account)
+            {
+                leaderboardEntries = AdventureGameManager.leaderboardEntries.ToList().FindAll(x => x.AccountName.Equals(AdventureGameManager.currentAccount.Name));
+            }
+            else
+            {
+                leaderboardEntries = AdventureGameManager.leaderboardEntries.ToList();
+            }
+
+            foreach (var entry in leaderboardEntries)
+            {
+                leaderboardEntriesFormatted.Add(new LeaderboardEntryFormatted(entry));
+            }
+            leaderboardEntriesFormatted.Sort();
+
+            LeaderboardListbox.ItemsSource = leaderboardEntriesFormatted;
         }
     }
 
@@ -45,7 +86,7 @@ namespace CSCI4600_Game
         internal LeaderboardEntryFormatted(LeaderboardEntry leaderboardEntry)
         {
             AccountName = "Account: " + leaderboardEntry.AccountName;
-            CharacterName = "CurrentCharacter: " + leaderboardEntry.CharacterName;
+            CharacterName = "Character: " + leaderboardEntry.CharacterName;
             Desc = leaderboardEntry.Desc;
             Score = leaderboardEntry.Score.ToString();
         }
