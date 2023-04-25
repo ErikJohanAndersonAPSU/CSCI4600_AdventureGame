@@ -14,7 +14,6 @@ namespace CSCI4600_Game
         private string _leftDescLocked;
         private string _rightDescUnlocked;
         private string _rightDescLocked;
-        private int _unlockItemID;
 
         public string Name { get { return _name; } }
         public string Desc { get { return _desc; } }

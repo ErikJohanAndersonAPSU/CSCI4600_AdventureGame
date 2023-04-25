@@ -9,20 +9,20 @@ namespace CSCI4600_Game
     internal class CharacterClass
     {
         private string _className;
-        private CharacterStats _characterStats;
+        private CharacterStats _startingStats;
 
         public string ClassName { get { return _className; } }
-        public CharacterStats CharacterStats { get { return _characterStats; } }
+        public CharacterStats StartingStats { get { return _startingStats; } }
 
         public CharacterClass(string className, CharacterStats stats)
         {
             _className = className;
-            _characterStats = stats;
+            _startingStats = stats;
         }
 
         public override string ToString()
         {
-            return ClassName + " : " + CharacterStats.ToString();
+            return ClassName + " : " + StartingStats.ToString();
         }
     }
 }

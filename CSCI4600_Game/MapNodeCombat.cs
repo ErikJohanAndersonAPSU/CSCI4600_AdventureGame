@@ -33,11 +33,6 @@ namespace CSCI4600_Game
             _rightCombatDesc = rightCombatDesc;
         }
 
-        public void RunCombat()
-        {
-
-        }
-
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -53,6 +48,11 @@ namespace CSCI4600_Game
 
 
             return sb.ToString();
+        }
+
+        public void RunCombat()
+        {
+
         }
     }
 }

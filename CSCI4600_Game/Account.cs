@@ -85,6 +85,17 @@ namespace CSCI4600_Game
             NumSavesSaved = numSavesSaved;
         }
 
+        public Account(Account account, string name, string pass)
+        {
+            ID = account.ID;
+            Name = name ?? "default";
+            Pass = pass ?? "";
+            MetaCurrency = account.MetaCurrency;
+            NumGamesPlayed = account.NumGamesPlayed;
+            MetaShopPurchases = account.MetaShopPurchases;
+            NumSavesSaved = account.NumSavesSaved;
+        }
+
         public Account(string name, string pass)
         {
             ID = AdventureGameManager.nextAccountID;

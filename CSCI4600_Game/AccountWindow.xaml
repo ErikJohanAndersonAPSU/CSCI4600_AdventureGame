@@ -5,33 +5,81 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="AccountWindow" Height="auto" Width="auto">
-    <Grid  Height="300" Width="600" Margin="20">
+        Title="AccountWindow" Height="380" Width="360"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing">
+    <StackPanel  Height="350" Width="320" Margin="0">
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="5" Text="Choose an Account:" VerticalAlignment="Top" Width="146"  FontSize="17" FontStretch="ExtraCondensed"/>
-  
-        <Grid Margin="50" Background="White" Height="150" VerticalAlignment="Top">
+
+        <Grid Margin="2" Background="White" Height="320" VerticalAlignment="Top">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
-                <RowDefinition Height="50" />
+                <RowDefinition Height="220" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-              
-               
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
             </Grid.ColumnDefinitions>
-            <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
-
-
-            
-            <Button Grid.Column="0" Grid.Row="1"   Content="Add" Height="23" HorizontalAlignment="Left"  Name="addButton" VerticalAlignment="Top" Width="70" Margin="5,10,5,5" Click="AddButton_Click" />
-            <Button Grid.Column="1" Grid.Row="1"  Content="Delete" Height="23" HorizontalAlignment="Left"  Name="deleteButton" VerticalAlignment="Top" Width="70" Margin="5,10,5,5" Click="DeleteButton_Click" />
-            <Button Grid.Column="2" Grid.Row="1"  Content="Modify" Height="23" HorizontalAlignment="Left" Name="modifyButton" VerticalAlignment="Top" Width="70" Margin="5,10,5,5" Click="ModifyButton_Click" />
-            <Button Grid.Column="3" Grid.Row="1"  Content="PLAY" Height="23" HorizontalAlignment="Left" Name="playButton" VerticalAlignment="Top" Width="70" Margin="5,10,5,5" Click="PlayButton_Click" />
-
+            <ListBox Name="AccountWindowListbox" SelectionMode="Single" SelectionChanged="AccountWindowListbox_SelectionChanged" Margin="5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="40"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding Path=Name}" TextWrapping="Wrap" Grid.Column="0" Grid.Row="0" Grid.RowSpan="4"/>
+                            <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Margin="0 0 5 0">
+                                <TextBlock.Inlines>
+                                    <Run FontWeight="Bold" Text="Metacurrency:"/>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Path=MetaCurrency}" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left"/>
+                            <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Margin="0 0 5 0">
+                                <TextBlock.Inlines>
+                                    <Run FontWeight="Bold" Text="Games played:"/>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Path=NumGamesPlayed}" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left"/>
+                            <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" Margin="0 0 5 0">
+                                <TextBlock.Inlines>
+                                    <Run FontWeight="Bold" Text="Saves made:"/>
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Path=NumSavesSaved}" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Create" Grid.Column="0" Height="23" HorizontalAlignment="Left"  Name="addButton" VerticalAlignment="Top" Width="96.666" Margin="5,10,5,5" Click="CreateButton_Click" />
+                <Button Content="Delete" Grid.Column="1" Height="23" HorizontalAlignment="Center"  Name="deleteButton" VerticalAlignment="Top" Width="96.666" Margin="5,10,5,5" Click="DeleteButton_Click" />
+                <Button Content="Modify" Grid.Column="2" Height="23" HorizontalAlignment="Right" Name="modifyButton" VerticalAlignment="Top" Width="96.666" Margin="5,10,5,5" Click="ModifyButton_Click" />
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Login" Grid.Column="0" Height="23" HorizontalAlignment="Left" Name="logicButton" VerticalAlignment="Top" Width="150" Margin="5,10,5,5" Click="LoginButton_Click" />
+                <Button Content="Cancel" Grid.Column="1" Height="23" HorizontalAlignment="Left" Name="cancelButton" VerticalAlignment="Top" Width="150" Margin="5,10,5,5" Click="cancelButton_Click" />
+            </Grid>
         </Grid>
-       
-    </Grid>
+    </StackPanel>
 </Window>

@@ -86,16 +86,16 @@ namespace CSCI4600_Game
                 StringBuilder sb = new StringBuilder();
 
                 sb.AppendLine(save.CurrentMapNode.ToString());
-                sb.AppendLine(save.Character.Name);
-                sb.AppendLine(save.Character.Desc);
-                sb.AppendLine(save.Character.CharClass.ClassName);
+                sb.AppendLine(save.CurrentCharacter.Name);
+                sb.AppendLine(save.CurrentCharacter.Desc);
+                sb.AppendLine(save.CurrentCharacter.CharClass.ClassName);
 
-                sb.Append(save.Character.CharStats.Health + ",");
-                sb.Append(save.Character.CharStats.Attack + ",");
-                sb.AppendLine(save.Character.CharStats.Defense.ToString());
+                sb.Append(save.CurrentCharacter.CharStats.Health + ",");
+                sb.Append(save.CurrentCharacter.CharStats.Attack + ",");
+                sb.AppendLine(save.CurrentCharacter.CharStats.Defense.ToString());
 
-                List<Item> items = save.Character.CharInventory.Items;
-                int bound = save.Character.CharInventory.Items.Count;
+                List<Item> items = save.CurrentCharacter.CharInventory.Items;
+                int bound = save.CurrentCharacter.CharInventory.Items.Count;
                 for (int i = 0; i < bound; i++)
                 {
                     sb.Append(items[i].ID.ToString());

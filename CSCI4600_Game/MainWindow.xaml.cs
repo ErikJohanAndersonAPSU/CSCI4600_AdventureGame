@@ -33,15 +33,21 @@ namespace CSCI4600_Game
         
         private void Test_Click(object sender, RoutedEventArgs e)
         {
-            Window1 window1 = new Window1();
-            window1.Show();
+            /*Window1 window1 = new Window1();
+            window1.Show();*/
+
+            /*AccountWindow accountWindow = new AccountWindow();
+            accountWindow.Show();*/
+
+            StartWindow startWindow = new StartWindow();
+            startWindow.ShowDialog();
         }
         
         //MainWindow Buttons
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
-            UserRegistration userregistrationWindow = new UserRegistration();
-            userregistrationWindow.Show();
+            /*UserRegistration userregistrationWindow = new UserRegistration("Create Account", UserRegistration.AccountAction.Create);
+            userregistrationWindow.Show();*/
         }
         private void LoadGame_Click(object sender, RoutedEventArgs e)
         {

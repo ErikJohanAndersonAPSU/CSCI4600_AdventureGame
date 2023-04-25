@@ -64,7 +64,7 @@ namespace CSCI4600_Game
                 i++;
             }
 
-
+            Array.Sort(leaderboardEntries);
 
             return leaderboardEntries;
         }

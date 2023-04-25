@@ -5,30 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="User Registration" Height="300" Width="500">
-    <Grid  Height="Auto" Width="auto">
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Text="User Registration:" VerticalAlignment="Top" Width="146"  FontSize="17" FontStretch="ExtraCondensed"/>
-        <!--Button as a Link button using style-->
-        <!--end Button as a Link button using style-->
-        <Grid Margin="31,63,29,0" Background="White" Height="239" VerticalAlignment="Top">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="252*" />
-                <!--   <RowDefinition Height="12*" />-->
-            </Grid.RowDefinitions>
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="textBlockUserName" Text="Name:" VerticalAlignment="Top" Width="110" />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,48,0,0" Name="textBlockPassword" Text="Password:" VerticalAlignment="Top" Width="110"  />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,76,0,0" Name="textBlockConfirmPassword" Text="Confirm Password:" VerticalAlignment="Top" Width="110" />
+        Title="User Registration" Height="210" Width="410">
+    <Grid Background="White" Height="160" Width="380" VerticalAlignment="Top" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="83.333"/>
+            <ColumnDefinition Width="83.333"/>
+            <ColumnDefinition Width="83.333"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Height="23" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="5,10,5,5" Name="textBlockUserName" Text="Name:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="5,10,5,5" Name="textBlockPassword" Text="Password:" VerticalAlignment="Top" Width="110"  />
+        <TextBlock Height="23" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5,10,5,5" Name="textBlockConfirmPassword" Text="Confirm Password:" VerticalAlignment="Top" Width="110" />
 
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="textBoxUserName" VerticalAlignment="Top" Width="222" />
-            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,48,0,0" Name="textBoxPassword" VerticalAlignment="Top" Width="222" />
-            <!--For password-->
-            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,76,0,0" Name="textBoxConfirmPassword" VerticalAlignment="Top" Width="222" />
-            <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="259,154,0,0" Name="LoginButton" VerticalAlignment="Top" Width="70" Click="Login_Click" />
+        <TextBox Height="23" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Left" Margin="5,10,5,5" Name="textBoxUserName" VerticalAlignment="Top" Width="240" />
+        <PasswordBox Height="23" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" HorizontalAlignment="Left" Margin="5,10,5,5" Name="textBoxPassword" VerticalAlignment="Top" Width="240" />
+        <PasswordBox Height="23" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" HorizontalAlignment="Left" Margin="5,10,5,5" Name="textBoxConfirmPassword" VerticalAlignment="Top" Width="240" />
 
-            <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="183,0,0,0" Name="SubmitButton" VerticalAlignment="Center" Width="70" Click="Submit_Click" />
-            <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="258,0,0,0" Name="ResetButton" VerticalAlignment="Center" Width="70" Click="Reset_Click" />
-            <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="335,0,0,0" Name="CancelButton" VerticalAlignment="Center" Width="70" Click="Cancel_Click" />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,154,0,0" x:Name="textBlockConfirmPassword_Copy" Text="Already Have an Account?" VerticalAlignment="Top" Width="158" RenderTransformOrigin="0.366,3.424" />
-        </Grid>
+        <Button Content="Login" Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Center" Margin="5,10,5,5" Name="LoginButton" VerticalAlignment="Center" Width="70" Click="Login_Click" />
+        <Button Content="Reset" Grid.Column="2" Grid.Row="3" Height="23" HorizontalAlignment="Center" Margin="5,10,5,5" Name="ResetButton" VerticalAlignment="Center" Width="70" Click="Reset_Click" />
+        <Button Content="Cancel" Grid.Column="3" Grid.Row="3" Height="23" HorizontalAlignment="Center" Margin="5,10,5,5" Name="CancelButton" VerticalAlignment="Center" Width="70" Click="Cancel_Click" />
     </Grid>
 </Window>

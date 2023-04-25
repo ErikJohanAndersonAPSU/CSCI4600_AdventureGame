@@ -10,8 +10,11 @@
   <ItemGroup>
     <None Remove="Resources\Account\0.txt" />
     <None Remove="Resources\Account\1.txt" />
+    <None Remove="Resources\Account\2.txt" />
     <None Remove="Resources\Account\21.txt" />
+    <None Remove="Resources\Account\3.txt" />
     <None Remove="Resources\Account\32.txt" />
+    <None Remove="Resources\Account\4.txt" />
     <None Remove="Resources\Account\81.txt" />
     <None Remove="Resources\CharacterClass\default.txt" />
     <None Remove="Resources\CharacterClass\dog.txt" />
@@ -75,8 +78,11 @@
   <ItemGroup>
     <Resource Include="Resources\Account\0.txt" />
     <Resource Include="Resources\Account\1.txt" />
+    <Resource Include="Resources\Account\2.txt" />
     <Resource Include="Resources\Account\21.txt" />
+    <Resource Include="Resources\Account\3.txt" />
     <Resource Include="Resources\Account\32.txt" />
+    <Resource Include="Resources\Account\4.txt" />
     <Resource Include="Resources\Account\81.txt" />
     <Resource Include="Resources\CharacterClass\default.txt" />
     <Resource Include="Resources\CharacterClass\dog.txt" />

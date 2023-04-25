@@ -45,7 +45,7 @@ namespace CSCI4600_Game
         internal LeaderboardEntryFormatted(LeaderboardEntry leaderboardEntry)
         {
             AccountName = "Account: " + leaderboardEntry.AccountName;
-            CharacterName = "Character: " + leaderboardEntry.CharacterName;
+            CharacterName = "CurrentCharacter: " + leaderboardEntry.CharacterName;
             Desc = leaderboardEntry.Desc;
             Score = leaderboardEntry.Score.ToString();
         }

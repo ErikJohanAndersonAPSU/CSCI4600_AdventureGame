@@ -14,6 +14,16 @@ namespace CSCI4600_Game
         private int _score;
         private int _id;
 
+        public string AccountName { get { return _accountName; } }
+
+        public string CharacterName { get { return _characterName; } }
+
+        public string Desc { get { return _desc; } }
+
+        public int Score { get { return _score; } }
+
+        public int Id { get { return _id; } }
+
         public LeaderboardEntry(SaveGameState gameState)
         {
 
@@ -26,16 +36,6 @@ namespace CSCI4600_Game
             _score = score;
             _id = id;
         }
-
-        public string AccountName { get { return _accountName; } }
-
-        public string CharacterName { get { return _characterName; } }
-
-        public string Desc { get { return _desc; } }
-
-        public int Score { get { return _score; } }
-
-        public int Id { get { return _id; } }
 
         public int CompareTo(object? obj)
         {

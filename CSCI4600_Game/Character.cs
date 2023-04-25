@@ -8,7 +8,7 @@ namespace CSCI4600_Game
 {
     internal class Character
     {
-        private string _name;
+        private string _name = "";
         private string _desc = "";
         private CharacterClass? _charClass = null;
         private CharacterStats _charStats;
@@ -36,7 +36,7 @@ namespace CSCI4600_Game
             _name = name;
             _desc = desc;
             _charClass = charClass;
-            _charStats = charClass.CharacterStats;
+            _charStats = charClass.StartingStats;
             _charInventory = charInventory;
         }
 
@@ -52,9 +52,9 @@ namespace CSCI4600_Game
             return Name + " : " + Desc + "\n" + CharClass + "\n" + CharStats + "\n" + CharInventory;
         }
 
-        /*public CharacterStats GetStartingStats()
+        /*public StartingStats GetStartingStats()
         {
-            return new CharacterStats(0, 0, 0);
+            return new StartingStats(0, 0, 0);
         }*/
     }
 }

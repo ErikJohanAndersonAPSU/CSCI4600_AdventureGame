@@ -69,7 +69,7 @@ namespace CSCI4600_Game
                 i++;
             }
 
-
+            accounts.Sort();
 
             return accounts;
         }

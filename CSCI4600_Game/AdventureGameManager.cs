@@ -25,6 +25,7 @@ namespace CSCI4600_Game
         internal static bool changedAccount = false;
 
         internal static List<SaveGameState> saves = SaveManager.ReadSavesFromFile();
+        internal static SaveGameState currentSave;
 
         internal static LeaderboardEntry[] leaderboardEntries = LeaderboardManager.ReadLeaderboardsFromFile();
 
@@ -33,7 +34,6 @@ namespace CSCI4600_Game
         public static void UpdateNextAccountID()
         {
             accounts = AccountManager.ReadAccountsFromFile();
-            accounts.Sort();
 
             foreach(var account in accounts)
             {
@@ -59,6 +59,14 @@ namespace CSCI4600_Game
         {
             accounts = AccountManager.ReadAccountsFromFile();
             currentAccountID = currentAccount.ID;
+        }
+
+        public static void SetCurrentAccount(Account newCurrentAccount)
+        {
+            accounts = AccountManager.ReadAccountsFromFile();
+
+            currentAccountID = newCurrentAccount.ID;
+            currentAccount = accounts.Find(x => x.ID == currentAccountID);
         }
 
         public static void UpdateGameVariablesEndOfGame()

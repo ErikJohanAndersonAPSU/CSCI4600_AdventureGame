@@ -35,7 +35,7 @@ namespace CSCI4600_Game
 
         User Class
 
-        Character Class
+        CurrentCharacter Class
 
         MetaShop Class
 
