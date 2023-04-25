@@ -20,12 +20,27 @@ namespace CSCI4600_Game
         public DateTime SaveDateTime { get { return _saveDateTime; } set { _saveDateTime = value; } }
         public int CurrentMapNode { get { return _currentMapNode; } set { _currentMapNode = value; } }
         public Character CurrentCharacter { get { return _currentCharacter; } set { _currentCharacter = value; } }
-
+        public SaveGameState(int accountID, int saveID, DateTime saveDateTime, int currentMapNode, Character character)
+        {
+            AccountID = accountID;
+            SaveID = saveID;
+            SaveDateTime = saveDateTime;
+            CurrentMapNode = currentMapNode;
+            CurrentCharacter = character;
+        }
         public SaveGameState(int accountID, int saveID, int currentMapNode, Character character)
         {
             AccountID = accountID;
             SaveID = saveID;
             SaveDateTime = DateTime.Now;
+            CurrentMapNode = currentMapNode;
+            CurrentCharacter = character;
+        }
+        public SaveGameState(int currentMapNode, DateTime saveDateTime, Character character)
+        {
+            AccountID = AdventureGameManager.currentAccount.ID;
+            SaveID = ++AdventureGameManager.currentAccount.NumSavesSaved;
+            SaveDateTime = saveDateTime;
             CurrentMapNode = currentMapNode;
             CurrentCharacter = character;
         }

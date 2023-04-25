@@ -28,8 +28,8 @@ namespace CSCI4600_Game
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            Window1 window1 = new Window1();
-            window1.Show();
+            /*Window1 window1 = new Window1();
+            window1.Show();*/
             Close();
         }
 

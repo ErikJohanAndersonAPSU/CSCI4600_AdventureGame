@@ -19,9 +19,9 @@ namespace CSCI4600_Game
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class GameplayWindow : Window
     {
-        public Window1()
+        internal GameplayWindow(SaveGameState currentSave)
         {
 
             InitializeComponent();

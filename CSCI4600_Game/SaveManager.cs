@@ -23,6 +23,7 @@ namespace CSCI4600_Game
             {
                 int accountID = -1, saveID = -1, currentMapNode = -1;
                 string charName, charDesc, charClassStr;
+                DateTime saveDateTime;
 
                 try
                 {
@@ -34,6 +35,8 @@ namespace CSCI4600_Game
                     saveID = int.Parse(idStrArr[1]);
 
                     currentMapNode = int.Parse(sr.ReadLine());
+
+                    saveDateTime = DateTime.Parse(sr.ReadLine());
 
                     charName = sr.ReadLine();
                     charDesc = sr.ReadLine();
@@ -55,7 +58,7 @@ namespace CSCI4600_Game
 
                     sr.Close();
 
-                    saves.Add(new SaveGameState(accountID, saveID, currentMapNode, new Character(charName, charDesc, charClass, charStats, charInventory)));
+                    saves.Add(new SaveGameState(accountID, saveID, saveDateTime, currentMapNode, new Character(charName, charDesc, charClass, charStats, charInventory)));
                 }
                 catch (Exception e)
                 {
@@ -86,6 +89,9 @@ namespace CSCI4600_Game
                 StringBuilder sb = new StringBuilder();
 
                 sb.AppendLine(save.CurrentMapNode.ToString());
+
+                sb.AppendLine(save.SaveDateTime.ToString());
+
                 sb.AppendLine(save.CurrentCharacter.Name);
                 sb.AppendLine(save.CurrentCharacter.Desc);
                 sb.AppendLine(save.CurrentCharacter.CharClass.ClassName);
@@ -107,6 +113,15 @@ namespace CSCI4600_Game
                 //sb.AppendLine(" ");
 
                 File.WriteAllText(filepath, sb.ToString());
+            }
+        }
+        public static void DeleteSave(SaveGameState save)
+        {
+            string filepath = GetFilepath(save);
+
+            if (File.Exists(filepath))
+            {
+                File.Delete(filepath);
             }
         }
 

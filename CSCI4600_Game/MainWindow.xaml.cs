@@ -51,48 +51,37 @@ namespace CSCI4600_Game
         }
         private void LoadGame_Click(object sender, RoutedEventArgs e)
         {
-            if (AdventureGameManager.currentAccount != null)
+            SaveMenuWindow saveMenuWindow = new SaveMenuWindow();
+
+            if (saveMenuWindow.ShowDialog() == true)
             {
-                LoginWindow loginWindow = new LoginWindow();
-                loginWindow.Show();
-            } 
-            else
-            {
-                MessageBox.Show("Please log in.");
+                Close();
             }
         }
         private void MetaShop_Click(object sender, RoutedEventArgs e)
         {
-            if (AdventureGameManager.currentAccount != null)
-            {
-                MetaShopWindow metaShopWindow = new MetaShopWindow();
-                metaShopWindow.Show();
-            }
-            else
-            {
-                MessageBox.Show("Please log in.");
-            }
+            MetaShopWindow metaShopWindow = new MetaShopWindow();
+            metaShopWindow.ShowDialog();
         }
         private void Wiki_Click(object sender, RoutedEventArgs e)
         {
             WikiWindow wikiWindow = new WikiWindow();
             wikiWindow.ShowDialog();
-
-            /*WikiWindow wikiWindow = new WikiWindow();
-            wikiWindow.Show();*/
         }
         private void LeaderBoard_Click(object sender, RoutedEventArgs e)
         {  
             LeaderBoardWindow leaderBoardWindow = new LeaderBoardWindow();
             leaderBoardWindow.ShowDialog();
-
-            /*LeaderBoardWindow leaderBoardWindow = new LeaderBoardWindow();
-            leaderBoardWindow.Show();*/
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
+            AdventureGameManager.ResetCurrentAccount();
 
+            StartWindow startWindow = new StartWindow();
+            startWindow.Show();
+
+            Close();
         }
     }
 }
