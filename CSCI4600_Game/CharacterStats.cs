@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class CharacterStats
+    public class CharacterStats
     {
         private int _health;
         private int _attack;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class MetaShopOffer
+    public class MetaShopOffer
     {
         private int _metaShopID;
         private string _name;

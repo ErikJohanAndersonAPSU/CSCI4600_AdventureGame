@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class LeaderboardEntry : IComparable
+    public class LeaderboardEntry : IComparable
     {
         private string _accountName;
         private string _characterName;

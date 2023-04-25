@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class CharacterClass
+    public class CharacterClass
     {
         private string _className;
         private CharacterStats _startingStats;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class MapNodeEvent : MapNode
+    public class MapNodeEvent : MapNode
     {
         private string _name;
         private string _desc;
@@ -18,7 +18,7 @@ namespace CSCI4600_Game
         public string Name { get { return _name; } }
         public string Desc { get { return _desc; } }
         public string LeftDescUnlocked { get { return _leftDescUnlocked; } }
-        internal string LeftDescLocked { get { return _leftDescLocked; } }
+        public string LeftDescLocked { get { return _leftDescLocked; } }
         public string RightDescUnlocked { get { return _rightDescUnlocked; } }
         public string RightDescLocked { get { return _rightDescLocked; } }
 

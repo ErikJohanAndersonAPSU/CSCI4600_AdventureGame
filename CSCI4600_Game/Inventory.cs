@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class Inventory
+    public class Inventory
     {
         private List<Item> _items;
 

@@ -130,7 +130,7 @@ namespace CSCI4600_Game
             public string CharacterDesc { get; set; }
             public string SaveDateTime { get; set; }
 
-            internal SaveGameStateFormatted(SaveGameState saveGameState)
+            public SaveGameStateFormatted(SaveGameState saveGameState)
             {
                 AccountID = saveGameState.AccountID;
                 SaveID = saveGameState.SaveID;

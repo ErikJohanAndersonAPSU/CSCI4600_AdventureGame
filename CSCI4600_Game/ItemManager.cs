@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal static class ItemManager
+    public static class ItemManager
     {
         private static string _dir = "../../../Resources/Item/";
 

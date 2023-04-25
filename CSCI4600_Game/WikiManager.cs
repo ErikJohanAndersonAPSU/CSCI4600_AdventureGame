@@ -9,7 +9,7 @@ using System.Windows.Shapes;
 
 namespace CSCI4600_Game
 {
-    internal static class WikiManager
+    public static class WikiManager
     {
         //private static string _dir = System.IO.Path.Combine(Environment.CurrentDirectory, @"Wiki\");
         private static string _dir = "../../../Resources/Wiki/";

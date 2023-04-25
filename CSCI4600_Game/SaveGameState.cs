@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class SaveGameState
+    public class SaveGameState
     {
         private int _accountID;
         private int _saveID;

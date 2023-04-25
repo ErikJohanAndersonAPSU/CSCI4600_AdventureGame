@@ -9,27 +9,27 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal static class AdventureGameManager
+    public static class AdventureGameManager
     {
         // Variables that only need to be initialized once
-        internal static List<Item> items = ItemManager.ReadItemsFromFile();
-        internal static List<CharacterClass> charClasses = CharacterClassManager.ReadCharacterClassFromFile();
-        internal static List<MapNode> mapNodes = MapManager.ReadNodesFromFile();
-        internal static WikiEntry[] wikiEntries = WikiManager.ReadWikiEntryFromFile();
+        public static List<Item> items = ItemManager.ReadItemsFromFile();
+        public static List<CharacterClass> charClasses = CharacterClassManager.ReadCharacterClassFromFile();
+        public static List<MapNode> mapNodes = MapManager.ReadNodesFromFile();
+        public static WikiEntry[] wikiEntries = WikiManager.ReadWikiEntryFromFile();
 
         // Variables that need to be updated to avoid mixups
-        internal static List<Account> accounts = AccountManager.ReadAccountsFromFile();
-        internal static Account? currentAccount;
-        internal static int currentAccountID = -1;
-        internal static int nextAccountID = 1;
-        internal static bool changedAccount = false;
+        public static List<Account> accounts = AccountManager.ReadAccountsFromFile();
+        public static Account? currentAccount;
+        public static int currentAccountID = -1;
+        public static int nextAccountID = 1;
+        public static bool changedAccount = false;
 
-        internal static List<SaveGameState> saves = SaveManager.ReadSavesFromFile();
-        internal static SaveGameState currentSave;
+        public static List<SaveGameState> saves = SaveManager.ReadSavesFromFile();
+        public static SaveGameState currentSave;
 
-        internal static LeaderboardEntry[] leaderboardEntries = LeaderboardManager.ReadLeaderboardsFromFile();
+        public static LeaderboardEntry[] leaderboardEntries = LeaderboardManager.ReadLeaderboardsFromFile();
 
-        internal static List<MetaShopOffer> metaShopOffers = MetaShopManager.ReadMetaShopOffersFromFile();
+        public static List<MetaShopOffer> metaShopOffers = MetaShopManager.ReadMetaShopOffersFromFile();
 
         public static void UpdateNextAccountID()
         {

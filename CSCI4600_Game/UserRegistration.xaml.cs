@@ -22,10 +22,10 @@ namespace CSCI4600_Game
     /// </summary>
     public partial class UserRegistration : Window
     {
-        internal Account? SelectedAccount { get; set; }
+        public Account? SelectedAccount { get; set; }
         public AccountAction SelectedAccountAction { get; set; }
 
-        internal UserRegistration(string windowTitle, AccountAction accountAction, Account? selectedAccount = null)
+        public UserRegistration(string windowTitle, AccountAction accountAction, Account? selectedAccount = null)
         {
             this.Title = windowTitle;
             SelectedAccountAction = accountAction;

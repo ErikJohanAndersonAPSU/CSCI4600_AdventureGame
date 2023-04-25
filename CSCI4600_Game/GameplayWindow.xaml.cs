@@ -21,7 +21,7 @@ namespace CSCI4600_Game
     /// </summary>
     public partial class GameplayWindow : Window
     {
-        internal GameplayWindow(SaveGameState currentSave)
+        public GameplayWindow(SaveGameState currentSave)
         {
 
             InitializeComponent();

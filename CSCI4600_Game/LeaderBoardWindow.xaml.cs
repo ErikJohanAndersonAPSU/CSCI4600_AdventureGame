@@ -83,7 +83,7 @@ namespace CSCI4600_Game
         public string Desc { get; set; }
         public string Score { get; set; }
 
-        internal LeaderboardEntryFormatted(LeaderboardEntry leaderboardEntry)
+        public LeaderboardEntryFormatted(LeaderboardEntry leaderboardEntry)
         {
             AccountName = "Account: " + leaderboardEntry.AccountName;
             CharacterName = "Character: " + leaderboardEntry.CharacterName;
@@ -108,7 +108,7 @@ namespace CSCI4600_Game
         }
     }
 
-    /*internal class ViewModel
+    /*public class ViewModel
     {
         public List<LeaderboardEntry> LeaderboardEntries = AdventureGameManager.leaderboardEntries.ToList();
     }*/

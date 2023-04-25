@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace CSCI4600_Game
 {
-    internal static class CharacterClassManager
+    public static class CharacterClassManager
     {
         private static string _dir = "../../../Resources/CharacterClass/";
 

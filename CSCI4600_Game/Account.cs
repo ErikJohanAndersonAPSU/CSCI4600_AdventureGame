@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class Account : IComparable
+    public class Account : IComparable
     {
         private int _id;
         private string _name;

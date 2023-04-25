@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class WikiEntry
+    public class WikiEntry
     {
         private string _name;
         private string _desc;

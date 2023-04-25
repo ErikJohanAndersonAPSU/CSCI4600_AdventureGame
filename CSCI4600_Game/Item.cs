@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class Item
+    public class Item
     {
         private int _id;
         private string _name;

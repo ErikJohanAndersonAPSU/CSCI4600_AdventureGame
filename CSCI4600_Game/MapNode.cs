@@ -14,7 +14,7 @@ namespace CSCI4600_Game
         Combat
     }
 
-    internal class MapNode
+    public class MapNode
     {
         private int _id;
         private MapNodeType _type;

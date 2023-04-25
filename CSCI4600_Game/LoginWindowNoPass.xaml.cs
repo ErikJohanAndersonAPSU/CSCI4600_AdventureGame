@@ -20,9 +20,9 @@ namespace CSCI4600_Game
     /// </summary>
     public partial class LoginWindowNoPass : Window
     {
-        internal Account SelectedAccount;
+        public Account SelectedAccount;
 
-        internal LoginWindowNoPass(Account account)
+        public LoginWindowNoPass(Account account)
         {
             SelectedAccount = account;
 

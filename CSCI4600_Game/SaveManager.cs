@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace CSCI4600_Game
 {
-    internal static class SaveManager
+    public static class SaveManager
     {
         private static string _dir = "../../../Resources/Save/";
 

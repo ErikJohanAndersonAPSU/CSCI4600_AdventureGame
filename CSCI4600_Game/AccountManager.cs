@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal static class AccountManager
+    public static class AccountManager
     {
         //private static string _dir = Path.Combine(Environment.CurrentDirectory, @"Account\");
         private static string _dir = "../../../Resources/Account/";

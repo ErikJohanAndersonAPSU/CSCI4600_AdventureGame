@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal class MapNodeCombat : MapNodeEvent
+    public class MapNodeCombat : MapNodeEvent
     {
         private Character _enemyChar;
         private bool _combatCompleted;

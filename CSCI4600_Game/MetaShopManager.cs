@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    internal static class MetaShopManager
+    public static class MetaShopManager
     {
         private static string _dir = "../../../Resources/Metashop/";
 
