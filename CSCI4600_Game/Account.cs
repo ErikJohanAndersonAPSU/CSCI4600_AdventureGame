@@ -14,7 +14,7 @@ namespace CSCI4600_Game
         private string _pass;
         private int _metaCurrency;
         private int _numGamesPlayed;
-        private List<int> _metaShopPurchases;
+        private List<Item> _metaShopPurchases;
         private int _numSavesSaved;
 
         public int ID
@@ -56,7 +56,7 @@ namespace CSCI4600_Game
             }
         }
 
-        public List<int> MetaShopPurchases
+        public List<Item> MetaShopPurchases
         {
             get { return _metaShopPurchases; }
             set
@@ -74,14 +74,14 @@ namespace CSCI4600_Game
             }
         }
 
-        public Account(int id, string name, string pass, int metaCurrency, int numGamesPlayed, List<int> metaShopPurchases, int numSavesSaved)
+        public Account(int id, string name, string pass, int metaCurrency, int numGamesPlayed, List<Item> metaShopPurchases, int numSavesSaved)
         {
             ID = id;
             Name = name ?? "default";
             Pass = pass ?? "";
             MetaCurrency = metaCurrency;
             NumGamesPlayed = numGamesPlayed;
-            MetaShopPurchases = metaShopPurchases ?? new List<int>();
+            MetaShopPurchases = metaShopPurchases ?? new List<Item>();
             NumSavesSaved = numSavesSaved;
         }
 
@@ -103,7 +103,7 @@ namespace CSCI4600_Game
             Pass = pass ?? "";
             MetaCurrency = 0;
             NumGamesPlayed = 0;
-            MetaShopPurchases = new List<int> { -1 };
+            MetaShopPurchases = new List<Item> { AdventureGameManager.items.Find(x => x.ID == -1) };
             NumSavesSaved = 0;
         }
 

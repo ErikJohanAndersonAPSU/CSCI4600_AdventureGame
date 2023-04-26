@@ -1,0 +1,4 @@
+Name
+Desc
+Cost (int)
+ItemID (int)

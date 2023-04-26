@@ -20,15 +20,13 @@ namespace CSCI4600_Game
 
             List<Account> accounts = new List<Account>();
 
-            int i = 0;
-
 
 
             foreach (string entry in fileEntries)
             {
                 string name, pass;
                 int id = -1, metaCurrency = -1, numGamesPlayed = -1, numSavesSaved = -1;
-                List<int> metaShopPurchases = new List<int>();
+                List<Item> metaShopPurchases = new List<Item>();
 
                 try
                 {
@@ -46,9 +44,19 @@ namespace CSCI4600_Game
 
                     string[] metashopPurchaseStrArr = sr.ReadLine().Split(",");
 
-                    foreach (string mspEntry in metashopPurchaseStrArr)
+                    /*foreach (string mspEntry in metashopPurchaseStrArr)
                     {
                         metaShopPurchases.Add(int.Parse(mspEntry));
+                    }*/
+
+                    foreach(string mspEntry in metashopPurchaseStrArr)
+                    {
+                        Item? item = AdventureGameManager.items.Find(x => x.ID == int.Parse(mspEntry));
+
+                        if (item != null)
+                        {
+                            metaShopPurchases.Add(item);
+                        }
                     }
 
                     int.TryParse(sr.ReadLine(), out numSavesSaved);
@@ -65,8 +73,6 @@ namespace CSCI4600_Game
                 {
                     Debug.WriteLine("Executing finally block.");
                 }
-
-                i++;
             }
 
             accounts.Sort();
@@ -116,7 +122,7 @@ namespace CSCI4600_Game
 
                 for (int i = 0; i < account.MetaShopPurchases.Count; i++)
                 {
-                    sb.Append(account.MetaShopPurchases[i]);
+                    sb.Append(account.MetaShopPurchases[i].ID);
 
                     if (i != account.MetaShopPurchases.Count - 1)
                     {

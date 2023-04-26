@@ -87,15 +87,15 @@ namespace CSCI4600_Game
 
         }
 
-        public static void Test()
+        /*public static void Test()
         {
             //-------------------------------------------------------------------------------------------------------------------------------------
             // Test directory
-            /*string[] Documents = System.IO.Directory.GetFiles("../../../Resources/Leaderboard/");
+            *//*string[] Documents = System.IO.Directory.GetFiles("../../../Resources/Leaderboard/");
             foreach(string File in Documents)
             {
                 Trace.WriteLine(File);
-            }*/
+            }*//*
             //-------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -425,6 +425,6 @@ namespace CSCI4600_Game
 
             Debug.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
             //-------------------------------------------------------------------------------------------------------------------------------------
-        }
+        }*/
     }
 }

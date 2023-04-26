@@ -60,15 +60,15 @@ namespace CSCI4600_Game
 
         public static void CalcAvailableMetaShopOffers(Account account, List<MetaShopOffer> metaShopOffers)
         {
-            foreach (int metaShopPurchase in account.MetaShopPurchases)
+            foreach (Item metaShopPurchase in account.MetaShopPurchases)
             {
-                metaShopOffers.RemoveAll(x => x.MetaShopID == metaShopPurchase);
+                metaShopOffers.RemoveAll(x => x.MetaShopID == metaShopPurchase.ID);
             }
         }
 
-        public static void PurchaseMetaShopOffer(Account account, int metaShopID, List<MetaShopOffer> metaShopOffers)
+        public static void PurchaseMetaShopOffer(Account account, Item metaShopOffer, List<MetaShopOffer> metaShopOffers)
         {
-            account.MetaShopPurchases.Add(metaShopID);
+            account.MetaShopPurchases.Add(metaShopOffer);
 
             CalcAvailableMetaShopOffers(account, metaShopOffers);
         }
