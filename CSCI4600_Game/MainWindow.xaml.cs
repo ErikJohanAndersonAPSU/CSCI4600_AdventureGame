@@ -27,9 +27,6 @@ namespace CSCI4600_Game
 
             //AdventureGameManager.Test();
         }
-
-
-        //TEST BUTTON to Window1
         
         private void Test_Click(object sender, RoutedEventArgs e)
         {
@@ -46,8 +43,12 @@ namespace CSCI4600_Game
         //MainWindow Buttons
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
-            /*UserRegistration userregistrationWindow = new UserRegistration("Create Account", UserRegistration.AccountAction.Create);
-            userregistrationWindow.Show();*/
+            NewGameWindow newGameWindow = new NewGameWindow();
+
+            if (newGameWindow.ShowDialog() == true)
+            {
+                Close();
+            }
         }
         private void LoadGame_Click(object sender, RoutedEventArgs e)
         {

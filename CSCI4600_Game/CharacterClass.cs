@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
+    public enum CharClass
+    {
+        robot,
+        dog,
+        boy,
+        girl
+    }
+
     public class CharacterClass
     {
         private string _className;

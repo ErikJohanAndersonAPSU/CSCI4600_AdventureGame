@@ -52,6 +52,14 @@ namespace CSCI4600_Game
             CurrentMapNode = currentMapNode;
             CurrentCharacter = character;
         }
+        public SaveGameState(Character character)
+        {
+            AccountID = AdventureGameManager.currentAccount.ID;
+            SaveID = ++AdventureGameManager.currentAccount.NumSavesSaved;
+            SaveDateTime = DateTime.Now;
+            CurrentMapNode = 1;
+            CurrentCharacter = character;
+        }
 
         public override string ToString()
         {

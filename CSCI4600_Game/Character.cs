@@ -30,7 +30,7 @@ namespace CSCI4600_Game
             _charInventory = charInventory;
         }
 
-        // Create a character with their class's base stats
+        // Create a character with their class's starting stats with a starting inventory
         public Character(string name, string desc, CharacterClass charClass, Inventory charInventory)
         {
             _name = name;
@@ -38,6 +38,16 @@ namespace CSCI4600_Game
             _charClass = charClass;
             _charStats = charClass.StartingStats;
             _charInventory = charInventory;
+        }
+
+        // Create a character with their class's starting stats without a starting inventory
+        public Character(string name, string desc, CharacterClass charClass)
+        {
+            _name = name;
+            _desc = desc;
+            _charClass = charClass;
+            _charStats = charClass.StartingStats;
+            //_charInventory = new Inventory(AdventureGameManager.currentAccount.MetaShopPurchases);
         }
 
         // Create an (enemy) character with only name and stats

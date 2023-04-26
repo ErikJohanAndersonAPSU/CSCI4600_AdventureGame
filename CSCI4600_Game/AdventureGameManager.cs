@@ -20,7 +20,7 @@ namespace CSCI4600_Game
         // Variables that need to be updated to avoid mixups
         public static List<Account> accounts = AccountManager.ReadAccountsFromFile();
         public static Account? currentAccount;
-        public static int currentAccountID = -1;
+        //public static int currentAccountID = -1;
         public static int nextAccountID = 1;
         public static bool changedAccount = false;
 
@@ -49,31 +49,31 @@ namespace CSCI4600_Game
             accounts = AccountManager.ReadAccountsFromFile();
         }
 
-        public static void UpdateAccountsAndID(int currentAccountID)
+        /*public static void UpdateAccountsAndID(int currentAccountID)
         {
             accounts = AccountManager.ReadAccountsFromFile();
-            AdventureGameManager.currentAccountID = currentAccountID;
+            //AdventureGameManager.currentAccountID = currentAccountID;
         }
 
         public static void UpdateAccountsAndID(Account currentAccount)
         {
             accounts = AccountManager.ReadAccountsFromFile();
-            currentAccountID = currentAccount.ID;
-        }
+            //currentAccountID = currentAccount.ID;
+        }*/
 
         public static void SetCurrentAccount(Account newCurrentAccount)
         {
             accounts = AccountManager.ReadAccountsFromFile();
 
-            currentAccountID = newCurrentAccount.ID;
-            currentAccount = accounts.Find(x => x.ID == currentAccountID);
+            //currentAccountID = newCurrentAccount.ID;
+            currentAccount = accounts.Find(x => x.ID == newCurrentAccount.ID);
         }
 
         public static void ResetCurrentAccount()
         {
             accounts = AccountManager.ReadAccountsFromFile();
 
-            currentAccountID = -1;
+            //currentAccountID = -1;
             currentAccount = null;
         }
 

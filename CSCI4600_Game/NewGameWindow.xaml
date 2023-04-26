@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="New Game" Height="auto" Width="auto">
-    
-    <Grid Height="Auto" Width="auto" Margin="20">
+        Title="New Game" Height="330" Width="420">
+
+    <Grid Name="CharCreationGrid" Height="Auto" Width="auto" Margin="20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
@@ -18,33 +18,37 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="100" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
        
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Select a Character:" Margin="5"/>
 
-       
+        <ListBox Name="ClassSelectListBox" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Width="284" Height="84" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="Single">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Source="{Binding Path=Filepath}"  Width="50" Height="50" Margin="5"/>
+                        <TextBlock Text="{Binding Path=CharClass}" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
-        <!--DATA BINDING NOT FINISHED-->
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Choose a Name:" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Height="auto" x:Name="CharacterNameTextBox" VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Choose a Description:" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Height="auto" x:Name="CharacterDescTextBox" VerticalAlignment="Center"/>
         
-        <RadioButton Grid.Row="1" Grid.Column="0" Width="75" Height="75" Margin="0,0,5,0" IsChecked="{Binding SelectedButton, Mode=TwoWay }" >
-            <Image Source="\Resources\characterImage_Boy.png"  Width="50" Height="50" Margin="5"/>
-        </RadioButton>
-        <RadioButton Grid.Row="1" Grid.Column="1" Width="75" Height="75" Margin="0,0,5,0" IsChecked="{Binding SelectedButton, Mode=TwoWay}" >
-            <Image Source="\Resources\characterImage_Girl.png" Width="50" Height="50" Margin="5"/>
-            </RadioButton>
-        <RadioButton  Grid.Row="1" Grid.Column="2" Width="75" Height="75" Margin="0,0,5,0" IsChecked="{Binding SelectedButton, Mode=TwoWay }" >
-            <Image Source="\Resources\characterImage_Puppers.png" Width="50" Height="50" Margin="5"/>
-            </RadioButton>
-        <RadioButton  Grid.Row="1" Grid.Column="3" Width="75" Height="75" Margin="0,0,5,0" IsChecked="{Binding SelectedButton, Mode=TwoWay }" >
-            <Image Source="\Resources\characterImage_Robot.png" Width="50" Height="50" Margin="5"/>
-            </RadioButton>
-     
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Choose a Name:" Margin="5" />
-        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Height="auto" x:Name="characterName" VerticalAlignment="Top"/>
-        <Button Grid.Row="3" Grid.Column="1" Content="Submit" Height="23" HorizontalAlignment="Right" Margin="0" Name="submitButton" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
-        <Button Grid.Row="3" Grid.Column="2" Content="Cancel" Height="23" HorizontalAlignment="Center" Margin="0" Name="cancelButton" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />
-        <Button Grid.Row="3" Grid.Column="3" Content="Reset" Height="23" HorizontalAlignment="Left" Margin="0" Name="resetButton" VerticalAlignment="Top" Width="70" Click="Reset_Click" />
+        <Button Grid.Row="4" Grid.Column="1" Content="Submit" Height="23" HorizontalAlignment="Right" Margin="0" Name="submitButton" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
+        <Button Grid.Row="4" Grid.Column="2" Content="Cancel" Height="23" HorizontalAlignment="Center" Margin="0" Name="cancelButton" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />
+        <Button Grid.Row="4" Grid.Column="3" Content="Reset" Height="23" HorizontalAlignment="Left" Margin="0" Name="resetButton" VerticalAlignment="Top" Width="70" Click="Reset_Click" />
 
     </Grid>
 </Window>

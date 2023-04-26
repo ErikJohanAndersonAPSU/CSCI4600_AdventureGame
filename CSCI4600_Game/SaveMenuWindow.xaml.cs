@@ -21,14 +21,6 @@ namespace CSCI4600_Game
     /// </summary>
     public partial class SaveMenuWindow : Window
     {
-        public enum SaveAction
-        {
-            Load,
-            Delete
-        }
-
-        public SaveAction SelectedSaveAction { get; set; }
-
         public SaveMenuWindow()
         {
             InitializeComponent();
@@ -40,7 +32,7 @@ namespace CSCI4600_Game
         {
             AdventureGameManager.UpdateSaves();
 
-            List<SaveGameState> accountSaves = AdventureGameManager.saves.FindAll(x => x.AccountID.Equals(AdventureGameManager.currentAccountID));
+            List<SaveGameState> accountSaves = AdventureGameManager.saves.FindAll(x => x.AccountID.Equals(AdventureGameManager.currentAccount.ID));
             List<SaveGameStateFormatted> accountSavesFormatted = new List<SaveGameStateFormatted>();
 
             foreach (SaveGameState state in accountSaves)
@@ -64,7 +56,12 @@ namespace CSCI4600_Game
 
                     if (selectedSave != null)
                     {
+                        GameplayWindow gameplayWindow = new GameplayWindow(selectedSave);
+                        gameplayWindow.Show();
 
+                        this.DialogResult = true;
+
+                        Close();
                     }
                     else
                     {

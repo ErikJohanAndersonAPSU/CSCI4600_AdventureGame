@@ -42,7 +42,7 @@ namespace CSCI4600_Game
                 if (account != null && textBoxPassword.Password.Equals(account.Pass))
                 {
                     AdventureGameManager.currentAccount = account;
-                    AdventureGameManager.currentAccountID = account.ID;
+                    //AdventureGameManager.currentAccountID = account.ID;
 
                     textBoxUserName.Clear();
                     textBoxPassword.Clear();
