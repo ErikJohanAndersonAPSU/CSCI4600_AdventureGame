@@ -84,5 +84,10 @@ namespace CSCI4600_Game
 
             Close();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
     }
 }

@@ -38,6 +38,11 @@ namespace CSCI4600_Game
             _charClass = charClass;
             _charStats = charClass.StartingStats;
             _charInventory = charInventory;
+
+            foreach (var item in charInventory.Items)
+            {
+                _charStats.addItemStats(item);
+            }
         }
 
         // Create a character with their class's starting stats without a starting inventory

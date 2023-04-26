@@ -63,7 +63,7 @@ namespace CSCI4600_Game
 
         public override string ToString()
         {
-            return AccountID.ToString() + " : " + SaveID.ToString() + "\n" + SaveDateTime.ToString() + "\n" + CurrentMapNode.ToString() + "\n" + CurrentCharacter;
+            return AccountID.ToString() + " : " + SaveID.ToString() + "\n" + CurrentMapNode + "\n" + SaveDateTime.ToString() + "\n" + CurrentCharacter;
         }
     }
 }

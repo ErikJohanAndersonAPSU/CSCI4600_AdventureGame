@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -120,16 +121,25 @@ namespace CSCI4600_Game
                 string fileName = max + ".txt";
 
                 string newFileEntry = Path.Combine(_dir, fileName);
-                //Debug.WriteLine(newFileEntry);
 
+                /*
                 StreamWriter sw = new StreamWriter(newFileEntry);
-
                 sw.WriteLine(entry.AccountName);
                 sw.WriteLine(entry.CharacterName);
                 sw.WriteLine(entry.Desc);
                 sw.WriteLine(entry.Score);
                 sw.WriteLine(entry.Id);
                 sw.Close();
+                */
+
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine(entry.AccountName);
+                sb.AppendLine(entry.CharacterName);
+                sb.AppendLine(entry.Desc);
+                sb.AppendLine(entry.Score.ToString());
+                sb.AppendLine(entry.Id.ToString());
+
+                File.WriteAllText(fileName, sb.ToString());
             }
         }
     }

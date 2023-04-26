@@ -57,12 +57,15 @@ namespace CSCI4600_Game
 
                     CharacterClass charClass = AdventureGameManager.charClasses.Find(x => x.ClassName.Equals(charClassName));
 
-                    Character newCharacter = new Character(name, desc, charClass);
+                    /*Debug.WriteLine("Printing account items, n = " + AdventureGameManager.currentAccount.MetaShopPurchases.Count());
+                    foreach (var item in AdventureGameManager.currentAccount.MetaShopPurchases)
+                    {
+                        Debug.WriteLine(item);
+                    }*/
+
+                    Character newCharacter = new Character(name, desc, charClass, new Inventory(AdventureGameManager.currentAccount.MetaShopPurchases));
 
                     SaveGameState saveGameState = new SaveGameState(newCharacter);
-
-                    Debug.WriteLine(newCharacter);
-                    Debug.WriteLine(saveGameState);
 
                     GameplayWindow gameplayWindow = new GameplayWindow(saveGameState);
                     gameplayWindow.Show();

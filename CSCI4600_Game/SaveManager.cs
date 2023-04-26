@@ -89,7 +89,6 @@ namespace CSCI4600_Game
                 StringBuilder sb = new StringBuilder();
 
                 sb.AppendLine(save.CurrentMapNode.ToString());
-
                 sb.AppendLine(save.SaveDateTime.ToString());
 
                 sb.AppendLine(save.CurrentCharacter.Name);

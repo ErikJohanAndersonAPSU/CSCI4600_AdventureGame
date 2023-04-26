@@ -297,7 +297,7 @@ namespace CSCI4600_Game
 
         private void UpdateItemSource()
         {
-            AdventureGameManager.UpdateAccounts();
+            AdventureGameManager.RefreshAccounts();
             AccountWindowListbox.ItemsSource = AdventureGameManager.accounts;
             AccountWindowListbox.Items.Refresh();
         }
@@ -320,7 +320,7 @@ namespace CSCI4600_Game
         /*private void ModifyAccountAndUpdateItemSource(Account selectedAccount)
         {
             AccountManager.DeleteAccount(selectedAccount);
-            AdventureGameManager.UpdateAccounts();
+            AdventureGameManager.RefreshAccounts();
             AccountWindowListbox.ItemsSource = AdventureGameManager.accounts;
             AccountWindowListbox.Items.Refresh();
         }*/

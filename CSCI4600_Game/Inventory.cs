@@ -25,8 +25,7 @@ namespace CSCI4600_Game
 
         public Inventory(Item item)
         {
-            _items = new List<Item>();
-            _items.Add(item);
+            _items = new List<Item> { item };
         }
 
         public Inventory(List<Item> items)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSCI4600_Game
 {
-    public class MetaShopOffer
+    public class MetaShopOffer : IComparable<MetaShopOffer>
     {
         private int _metaShopID;
         private string _name;
@@ -47,6 +47,13 @@ namespace CSCI4600_Game
         public override string ToString()
         {
             return MetaShopID.ToString() + " : " + Name + " : " + Desc + " : " + Cost.ToString() + " : " + ItemID.ToString();
+        }
+
+        public int CompareTo(MetaShopOffer? other)
+        {
+            if (other == null) return 1;
+
+            return Cost.CompareTo(other.Cost);
         }
     }
 }

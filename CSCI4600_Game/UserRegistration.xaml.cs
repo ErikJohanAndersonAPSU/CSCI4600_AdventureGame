@@ -104,7 +104,7 @@ namespace CSCI4600_Game
 
                         // Set the current account
                         *//*AdventureGameManager.currentAccountID = newAccount.ID;
-                        AdventureGameManager.UpdateAccounts();*//*
+                        AdventureGameManager.RefreshAccounts();*//*
                         AdventureGameManager.SetCurrentAccount(newAccount);
 
                         // Change to display successful account creation, then open actual window w/ New Game, Load Game, Leaderboard, Wiki
@@ -136,7 +136,7 @@ namespace CSCI4600_Game
                     AdventureGameManager.accounts.RemoveAll(x => x.ID == SelectedAccount.ID);
 
                     //AdventureGameManager.accounts.Remove(SelectedAccount);
-                    //AdventureGameManager.UpdateAccounts();
+                    //AdventureGameManager.RefreshAccounts();
 
                     Debug.WriteLine(SelectedAccount.ID);
 
@@ -149,7 +149,7 @@ namespace CSCI4600_Game
 
                         // Set the current account
                         *//*AdventureGameManager.currentAccountID = newAccount.ID;
-                        AdventureGameManager.UpdateAccounts();*//*
+                        AdventureGameManager.RefreshAccounts();*//*
                         AdventureGameManager.SetCurrentAccount(newAccount);
 
                         // Change to display successful account creation, then open actual window w/ New Game, Load Game, Leaderboard, Wiki

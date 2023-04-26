@@ -16,20 +16,17 @@ namespace CSCI4600_Game
         public static List<CharacterClass> charClasses = CharacterClassManager.ReadCharacterClassFromFile();
         public static List<MapNode> mapNodes = MapManager.ReadNodesFromFile();
         public static WikiEntry[] wikiEntries = WikiManager.ReadWikiEntryFromFile();
+        public static List<MetaShopOffer> metaShopOffers = MetaShopManager.ReadMetaShopOffersFromFile();
 
         // Variables that need to be updated to avoid mixups
         public static List<Account> accounts = AccountManager.ReadAccountsFromFile();
         public static Account? currentAccount;
-        //public static int currentAccountID = -1;
         public static int nextAccountID = 1;
-        public static bool changedAccount = false;
 
         public static List<SaveGameState> saves = SaveManager.ReadSavesFromFile();
         public static SaveGameState currentSave;
 
         public static LeaderboardEntry[] leaderboardEntries = LeaderboardManager.ReadLeaderboardsFromFile();
-
-        public static List<MetaShopOffer> metaShopOffers = MetaShopManager.ReadMetaShopOffersFromFile();
 
         public static void UpdateNextAccountID()
         {
@@ -44,9 +41,14 @@ namespace CSCI4600_Game
             }
         }
 
-        public static void UpdateAccounts()
+        public static void RefreshAccounts()
         {
             accounts = AccountManager.ReadAccountsFromFile();
+        }
+
+        public static void WriteUpdatedAccounts()
+        {
+            AccountManager.WriteAccountsToFile(accounts);
         }
 
         /*public static void UpdateAccountsAndID(int currentAccountID)
@@ -82,20 +84,24 @@ namespace CSCI4600_Game
             saves = SaveManager.ReadSavesFromFile();
         }
 
-        public static void UpdateGameVariablesEndOfGame()
+        public static void WriteVariablesAtClose()
         {
+            AccountManager.WriteAccountsToFile(accounts);
+            SaveManager.WriteSavesToFile(saves);
+            LeaderboardManager.WriteNewLeaderboardsToFile(leaderboardEntries);
 
+            Debug.WriteLine("Varibles written.");
         }
 
         /*public static void Test()
         {
             //-------------------------------------------------------------------------------------------------------------------------------------
             // Test directory
-            *//*string[] Documents = System.IO.Directory.GetFiles("../../../Resources/Leaderboard/");
+            //string[] Documents = System.IO.Directory.GetFiles("../../../Resources/Leaderboard/");
             foreach(string File in Documents)
             {
                 Trace.WriteLine(File);
-            }*//*
+            }
             //-------------------------------------------------------------------------------------------------------------------------------------
 
 

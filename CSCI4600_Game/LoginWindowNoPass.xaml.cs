@@ -31,7 +31,7 @@ namespace CSCI4600_Game
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            AdventureGameManager.UpdateAccounts();
+            AdventureGameManager.RefreshAccounts();
 
             // Pass Password 
             if (SelectedAccount != null && textBoxPassword.Password.Equals(SelectedAccount.Pass))

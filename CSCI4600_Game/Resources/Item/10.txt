@@ -1,0 +1,3 @@
+An ornate key
+Heavy, and possesses an auro of unlocking with extreme prejudice.
+0,1,0

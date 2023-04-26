@@ -56,6 +56,15 @@ namespace CSCI4600_Game
             return "(" + Health.ToString() + "," + Attack.ToString() + "," + Defense.ToString() + ")";
         }
 
+        public void addItemStats(Item item)
+        {
+            CharacterStats itemStats = item.StatMod;
+
+            Health += itemStats.Health;
+            Attack += itemStats.Attack;
+            Defense += itemStats.Defense;
+        }
+
         public Boolean DoStatsPass(CharacterStats stats)
         {
             return (Health >= stats.Health

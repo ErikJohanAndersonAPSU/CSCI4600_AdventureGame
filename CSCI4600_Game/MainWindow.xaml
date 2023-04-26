@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-       Title="GET READY FOR ADVENTURE!!!" Height="600" Width="1200">
+        Title="GET READY FOR ADVENTURE!!!" Height="600" Width="1200"
+        Closing="Window_Closing">
     <Grid>
         <!--Grid Layout-->
         <Grid.ColumnDefinitions>
@@ -16,7 +17,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="1*"/>
-
         </Grid.RowDefinitions>
 
      
@@ -93,7 +93,7 @@
 		  Margin="600,200,0,175" />
 
         
-        <Button 
+        <!--Button 
             x:Name="Test_Button"
 			Click="Test_Click"
             Grid.Column="0"
@@ -103,7 +103,7 @@
             VerticalAlignment="Bottom" 
             Width="150"
             Margin="100,100,100,100" 
-            />
+            /-->
 
     </Grid>
 	

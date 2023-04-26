@@ -136,7 +136,8 @@ namespace CSCI4600_Game
 
             if (otherAccountObj != null)
             {
-                return this.ID.CompareTo(otherAccountObj.ID);
+                //return this.ID.CompareTo(otherAccountObj.ID);
+                return this.Name.CompareTo(otherAccountObj.Name);
             }
             else
             {
