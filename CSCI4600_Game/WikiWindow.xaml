@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="AdventureGame Wiki" Height="400" Width="600">
+        Title="AdventureGame Wiki" Height="400" Width="600" WindowStartupLocation="CenterScreen">
 
     <ScrollViewer HorizontalAlignment="Right" VerticalScrollBarVisibility="Auto">
         <ListBox Name="WikiListBox" Margin="5">

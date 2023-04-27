@@ -94,10 +94,5 @@ namespace CSCI4600_Game
 
             return nodes;
         }
-
-        /*public static void CalculateMap(Account account)
-        {
-
-        }*/
     }
 }

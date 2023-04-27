@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="SaveMenuWindow" Height="450" Width="362">
+        Title="SaveMenuWindow" Height="450" Width="362" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

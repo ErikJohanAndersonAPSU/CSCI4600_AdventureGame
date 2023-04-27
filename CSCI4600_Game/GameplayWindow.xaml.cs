@@ -1,7 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,15 +25,105 @@ namespace CSCI4600_Game
     /// </summary>
     public partial class GameplayWindow : Window
     {
+        public class GameplayWindowDataBindingModel : INotifyPropertyChanged
+        {
+            private SaveGameState _saveGameState;
+            public SaveGameState MySaveGameState
+            {
+                get { return _saveGameState; }
+                set
+                {
+                    _saveGameState = value;
+                    NotifyPropertyChanged(nameof(MySaveGameState));
+                }
+            }
+
+            private Account _currentAccount;
+            public Account CurrentAccount
+            {
+                get { return _currentAccount; }
+                set
+                {
+                    _currentAccount = value;
+                    NotifyPropertyChanged(nameof(CurrentAccount));
+                }
+            }
+
+            private string _classImageFilePath;
+            public string ClassImageFilePath
+            {
+                get { return _classImageFilePath; }
+                set
+                {
+                    _classImageFilePath = value;
+                    NotifyPropertyChanged(nameof(ClassImageFilePath));
+                }
+            }
+
+
+
+            public event PropertyChangedEventHandler PropertyChanged;
+            private void NotifyPropertyChanged(string property)
+            {
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs(property));
+                }
+            }
+
+        }
+
+        public GameplayWindowDataBindingModel model { get; set; }
+
         public GameplayWindow(SaveGameState currentSave)
         {
-
             InitializeComponent();
             {
                 //Resets position counter when window1 opened
                 postionCounter=0;
+
+                string className = currentSave.CurrentCharacter.CharClass.ClassName;
+                className = char.ToUpper(className[0]) + className.Substring(1);
+
+                string dir = "../../../Resources/";
+                string filename = "characterImage_" + className + ".png";
+                string filepath = System.IO.Path.Combine(dir, filename);
+
+                model = new GameplayWindowDataBindingModel { MySaveGameState = currentSave, CurrentAccount = AdventureGameManager.currentAccount, ClassImageFilePath = filepath };
+                DataContext = model;
             }
         }
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            GameplayWindowQuitDialog gameplayWindowQuitDialog = new GameplayWindowQuitDialog(model.MySaveGameState);
+            gameplayWindowQuitDialog.ShowDialog();
+
+            if (gameplayWindowQuitDialog.DialogResult == true)
+            {
+                if (gameplayWindowQuitDialog.QuitActionResult == GameplayWindowQuitDialog.QuitAction.QuitToMenu)
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                }
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+
+
+
+
+        /*public void UpdateStats()
+        {
+            NameTextBox.Text = SaveGameState.CurrentCharacter.Name;
+            HealthTextBox.Text = SaveGameState.CurrentCharacter.CharStats.Health.ToString();
+            AttackTextBox.Text = SaveGameState.CurrentCharacter.CharStats.Attack.ToString();
+            DefenseTextBox.Text = SaveGameState.CurrentCharacter.CharStats.Defense.ToString();
+        }*/
 
         /******************************************************************
 
@@ -378,11 +472,5 @@ namespace CSCI4600_Game
 
 
         }
-
-   
-        
-
-
-
     }
 }

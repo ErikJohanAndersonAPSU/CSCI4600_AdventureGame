@@ -51,10 +51,5 @@ namespace CSCI4600_Game
 
             return characterClasses;
         }
-
-        /*public static CharacterClass GetCharacterClass(string charClassName)
-        {
-            return null;
-        }*/
     }
 }

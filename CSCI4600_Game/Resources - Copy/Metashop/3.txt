@@ -1,4 +1,4 @@
 TestMetaShopOffer3
 Does thing 3
 2
-5
+3

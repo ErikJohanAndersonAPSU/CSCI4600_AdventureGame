@@ -47,57 +47,14 @@ namespace CSCI4600_Game
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-            /*CreateAccount();*/
+            //Create Account
 
             PerformAccountAction(AccountAction.Create);
-
-            /*//Add New Account
-            UserRegistration userRegistration = new UserRegistration("Create Account", UserRegistration.AccountAction.Create);
-
-            if (userRegistration.ShowDialog() == true)
-            {
-                // Account was created
-                //this.DialogResult = true;
-                Close();
-            }
-            else
-            {
-                // Account wasn't created
-                Debug.WriteLine("Account creation cancelled");
-            }*/
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             //Delete Selected Account
-            /*if (AccountWindowListbox.SelectedItem != null)
-            {
-                Account selectedAccount = AccountWindowListbox.SelectedItem as Account;
-
-                if (selectedAccount != null)
-                {
-                    LoginWindowNoPass loginWindowNoPass = new LoginWindowNoPass(selectedAccount);
-
-                    if (selectedAccount.Pass.Length == 0 || loginWindowNoPass.ShowDialog() == true)
-                    {
-                        DeleteAccount(selectedAccount);
-                    }
-                    else
-                    {
-                        Debug.WriteLine("Password was incorrect");
-                    }
-
-                    loginWindowNoPass.Close();
-                }
-                else
-                {
-                    Debug.WriteLine("Selected account is null");
-                }
-            }
-            else
-            {
-                Debug.WriteLine("No selected account");
-            }*/
 
             PerformAccountAction(AccountAction.Delete);
         }
@@ -105,83 +62,13 @@ namespace CSCI4600_Game
         private void ModifyButton_Click(object sender, RoutedEventArgs e)
         {
             //Modify Selected Account
-            /*if (AccountWindowListbox.SelectedItem != null)
-            {
-                Account selectedAccount = AccountWindowListbox.SelectedItem as Account;
-
-                if (selectedAccount != null)
-                {
-                    LoginWindowNoPass loginWindowNoPass = new LoginWindowNoPass(selectedAccount);
-
-                    if (selectedAccount.Pass.Length == 0 || loginWindowNoPass.ShowDialog() == true)
-                    {
-                        // Either no password or input password was correct
-
-                        // Open Account details dialog
-                        ModifyAccount(selectedAccount);
-                    }
-                    else
-                    {
-                        Debug.WriteLine("Password was incorrect");
-                    }
-
-                    // Ensure login window is closed
-                    loginWindowNoPass.Close();
-                }
-                else
-                {
-                    Debug.WriteLine("Selected account is null");
-                }
-            }
-            else
-            {
-                Debug.Write("No selected account");
-            }*/
 
             PerformAccountAction(AccountAction.Modify);
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            //Should pass account to AdventureGameManager(), open MainGameWindow
-            /*Window1 window1 = new Window1();
-            window1.Show();*/
-
-            /*if (AccountWindowListbox.SelectedItem != null)
-            {
-                Account selectedAccount = AccountWindowListbox.SelectedItem as Account;
-
-                if (selectedAccount != null)
-                {
-                    // Initialize login window
-                    LoginWindowNoPass loginWindowNoPass = new LoginWindowNoPass(selectedAccount);
-
-                    if (selectedAccount.Pass.Length == 0 || loginWindowNoPass.ShowDialog() == true)
-                    {
-                        // Open main game window
-                        Window1 window1 = new Window1();
-                        window1.Show();
-
-                        //this.DialogResult = true;
-                        Close();
-                    }
-                    else
-                    {
-                        Debug.WriteLine("Password was incorrect");
-                    }
-
-                    // Ensure login window is closed
-                    loginWindowNoPass.Close();
-                }
-                else
-                {
-                    Debug.WriteLine("Selected account is null");
-                }
-            }
-            else
-            {
-                Debug.Write("No selected account");
-            }*/
+            //Log in to Selected Account
 
             PerformAccountAction(AccountAction.Login);
         }
@@ -316,13 +203,5 @@ namespace CSCI4600_Game
                 startWindow.Show();
             }
         }
-
-        /*private void ModifyAccountAndUpdateItemSource(Account selectedAccount)
-        {
-            AccountManager.DeleteAccount(selectedAccount);
-            AdventureGameManager.RefreshAccounts();
-            AccountWindowListbox.ItemsSource = AdventureGameManager.accounts;
-            AccountWindowListbox.Items.Refresh();
-        }*/
     }
 }

@@ -1,0 +1,22 @@
+﻿<Window x:Class="CSCI4600_Game.GameplayWindowQuitDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSCI4600_Game"
+        mc:Ignorable="d"
+        Title="GameplayWindowQuitDialog" Height="170" Width="120" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Name="SaveWarningTextBlock"  Text="Remember to save!" HorizontalAlignment="Center" Margin="10"/>
+        <Button Grid.Row="1" Name="SaveGameButton" Content="Save Game" Click="SaveGameButton_Click" Margin="5"/>
+        <Button Grid.Row="2" Name="QuitToMenuButton" Content="Quit to Menu" Click="QuitToMenuButton_Click" Margin="5"/>
+        <Button Grid.Row="3" Name="CloseGameButton" Content="Quit to Desktop" Click="CloseGameButton_Click" Margin="5"/>
+    </Grid>
+</Window>

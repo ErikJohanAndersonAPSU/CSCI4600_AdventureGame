@@ -6,7 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="Get Ready for ADVENTURE!!!" Height="auto" Width="auto">
+        Title="Get Ready for ADVENTURE!!!" Height="900" Width="1200" WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing">
 
     <Grid>
         <!--Grid Layout-->
@@ -14,8 +15,7 @@
             <ColumnDefinition Width="240*" />
             <ColumnDefinition Width="720*" />
             <ColumnDefinition Width="229*" />
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="11*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -27,50 +27,43 @@
 
 
         <!--Character Pane-->
-        <Image 
-            x:Name="characterImage"
-            Source="\Resources\characterImage_Puppers.png"  
-            Grid.Column="0" 
-            Grid.Row="1"
-            VerticalAlignment="Top"
-            Margin="50,20,50,80"/>
-        <Label 
-            Content="Name: [Character Name]" 
-            Grid.Column="0" 
-            Grid.Row="1"
-            FontWeight="Bold"  
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Margin="50,225,0,0"/>
-        <Label 
-            Content="Health:[Health]" 
-            Grid.Column="0" 
-            Grid.Row="1" 
-            FontWeight="Bold" 
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top"
-            Margin="50,250,0,0"/>
-        <Label 
-            Content="Attack]" 
-            Grid.Column="0" 
-            Grid.Row="1" 
-            FontWeight="Bold" 
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top"
-            Margin="50,275,0,0"/>
-        <Label 
-            Content="Defense: [Defense]"  
-            Grid.Column="0" 
-            Grid.Row="1"  
-            FontWeight="Bold"
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top"
-            Margin="50,300,0,0"/>
-        <Separator 
-            Grid.Column="0" 
-            Grid.Row="1" 
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="characterImage" Source="{Binding Path=ClassImageFilePath}"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="25 50 0 50"/>
+            
+            <Label Content="Name:" Grid.Column="0" Grid.Row="2" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+            <TextBlock Name="NameTextBlock" Grid.Column="1" Grid.Row="2" Text="{Binding Path=MySaveGameState.CurrentCharacter.Name}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+
+            <Label Content="Health:" Grid.Column="0" Grid.Row="3" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+            <TextBlock Name="HealthTextBlock" Grid.Column="1" Grid.Row="3" Text="{Binding Path=MySaveGameState.CurrentCharacter.CharStats.Health}"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+
+            <Label Content="Attack:" Grid.Column="0" Grid.Row="4" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+            <TextBlock Name="AttackTextBlock" Grid.Column="1" Grid.Row="4" Text="{Binding Path=MySaveGameState.CurrentCharacter.CharStats.Attack}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+
+            <Label Content="Defense:" Grid.Column="0" Grid.Row="5" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+            <TextBlock Name="DefenseTextBlock" Grid.Column="1" Grid.Row="5" Text="{Binding Path=MySaveGameState.CurrentCharacter.CharStats.Defense}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+
+            <Separator 
+            Grid.Column="0" Grid.ColumnSpan="2"
+            Grid.Row="8" 
             VerticalAlignment="Top" 
-            Margin="25,375,25,0"/>
+            Margin="5"/>
+
+
+        </Grid>
 
         <!--Action Center -->
         <Label 
@@ -112,44 +105,67 @@
             Grid.RowSpan="2"/>
 
         <!--Inventory Pane -->
-        <Label 
-            Grid.Column="2" 
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            
+            <Label 
+            Content="MetaCurrency:"  
+            Grid.Column="0" 
+            Grid.Row="0"  
+            FontWeight="Bold"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right" 
+            Margin="5"/>
+            <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Path=CurrentAccount.MetaCurrency}" VerticalAlignment="Center"/>
+
+            <Label 
+            Grid.Column="0" 
             Grid.Row="1"
+                Grid.ColumnSpan="2"
             Content="Character Inventory" 
             FontWeight="Bold" 
             VerticalAlignment="Top" 
-            HorizontalAlignment="Left" 
-            Margin="50,25,0,0"/>
-        <Label 
-            Content="MetaCurrency: [$$$$]"  
-            Grid.Column="2" 
-            Grid.Row="1"  
-            FontWeight="Bold"
-            VerticalAlignment="Top"
-            HorizontalAlignment="Left" 
-            Margin="50,50,0,0" Grid.ColumnSpan="2"/>
-        <ListBox 
-            Grid.Column="2" 
-            Grid.Row="1"
-            VerticalAlignment="Top" 
-            Margin="50,75,39,0">
-            <ListBoxItem>_Item_1</ListBoxItem>
-            <ListBoxItem>_Item_2</ListBoxItem>
-            <ListBoxItem>_Item_3</ListBoxItem>
-        </ListBox>
-        <Image 
-            Grid.Column="2"
-            Grid.Row="1" 
+            HorizontalAlignment="Center" 
+            Margin="5"/>
+
+            <ListBox Grid.Column="0"  Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Center" Margin="5" ItemsSource="{Binding Path=MySaveGameState.CurrentCharacter.CharInventory.Items}" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1" >
+                            <TextBlock Text="{Binding Path=Name}"  TextWrapping="Wrap"/>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <Image 
+            Grid.Column="0" Grid.ColumnSpan="2"
+            Grid.Row="4" 
             Source="\Resources\itemImage_Potion.png" 
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Bottom" 
-            Margin="70,0,0,75" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            Margin="5" 
             Width="100"/>
-        <Separator 
-            Grid.Column="2"
-            Grid.Row="1" 
-            VerticalAlignment="Bottom" 
+            
+            <Separator 
+            Grid.Column="0" Grid.ColumnSpan="2"
+            Grid.Row="6" 
+            VerticalAlignment="Bottom" HorizontalAlignment="Center"
             Margin="25,0,14,0"/>
+        </Grid>
 
         <!--SELECTION PANE-->
         <Label

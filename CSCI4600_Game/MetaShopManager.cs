@@ -47,10 +47,6 @@ namespace CSCI4600_Game
                 {
                     Debug.WriteLine("Exception: " + e.Message);
                 }
-                finally
-                {
-                    Debug.WriteLine("Executing finally block.");
-                }
             }
 
 

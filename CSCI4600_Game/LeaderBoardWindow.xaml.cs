@@ -107,9 +107,4 @@ namespace CSCI4600_Game
             }
         }
     }
-
-    /*public class ViewModel
-    {
-        public List<LeaderboardEntry> LeaderboardEntries = AdventureGameManager.leaderboardEntries.ToList();
-    }*/
 }

@@ -21,6 +21,7 @@
     <None Remove="Resources\CharacterClass\example.txt" />
     <None Remove="Resources\CharacterClass\robot.txt" />
     <None Remove="Resources\characterImage_Boy.png" />
+    <None Remove="Resources\characterImage_Dog.png" />
     <None Remove="Resources\characterImage_Girl.png" />
     <None Remove="Resources\characterImage_Puppers.png" />
     <None Remove="Resources\characterImage_Robot.png" />
@@ -66,31 +67,39 @@
     <None Remove="Resources\Metashop\3.txt" />
     <None Remove="Resources\Metashop\4.txt" />
     <None Remove="Resources\Metashop\5.txt" />
+    <None Remove="Resources\Metashop\6.txt" />
+    <None Remove="Resources\Metashop\7.txt" />
+    <None Remove="Resources\Metashop\8.txt" />
+    <None Remove="Resources\Metashop\9.txt" />
     <None Remove="Resources\Metashop\example.txt" />
+    <None Remove="Resources\Save\1_2.txt" />
+    <None Remove="Resources\Save\1_3.txt" />
+    <None Remove="Resources\Save\1_4.txt" />
+    <None Remove="Resources\Save\32_2.txt" />
+    <None Remove="Resources\Save\32_21.txt" />
     <None Remove="Resources\Save\32_22.txt" />
     <None Remove="Resources\Save\32_23.txt" />
+    <None Remove="Resources\Save\32_24.txt" />
     <None Remove="Resources\titlePage.png" />
+    <None Remove="Resources\Wiki\00_attack.txt" />
     <None Remove="Resources\Wiki\00_str.txt" />
     <None Remove="Resources\Wiki\01_health.txt" />
+    <None Remove="Resources\Wiki\02_defense.txt" />
+    <None Remove="Resources\Wiki\03_metacurrency.txt" />
     <None Remove="Resources\Wiki\99_example.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\Account\0.txt" />
     <Resource Include="Resources\Account\1.txt" />
-    <Resource Include="Resources\Account\2.txt" />
-    <Resource Include="Resources\Account\21.txt" />
-    <Resource Include="Resources\Account\3.txt" />
     <Resource Include="Resources\Account\32.txt" />
-    <Resource Include="Resources\Account\4.txt" />
-    <Resource Include="Resources\Account\81.txt" />
     <Resource Include="Resources\CharacterClass\default.txt" />
     <Resource Include="Resources\CharacterClass\dog.txt" />
     <Resource Include="Resources\CharacterClass\example.txt" />
     <Resource Include="Resources\CharacterClass\robot.txt" />
     <Resource Include="Resources\characterImage_Boy.png" />
+    <Resource Include="Resources\characterImage_Dog.png" />
     <Resource Include="Resources\characterImage_Girl.png" />
-    <Resource Include="Resources\characterImage_Puppers.png" />
     <Resource Include="Resources\characterImage_Robot.png" />
     <Resource Include="Resources\itemImage_Duct_Tape.png" />
     <Resource Include="Resources\itemImage_Potion.png" />
@@ -135,13 +144,24 @@
     <Resource Include="Resources\Metashop\3.txt" />
     <Resource Include="Resources\Metashop\4.txt" />
     <Resource Include="Resources\Metashop\5.txt" />
+    <Resource Include="Resources\Metashop\6.txt" />
+    <Resource Include="Resources\Metashop\7.txt" />
+    <Resource Include="Resources\Metashop\8.txt" />
+    <Resource Include="Resources\Metashop\9.txt" />
     <Resource Include="Resources\Metashop\example.txt" />
+    <Resource Include="Resources\Save\1_2.txt" />
+    <Resource Include="Resources\Save\1_3.txt" />
+    <Resource Include="Resources\Save\1_4.txt" />
+    <Resource Include="Resources\Save\32_2.txt" />
+    <Resource Include="Resources\Save\32_21.txt" />
     <Resource Include="Resources\Save\32_22.txt" />
     <Resource Include="Resources\Save\32_23.txt" />
+    <Resource Include="Resources\Save\32_24.txt" />
     <Resource Include="Resources\titlePage.png" />
-    <Resource Include="Resources\Wiki\00_str.txt" />
+    <Resource Include="Resources\Wiki\00_attack.txt" />
     <Resource Include="Resources\Wiki\01_health.txt" />
-    <Resource Include="Resources\Wiki\99_example.txt" />
+    <Resource Include="Resources\Wiki\02_defense.txt" />
+    <Resource Include="Resources\Wiki\03_metacurrency.txt" />
   </ItemGroup>
 
 </Project>

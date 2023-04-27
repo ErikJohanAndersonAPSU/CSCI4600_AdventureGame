@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="User Registration" Height="210" Width="410">
+        Title="User Registration" Height="210" Width="410" WindowStartupLocation="CenterScreen">
     <Grid Background="White" Height="160" Width="380" VerticalAlignment="Top" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />

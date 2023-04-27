@@ -24,20 +24,6 @@ namespace CSCI4600_Game
         public MainWindow()
         {
             InitializeComponent();
-
-            //AdventureGameManager.Test();
-        }
-        
-        private void Test_Click(object sender, RoutedEventArgs e)
-        {
-            /*Window1 window1 = new Window1();
-            window1.Show();*/
-
-            /*AccountWindow accountWindow = new AccountWindow();
-            accountWindow.Show();*/
-
-            /*StartWindow startWindow = new StartWindow();
-            startWindow.ShowDialog();*/
         }
         
         //MainWindow Buttons

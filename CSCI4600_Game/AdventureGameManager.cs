@@ -51,18 +51,6 @@ namespace CSCI4600_Game
             AccountManager.WriteAccountsToFile(accounts);
         }
 
-        /*public static void UpdateAccountsAndID(int currentAccountID)
-        {
-            accounts = AccountManager.ReadAccountsFromFile();
-            //AdventureGameManager.currentAccountID = currentAccountID;
-        }
-
-        public static void UpdateAccountsAndID(Account currentAccount)
-        {
-            accounts = AccountManager.ReadAccountsFromFile();
-            //currentAccountID = currentAccount.ID;
-        }*/
-
         public static void SetCurrentAccount(Account newCurrentAccount)
         {
             accounts = AccountManager.ReadAccountsFromFile();
@@ -89,8 +77,6 @@ namespace CSCI4600_Game
             AccountManager.WriteAccountsToFile(accounts);
             SaveManager.WriteSavesToFile(saves);
             LeaderboardManager.WriteNewLeaderboardsToFile(leaderboardEntries);
-
-            Debug.WriteLine("Varibles written.");
         }
 
         /*public static void Test()

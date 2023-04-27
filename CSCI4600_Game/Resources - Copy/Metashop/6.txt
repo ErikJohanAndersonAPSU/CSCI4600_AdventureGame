@@ -1,0 +1,4 @@
+TestMetaShopOffer6
+Does thing 6
+5
+6

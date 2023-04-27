@@ -66,10 +66,5 @@ namespace CSCI4600_Game
         {
             return Name + " : " + Desc + "\n" + CharClass + "\n" + CharStats + "\n" + CharInventory;
         }
-
-        /*public StartingStats GetStartingStats()
-        {
-            return new StartingStats(0, 0, 0);
-        }*/
     }
 }

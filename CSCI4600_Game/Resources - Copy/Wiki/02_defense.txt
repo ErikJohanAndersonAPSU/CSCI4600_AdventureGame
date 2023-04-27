@@ -1,0 +1,2 @@
+Defense
+This is how well protected you are from attacks and other damage to your character.

@@ -29,7 +29,7 @@ namespace CSCI4600_Game
             List<CharClassAndImage> charClassAndImages = new List<CharClassAndImage>();
             charClassAndImages.Add(new CharClassAndImage(CharClass.boy, @"\Resources\characterImage_Boy.png"));
             charClassAndImages.Add(new CharClassAndImage(CharClass.girl, @"\Resources\characterImage_Girl.png"));
-            charClassAndImages.Add(new CharClassAndImage(CharClass.dog, @"\Resources\characterImage_Puppers.png"));
+            charClassAndImages.Add(new CharClassAndImage(CharClass.dog, @"\Resources\characterImage_Dog.png"));
             charClassAndImages.Add(new CharClassAndImage(CharClass.robot, @"\Resources\characterImage_Robot.png"));
 
             ClassSelectListBox.ItemsSource = charClassAndImages;
@@ -57,18 +57,14 @@ namespace CSCI4600_Game
 
                     CharacterClass charClass = AdventureGameManager.charClasses.Find(x => x.ClassName.Equals(charClassName));
 
-                    /*Debug.WriteLine("Printing account items, n = " + AdventureGameManager.currentAccount.MetaShopPurchases.Count());
-                    foreach (var item in AdventureGameManager.currentAccount.MetaShopPurchases)
-                    {
-                        Debug.WriteLine(item);
-                    }*/
-
                     Character newCharacter = new Character(name, desc, charClass, new Inventory(AdventureGameManager.currentAccount.MetaShopPurchases));
 
                     SaveGameState saveGameState = new SaveGameState(newCharacter);
 
                     GameplayWindow gameplayWindow = new GameplayWindow(saveGameState);
                     gameplayWindow.Show();
+
+                    DialogResult = true;
 
                     Close();
                 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="GET READY FOR ADVENTURE!!!" Height="600" Width="1200"
+        Title="GET READY FOR ADVENTURE!!!" Height="600" Width="1200" WindowStartupLocation="CenterScreen"
         Closing="Window_Closing">
     <Grid>
         <!--Grid Layout-->

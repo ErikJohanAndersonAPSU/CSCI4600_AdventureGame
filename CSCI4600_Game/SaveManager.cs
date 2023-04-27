@@ -124,16 +124,6 @@ namespace CSCI4600_Game
             }
         }
 
-        /*public static void CreateSave(SaveGameState saveGameState, List<SaveGameState> saves)
-        {
-
-        }*/
-
-        /*public static void PlaySave(SaveGameState save)
-        {
-
-        }*/
-
         private static string GetFilepath(SaveGameState save)
         {
             string filename = save.AccountID + "_" + save.SaveID + ".txt";

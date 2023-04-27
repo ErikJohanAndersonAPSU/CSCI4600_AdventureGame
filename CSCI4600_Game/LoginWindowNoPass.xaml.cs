@@ -37,7 +37,6 @@ namespace CSCI4600_Game
             if (SelectedAccount != null && textBoxPassword.Password.Equals(SelectedAccount.Pass))
             {
                 this.DialogResult = true;
-                //CorrectPassword = true;
 
                 Close();
             }
@@ -59,7 +58,5 @@ namespace CSCI4600_Game
         {
             Close();
         }
-
-        //public bool CorrectPassword { get; set; } = false;
     }
 }

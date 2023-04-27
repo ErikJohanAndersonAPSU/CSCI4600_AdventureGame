@@ -11,7 +11,6 @@ namespace CSCI4600_Game
 {
     public static class AccountManager
     {
-        //private static string _dir = Path.Combine(Environment.CurrentDirectory, @"Account\");
         private static string _dir = "../../../Resources/Account/";
 
         public static List<Account> ReadAccountsFromFile()
@@ -85,34 +84,6 @@ namespace CSCI4600_Game
             foreach (Account account in accounts)
             {
                 string filepath = GetFilepath(account);
-
-                /*
-                if (File.Exists(filepath))
-                {
-                    File.Delete(filepath);
-                }
-
-                StreamWriter sw = new StreamWriter(filepath);
-
-                sw.WriteLine(account.Name);
-                sw.WriteLine(account.Pass);
-                sw.WriteLine(account.MetaCurrency);
-                sw.WriteLine(account.NumGamesPlayed);
-
-                for (int i = 0; i < account.MetaShopPurchases.Length; i++)
-                {
-                    sw.Write(account.MetaShopPurchases[i]);
-
-                    if (i != account.MetaShopPurchases.Length - 1)
-                    {
-                        sw.Write(",");
-                    }
-                }
-                sw.WriteLine();
-                sw.WriteLine(account.NumSavesSaved);
-
-                sw.Close();
-                */
 
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine(account.Name);

@@ -72,10 +72,6 @@ namespace CSCI4600_Game
                     // Set the current account
                     AdventureGameManager.SetCurrentAccount(newAccount);
 
-                    // Change to display successful account creation, then open actual window w/ New Game, Load Game, Leaderboard, Wiki
-                    /*MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();*/
-
                     // Return the new account, close the dialog and report dialog result as true
                     this.DialogResult = true;
 
@@ -90,91 +86,6 @@ namespace CSCI4600_Game
                     Debug.WriteLine("An account with that name already exists");
                 }
             }
-
-            /*if (SelectedAccountAction == AccountAction.Create)
-            {
-                if (trimmedUsername.Length > 0 && trimmedUsername.Equals(untrimmedUsername) && textBoxPassword.Password.Equals(textBoxConfirmPassword.Password))
-                {
-                    if (AdventureGameManager.accounts.Find(x => x.Name.Equals(trimmedUsername)) == null)
-                    {
-                        // Update next available account iD, create account, then write it to a file
-                        AdventureGameManager.UpdateNextAccountID();
-                        Account newAccount = new Account(textBoxUserName.Text, textBoxPassword.Password);
-                        AccountManager.AddAccount(newAccount);
-
-                        // Set the current account
-                        *//*AdventureGameManager.currentAccountID = newAccount.ID;
-                        AdventureGameManager.RefreshAccounts();*//*
-                        AdventureGameManager.SetCurrentAccount(newAccount);
-
-                        // Change to display successful account creation, then open actual window w/ New Game, Load Game, Leaderboard, Wiki
-                        NewGameWindow newGameWindow = new NewGameWindow();
-                        newGameWindow.Show();
-                        // Return the new account, close the dialog and report dialog result as true
-
-
-                        this.DialogResult = true;
-
-                        Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("An account already exists with that name.");
-                    }
-                }
-                else
-                {
-                    // Should show a popup saying exactly what's wrong, i.e. no non-whitespace username, no non-whitespace password, mismatch password, etc
-                    MessageBox.Show("Invalid password.");
-                }
-            }
-            
-            if (SelectedAccountAction == AccountAction.Modify && SelectedAccount != null)
-            {
-                if (trimmedUsername.Length > 0 && trimmedUsername.Equals(untrimmedUsername) && textBoxPassword.Password.Equals(textBoxConfirmPassword.Password))
-                {
-                    AdventureGameManager.accounts.RemoveAll(x => x.ID == SelectedAccount.ID);
-
-                    //AdventureGameManager.accounts.Remove(SelectedAccount);
-                    //AdventureGameManager.RefreshAccounts();
-
-                    Debug.WriteLine(SelectedAccount.ID);
-
-                    if (AdventureGameManager.accounts.Find(x => x.Name.Equals(trimmedUsername)) == null)
-                    {
-                        // Update next available account iD, create account, then write it to a file
-                        Account newAccount = new Account(SelectedAccount, textBoxUserName.Text, textBoxPassword.Password);
-                        AccountManager.AddAccount(newAccount);
-                        Debug.WriteLine(newAccount);
-
-                        // Set the current account
-                        *//*AdventureGameManager.currentAccountID = newAccount.ID;
-                        AdventureGameManager.RefreshAccounts();*//*
-                        AdventureGameManager.SetCurrentAccount(newAccount);
-
-                        // Change to display successful account creation, then open actual window w/ New Game, Load Game, Leaderboard, Wiki
-                        NewGameWindow newGameWindow = new NewGameWindow();
-                        newGameWindow.Show();
-
-                        this.DialogResult = true;
-
-                        Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("An account already exists with that name.");
-                    }
-                }
-                else
-                {
-                    // Should show a popup saying exactly what's wrong, i.e. no non-whitespace username, no non-whitespace password, mismatch password, etc
-                    MessageBox.Show("Invalid password.");
-                }
-            }
-            else if (SelectedAccount != null) { }
-            {
-                Debug.WriteLine("SelectedAccount is null");
-            }*/
         }
         private void Reset_Click(object sender, RoutedEventArgs e)
         {

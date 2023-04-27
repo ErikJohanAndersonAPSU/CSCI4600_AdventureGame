@@ -12,7 +12,6 @@ namespace CSCI4600_Game
 {
     public static class LeaderboardManager
     {
-        //private static string _dir = Path.Combine(Environment.CurrentDirectory, @"Leaderboard\");
         private static string _dir = "../../../Resources/Leaderboard/";
 
         public static LeaderboardEntry[] ReadLeaderboardsFromFile()
@@ -121,16 +120,6 @@ namespace CSCI4600_Game
                 string fileName = max + ".txt";
 
                 string newFileEntry = Path.Combine(_dir, fileName);
-
-                /*
-                StreamWriter sw = new StreamWriter(newFileEntry);
-                sw.WriteLine(entry.AccountName);
-                sw.WriteLine(entry.CharacterName);
-                sw.WriteLine(entry.Desc);
-                sw.WriteLine(entry.Score);
-                sw.WriteLine(entry.Id);
-                sw.Close();
-                */
 
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine(entry.AccountName);

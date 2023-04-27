@@ -27,10 +27,5 @@ namespace CSCI4600_Game
 
             WikiListBox.ItemsSource = entries;
         }
-
-        /*private void DoneButton_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }*/
     }
 }

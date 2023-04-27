@@ -1,0 +1,2 @@
+MetaCurrency
+A resource earned through your trials and tribulations that can be spent to purchase stat upgrades, starting items, and items to unlock new paths.

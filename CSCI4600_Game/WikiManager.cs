@@ -52,10 +52,5 @@ namespace CSCI4600_Game
 
             return wikiEntries;
         }
-
-        /*public static void ShowWikiEntry()
-        {
-
-        }*/
     }
 }

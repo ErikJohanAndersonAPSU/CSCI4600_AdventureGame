@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600_Game"
         mc:Ignorable="d"
-        Title="Meta Shop Window" Height="410" Width="700"
+        Title="Meta Shop Window" Height="410" Width="700" WindowStartupLocation="CenterScreen"
         Closing="Window_Closing">
     <Grid Margin="10" Height="370" Width="600">
         <Grid.ColumnDefinitions>
@@ -35,7 +35,7 @@
                             </Grid.RowDefinitions>
                             <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding Path=Name}"  TextWrapping="Wrap"/>
                             <TextBlock Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"  Text="{Binding Path=Desc}" TextWrapping="Wrap" HorizontalAlignment="Left"/>
-                            <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Text="{Binding Path=Cost}" HorizontalAlignment="Right"/>
+                            <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Text="{Binding Path=Cost}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         </Grid>
                     </Border>
                 </DataTemplate>
@@ -60,7 +60,7 @@
                             </Grid.RowDefinitions>
                             <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding Path=Name}" HorizontalAlignment="Left"/>
                             <TextBlock Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Text="{Binding Path=Desc}" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                            <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Text="{Binding Path=Cost}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Text="{Binding Path=Cost}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         </Grid>
                     </Border>
                 </DataTemplate>

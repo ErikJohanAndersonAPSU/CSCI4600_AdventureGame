@@ -30,10 +30,6 @@ namespace CSCI4600_Game
 
             accountWindow.Show();
             Close();
-            /*if (accountWindow.ShowDialog() == true)
-            {
-                Close();
-            }*/
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
