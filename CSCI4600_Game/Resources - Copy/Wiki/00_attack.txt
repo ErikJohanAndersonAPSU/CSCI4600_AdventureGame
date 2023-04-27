@@ -1,2 +1,0 @@
-Attack
-This stat determines your capacity to do damage.

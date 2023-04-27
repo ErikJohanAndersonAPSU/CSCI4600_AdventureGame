@@ -1,3 +1,0 @@
-UnlockItemExample
-An example of an item used to unlock a node
-0,0,0

@@ -1,3 +1,0 @@
-DummyItem
-Used to avoid process exceptions when trying to delete/overwrite files
-0,0,0

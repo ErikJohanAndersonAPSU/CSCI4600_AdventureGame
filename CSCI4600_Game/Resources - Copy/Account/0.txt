@@ -1,6 +1,0 @@
-account name
-password
-metaCurrency (int)
-numGamesPlayed (int)
-meta,shop,purchase,ids (int)
-numGamesSaved

@@ -1,2 +1,0 @@
-Health
-This is the amount of life you have left to give to the quest. When it hits 0, your quest ends and you must try again.

@@ -1,4 +1,0 @@
-TestMetaShopOffer15
-Does thing 15
-555
-15

@@ -1,3 +1,0 @@
-A zig-zagged rod
-Crank it
-0,0,0

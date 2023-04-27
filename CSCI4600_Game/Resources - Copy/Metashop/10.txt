@@ -1,4 +1,0 @@
-TestMetaShopOffer10
-Does thing 10
-100
-10

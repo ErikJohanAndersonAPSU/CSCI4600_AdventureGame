@@ -1,5 +1,0 @@
-account name
-character name
-description
-score
-id

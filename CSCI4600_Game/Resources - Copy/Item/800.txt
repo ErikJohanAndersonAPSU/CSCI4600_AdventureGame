@@ -1,3 +1,0 @@
-StatModifyingItemExample
-An example of an item that modifies stats
-5,2,2
